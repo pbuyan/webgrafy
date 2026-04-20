@@ -1,37 +1,55 @@
-import "@/styles/globals.css";
 import type { Metadata } from "next";
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { SiteFooter } from "@/components/layout/SiteFooter";
-import { getMessages, locales, type Locale } from "@/lib/i18n";
+import { notFound } from "next/navigation";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
+import { defaultLocale, isValidLocale, locales, type Locale } from "@/lib/i18n/config";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import { headers } from "next/headers";
+import "../globals.css";
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export const metadata: Metadata = {
-  metadataBase: new URL("https://webgrafy.com"),
-  title: {
-    default: "Webgrafy",
-    template: "%s"
-  }
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const validLocale = isValidLocale(locale) ? locale : defaultLocale;
+  const dict = await getDictionary(validLocale);
+
+  return {
+    title: {
+      default: dict.meta.siteName,
+      template: `%s | ${dict.meta.siteName}`,
+    },
+    description: dict.meta.siteDescription,
+  };
+}
 
 export default async function LocaleLayout({
   children,
-  params
-}: {
+  params,
+}: Readonly<{
   children: React.ReactNode;
-  params: Promise<{ locale: Locale }>;
-}) {
+  params: Promise<{ locale: string }>;
+}>) {
   const { locale } = await params;
-  const messages = await getMessages(locale);
+
+  if (!isValidLocale(locale)) notFound();
+
+  const dict = await getDictionary(locale as Locale);
+  const headersList = await headers();
+  const pathname = headersList.get("x-pathname") ?? `/${locale}`;
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className="min-h-screen bg-background text-foreground">
-        <SiteHeader locale={locale} messages={messages} />
-        <main className="min-h-[calc(100vh-64px)]">{children}</main>
-        <SiteFooter locale={locale} messages={messages} />
+    <html lang={locale}>
+      <body className="min-h-screen bg-[#f3eee7] text-[#111111] antialiased">
+        <SiteHeader locale={locale as Locale} pathname={pathname} dict={dict} />
+        <main>{children}</main>
+        <SiteFooter locale={locale as Locale} dict={dict} />
       </body>
     </html>
   );

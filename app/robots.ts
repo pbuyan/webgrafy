@@ -1,8 +1,14 @@
 import type { MetadataRoute } from "next";
 
+const baseUrl = "https://www.webgrafy.com";
+
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [{ userAgent: "*", allow: "/" }],
-    sitemap: "https://webgrafy.com/sitemap.xml"
+    rules: {
+      userAgent: "*",
+      allow: "/",
+    },
+    sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   };
 }

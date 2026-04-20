@@ -1,20 +1,17 @@
-# Webgrafy (Next.js + TS + Tailwind)
+# Webgrafy i18n starter
 
-## Setup
+Luxury/editorial digital agency website built with Next.js 16, React, TypeScript, Tailwind CSS v4, and locale-based routing for English and French.
+
+## Getting started
+
 ```bash
 npm install
 npm run dev
 ```
 
-## Bilingual routes
-- English: `/en/...`
-- French: `/fr/...` with pretty slugs:
-  - `/fr/tarifs` → internal `/fr/pricing`
-  - `/fr/realisations` → internal `/fr/work`
-  - `/fr/a-propos` → internal `/fr/about`
+Open http://localhost:3000 — middleware redirects `/` to `/en`.
 
-## Contact leads (Supabase)
-Create table `public.leads` in Supabase (SQL in docs/chat) and set env vars:
-- `SUPABASE_URL`
-- `SUPABASE_SERVICE_ROLE_KEY`
+## Locales
 
+- /en
+- /fr

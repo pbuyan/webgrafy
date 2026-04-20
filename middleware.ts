@@ -1,36 +1,38 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { INTERNAL_FR_REWRITES } from "@/lib/routes";
+import { defaultLocale, locales } from "@/lib/i18n/config";
 
-export function middleware(req: NextRequest) {
-  const { pathname } = req.nextUrl;
+export function middleware(request: NextRequest) {
+  const { pathname } = request.nextUrl;
 
   if (
     pathname.startsWith("/_next") ||
     pathname.startsWith("/api") ||
-    pathname.startsWith("/favicon") ||
-    pathname.startsWith("/icons") ||
-    pathname.match(/\.(png|jpg|jpeg|webp|svg|ico|css|js|map|txt|xml)$/)
+    pathname.includes(".")
   ) {
     return NextResponse.next();
   }
 
-  if (pathname === "/") {
-    const url = req.nextUrl.clone();
-    url.pathname = "/en";
+  const pathnameHasLocale = locales.some(
+    (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
+  );
+
+  if (!pathnameHasLocale) {
+    const url = request.nextUrl.clone();
+    url.pathname = `/${defaultLocale}${pathname}`;
     return NextResponse.redirect(url);
   }
 
-  const rewriteTo = INTERNAL_FR_REWRITES[pathname];
-  if (rewriteTo) {
-    const url = req.nextUrl.clone();
-    url.pathname = rewriteTo;
-    return NextResponse.rewrite(url);
-  }
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-pathname", pathname);
 
-  return NextResponse.next();
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 }
 
 export const config = {
-  matcher: ["/((?!_next|api).*)"],
+  matcher: ["/((?!_next|.*\\..*).*)"],
 };
