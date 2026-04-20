@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "ctaAudit": "Book a free audit"
+  },
+  "footer": {
+    "tagline": "More bookings for beauty & wellness businesses.",
+    "area": "Serving Montreal & surrounding areas.",
+    "pages": "Pages",
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "work": "Work",
+    "about": "About",
+    "contact": "Contact",
+    "faq": "FAQs",
+    "contactTitle": "Get a free audit",
+    "contactText": "Book a free 15-minute audit and get a 5-point action plan.",
+    "ctaAudit": "Book a free audit",
+    "privacy": "Privacy Policy",
+    "terms": "Terms",
+    "copyright": "© {year} Webgrafy. All rights reserved."
+  }
+}

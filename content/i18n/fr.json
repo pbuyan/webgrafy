@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "home": "Accueil",
+    "services": "Services",
+    "pricing": "Tarifs",
+    "work": "Réalisations",
+    "about": "À propos",
+    "contact": "Contact",
+    "ctaAudit": "Réserver un audit gratuit"
+  },
+  "footer": {
+    "tagline": "Plus de rendez-vous pour les entreprises beauté & bien-être.",
+    "area": "Montréal et environs.",
+    "pages": "Pages",
+    "home": "Accueil",
+    "services": "Services",
+    "pricing": "Tarifs",
+    "work": "Réalisations",
+    "about": "À propos",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "contactTitle": "Audit gratuit",
+    "contactText": "Réservez un audit gratuit de 15 minutes et recevez un plan d’action en 5 points.",
+    "ctaAudit": "Réserver un audit gratuit",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d’utilisation",
+    "copyright": "© {year} Webgrafy. Tous droits réservés."
+  }
+}
