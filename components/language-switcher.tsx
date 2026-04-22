@@ -28,7 +28,7 @@ export function LanguageSwitcher({
           <Link
             key={item}
             href={href}
-            className={`rounded-full px-2 py-1 transition ${active ? "bg-black text-white" : "hover:text-[#111111]"}`}
+            className={`rounded-full px-2 py-1 transition ${active ? "bg-black text-[#bbbbbb]!" : "hover:text-[#111111]"}`}
           >
             {item}
           </Link>

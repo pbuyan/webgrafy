@@ -5,7 +5,6 @@ import { SiteHeader } from "@/components/site-header";
 import { defaultLocale, isValidLocale, locales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { headers } from "next/headers";
-import "../globals.css";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -45,12 +44,10 @@ export default async function LocaleLayout({
   const pathname = headersList.get("x-pathname") ?? `/${locale}`;
 
   return (
-    <html lang={locale}>
-      <body className="min-h-screen bg-[#f3eee7] text-[#111111] antialiased">
-        <SiteHeader locale={locale as Locale} pathname={pathname} dict={dict} />
-        <main>{children}</main>
-        <SiteFooter locale={locale as Locale} dict={dict} />
-      </body>
-    </html>
+    <>
+      <SiteHeader locale={locale as Locale} pathname={pathname} dict={dict} />
+      <main>{children}</main>
+      <SiteFooter locale={locale as Locale} dict={dict} />
+    </>
   );
 }
