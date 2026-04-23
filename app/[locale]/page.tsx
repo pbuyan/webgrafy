@@ -23,40 +23,46 @@ export default async function HomePage({
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[#0a0a0a] text-white">
-        <Container className="py-16 lg:py-20">
-          <div className="grid items-stretch gap-0 overflow-hidden rounded-[1.2rem] border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.28)] lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_40%)] px-8 py-12 lg:px-12 lg:py-16">
-              <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/70">
-                {dict.home.badge}
-              </div>
-              <p className="mt-7 text-xs uppercase tracking-[0.22em] text-white/60">{dict.home.eyebrow}</p>
-              <h1 className="mt-5 max-w-xl text-6xl font-semibold leading-[0.9] tracking-[-0.05em] text-[#f3eee7] [font-family:var(--font-display)] sm:text-7xl">
-                {dict.home.title}
-              </h1>
-              <p className="mt-6 max-w-lg text-lg leading-8 text-white/78">{dict.home.intro}</p>
-              <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Link href={`/${locale}/contact`} className={buttonVariants({ variant: "primary", className: "rounded-none" })}>
-                  {dict.home.ctaPrimary}
-                </Link>
-                <Link href={`/${locale}/work`} className={buttonVariants({ variant: "secondary", className: "gap-2 rounded-none" })}>
-                  {dict.home.ctaSecondary}
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              </div>
+      <section className="relative -mt-20 overflow-hidden pt-20 text-white">
+        <div className="pointer-events-none absolute inset-0">
+          <Image
+            src="/images/hero-bg.png"
+            alt=""
+            fill
+            priority
+            className="object-cover object-[center_right] sm:object-right"
+            sizes="100vw"
+          />
+          <div
+            className="absolute inset-0 bg-linear-to-r from-[#0a0a0a] via-[#0a0a0a]/85 to-transparent sm:via-[#0a0a0a]/65"
+            aria-hidden
+          />
+        </div>
+        {/* <Container className="py-16 lg:py-20"> */}
+        <div className="relative z-10 grid items-stretch gap-0 overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.28)] lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.06),transparent_40%)] px-8 py-12 lg:px-12 lg:py-16">
+            <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/70">
+              {dict.home.badge}
             </div>
-
-            <div className="relative min-h-[420px] bg-[#111111] lg:min-h-[540px]">
-              <Image
-                src="/images/hero-editorial.jpg"
-                alt="Editorial branding composition"
-                fill
-                className="object-cover"
-                priority
-              />
+            <p className="mt-7 text-xs uppercase tracking-[0.22em] text-white/60">{dict.home.eyebrow}</p>
+            <h1 className="mt-5 max-w-xl text-6xl font-semibold leading-[0.9] tracking-[-0.05em] text-[#f3eee7] [font-family:var(--font-display)] sm:text-7xl">
+              {dict.home.title}
+            </h1>
+            <p className="mt-6 max-w-lg text-lg leading-8 text-white/78">{dict.home.intro}</p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link href={`/${locale}/contact`} className={buttonVariants({ variant: "primary", className: "rounded-none" })}>
+                {dict.home.ctaPrimary}
+              </Link>
+              <Link href={`/${locale}/work`} className={buttonVariants({ variant: "secondary", className: "gap-2 rounded-none" })}>
+                {dict.home.ctaSecondary}
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
           </div>
-        </Container>
+
+          <div className="relative min-h-[420px] lg:min-h-[900px]" aria-hidden />
+        </div>
+        {/* </Container> */}
       </section>
 
       <LogoStrip title={dict.home.trustedBy} logos={dict.home.logoStrip} />

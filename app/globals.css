@@ -3,6 +3,9 @@
 :root {
   --background: #f3eee7;
   --foreground: #111111;
+  /* Matches SiteHeader row + syncs with scroll hide/show */
+  --site-header-height: 5rem;
+  --header-offset: var(--site-header-height);
 }
 
 html {
@@ -12,6 +15,11 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+main.site-main {
+  padding-top: var(--header-offset);
+  transition: padding-top 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 * {

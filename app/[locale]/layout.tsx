@@ -59,7 +59,7 @@ export default async function LocaleLayout({
     <>
       <HtmlLang locale={locale as Locale} />
       <SiteHeader locale={locale as Locale} dict={dict} />
-      <main>{children}</main>
+      <main className="site-main">{children}</main>
       <SiteFooter locale={locale as Locale} dict={dict} />
     </>
   );

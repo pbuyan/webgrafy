@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 import { locales, type Locale } from "@/lib/i18n/config";
 
 function stripLocale(pathname: string, locale: Locale) {
@@ -15,15 +16,23 @@ function stripLocale(pathname: string, locale: Locale) {
 export function LanguageSwitcher({
   locale,
   labels,
+  tone = "onDark",
 }: {
   locale: Locale;
   labels: { en: string; fr: string };
+  tone?: "onDark" | "onLight";
 }) {
   const pathname = usePathname();
   const normalized = stripLocale(pathname, locale);
+  const isLight = tone === "onLight";
 
   return (
-    <div className="flex items-center gap-1 text-xs uppercase tracking-[0.16em] text-white/75">
+    <div
+      className={cn(
+        "flex items-center gap-1 text-xs uppercase tracking-[0.16em]",
+        isLight ? "text-[#544c43]/90" : "text-white/75",
+      )}
+    >
       {locales.map((item, index) => {
         const href = `/${item}${normalized === "/" ? "" : normalized}`;
         const active = item === locale;
@@ -31,7 +40,18 @@ export function LanguageSwitcher({
         return (
           <div key={item} className="flex items-center gap-1">
             {index > 0 ? <span>/</span> : null}
-            <Link href={href} className={active ? "text-white" : "hover:text-white"}>
+            <Link
+              href={href}
+              className={cn(
+                active
+                  ? isLight
+                    ? "text-[#1f1b18]"
+                    : "text-white"
+                  : isLight
+                    ? "hover:text-[#1f1b18]"
+                    : "hover:text-white",
+              )}
+            >
               {labels[item]}
             </Link>
           </div>
