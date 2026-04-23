@@ -7,10 +7,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-[#111111] text-white hover:opacity-90",
-        secondary:
-          "border border-[#111111]/15 bg-white/50 text-[#111111] hover:bg-white/70",
-        ghost: "text-[#111111] hover:bg-black/5",
+        primary: "bg-[#f3eee7] text-[#111111] hover:bg-[#e7ddd2]",
+        secondary: "bg-transparent text-[#f3eee7] hover:text-white",
+        dark: "bg-[#111111] text-white hover:opacity-90",
+        outline: "border border-[#111111]/15 bg-white/50 text-[#111111] hover:bg-white/70",
       },
       size: {
         default: "px-6 py-3",
@@ -18,7 +18,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "primary",
+      variant: "dark",
       size: "default",
     },
   }

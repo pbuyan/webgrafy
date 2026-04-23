@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { locales, type Locale } from "@/lib/i18n/config";
 
 function stripLocale(pathname: string, locale: Locale) {
@@ -11,27 +14,27 @@ function stripLocale(pathname: string, locale: Locale) {
 
 export function LanguageSwitcher({
   locale,
-  pathname,
+  labels,
 }: {
   locale: Locale;
-  pathname: string;
+  labels: { en: string; fr: string };
 }) {
+  const pathname = usePathname();
   const normalized = stripLocale(pathname, locale);
 
   return (
-    <div className="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-[#6f675d]">
-      {locales.map((item) => {
+    <div className="flex items-center gap-1 text-xs uppercase tracking-[0.16em] text-white/75">
+      {locales.map((item, index) => {
         const href = `/${item}${normalized === "/" ? "" : normalized}`;
         const active = item === locale;
 
         return (
-          <Link
-            key={item}
-            href={href}
-            className={`rounded-full px-2 py-1 transition ${active ? "bg-black text-[#bbbbbb]!" : "hover:text-[#111111]"}`}
-          >
-            {item}
-          </Link>
+          <div key={item} className="flex items-center gap-1">
+            {index > 0 ? <span>/</span> : null}
+            <Link href={href} className={active ? "text-white" : "hover:text-white"}>
+              {labels[item]}
+            </Link>
+          </div>
         );
       })}
     </div>

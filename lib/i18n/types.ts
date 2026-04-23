@@ -1,3 +1,31 @@
+export type ServiceItem = {
+  title: string;
+  description: string;
+  items: string[];
+  index: string;
+};
+
+export type ProjectItem = {
+  name: string;
+  category: string;
+  summary: string;
+  result: string;
+  image: string;
+};
+
+export type TestimonialItem = {
+  quote: string;
+  name: string;
+  role: string;
+  avatar: string;
+};
+
+export type ProcessItem = {
+  number: string;
+  title: string;
+  text: string;
+};
+
 export type SiteDictionary = {
   meta: {
     siteName: string;
@@ -10,17 +38,34 @@ export type SiteDictionary = {
     about: string;
     contact: string;
     bookCall: string;
+    langShort: {
+      en: string;
+      fr: string;
+    };
   };
   footer: {
     blurb: string;
     navigation: string;
+    services: string;
+    resources: string;
     contact: string;
+    legal: {
+      privacy: string;
+      terms: string;
+      copyright: string;
+    };
+    resourcesList: string[];
   };
   common: {
     serviceLabel: string;
-    startProject: string;
-    sendInquiry: string;
     yearLabel: string;
+    viewAllProjects: string;
+    exploreService: string;
+    sendInquiry: string;
+    replyWindow: string;
+    instagram: string;
+    behance: string;
+    linkedin: string;
   };
   home: {
     badge: string;
@@ -30,10 +75,16 @@ export type SiteDictionary = {
     traits: string[];
     ctaPrimary: string;
     ctaSecondary: string;
-    trust: string[];
-    highlightsEyebrow: string;
-    highlightsTitle: string;
-    highlightsText: string;
+    trustedBy: string;
+    logoStrip: string[];
+    servicesEyebrow: string;
+    servicesTitle: string;
+    workEyebrow: string;
+    workTitle: string;
+    testimonialsEyebrow: string;
+    testimonialsTitle: string;
+    processEyebrow: string;
+    processTitle: string;
   };
   pages: {
     services: { eyebrow: string; title: string; text: string; cta: string };
@@ -55,6 +106,9 @@ export type SiteDictionary = {
     eyebrow: string;
     title: string;
     text: string;
+    phone: string;
+    email: string;
+    location: string;
     form: {
       name: string;
       businessName: string;
@@ -65,20 +119,8 @@ export type SiteDictionary = {
       sending: string;
     };
   };
-  services: Array<{
-    title: string;
-    description: string;
-    items: string[];
-    index: string;
-  }>;
-  projects: Array<{
-    name: string;
-    category: string;
-    summary: string;
-  }>;
-  processSteps: Array<{
-    number: string;
-    title: string;
-    text: string;
-  }>;
+  services: ServiceItem[];
+  projects: ProjectItem[];
+  testimonials: TestimonialItem[];
+  processSteps: ProcessItem[];
 };

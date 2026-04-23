@@ -1,24 +1,8 @@
-import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { ProjectCard } from "@/components/ui/project-card";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: Locale }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const dict = await getDictionary(locale);
-
-  return {
-    title: dict.pages.work.eyebrow,
-    description: dict.pages.work.text,
-    alternates: { canonical: `/${locale}/work` },
-  };
-}
 
 export default async function WorkPage({
   params,

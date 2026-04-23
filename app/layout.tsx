@@ -1,21 +1,30 @@
+import { Cormorant_Garamond, Inter } from "next/font/google";
+import { defaultLocale } from "@/lib/i18n/config";
 import "./globals.css";
-import { defaultLocale, isValidLocale } from "@/lib/i18n/config";
-import { headers } from "next/headers";
 
-export default async function RootLayout({
+const display = Cormorant_Garamond({
+  subsets: ["latin"],
+  variable: "--font-display",
+  weight: ["500", "600", "700"],
+});
+
+const sans = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const pathname = headersList.get("x-pathname") ?? "";
-  const firstSegment = pathname.split("/").filter(Boolean)[0];
-  const lang =
-    firstSegment && isValidLocale(firstSegment) ? firstSegment : defaultLocale;
-
   return (
-    <html lang={lang}>
-      <body className="min-h-screen bg-[#f3eee7] text-[#111111] antialiased">
+    <html
+      lang={defaultLocale}
+      className={`${display.variable} ${sans.variable}`}
+      suppressHydrationWarning
+    >
+      <body className="min-h-screen bg-[#f3eee7] text-[#111111] antialiased [font-family:var(--font-sans)]">
         {children}
       </body>
     </html>

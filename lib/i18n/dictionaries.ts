@@ -14,38 +14,52 @@ const en: SiteDictionary = {
     about: "About",
     contact: "Contact",
     bookCall: "Book a Call",
+    langShort: { en: "EN", fr: "FR" },
   },
   footer: {
     blurb:
-      "Branding, graphic design, and website design for businesses that want a more refined, elevated, and memorable presence.",
+      "We help ambitious brands look better, communicate clearly, and grow with confidence.",
     navigation: "Navigation",
-    contact: "Contact",
+    services: "Services",
+    resources: "Resources",
+    contact: "Let's talk",
+    legal: {
+      privacy: "Privacy Policy",
+      terms: "Terms & Conditions",
+      copyright: "© 2026 Webgrafy. All rights reserved.",
+    },
+    resourcesList: ["Case Studies", "Process", "FAQs", "Blog"],
   },
   common: {
     serviceLabel: "Service",
-    startProject: "Start Your Project",
-    sendInquiry: "Send Inquiry",
     yearLabel: "2026",
+    viewAllProjects: "View all projects",
+    exploreService: "Explore service",
+    sendInquiry: "Send Message",
+    replyWindow: "We typically reply within 24 hours.",
+    instagram: "Instagram",
+    behance: "Behance",
+    linkedin: "LinkedIn",
   },
   home: {
-    badge: "Luxury Editorial · Branding · Websites · Graphic Design",
-    eyebrow: "Creative Studio for modern businesses",
-    title: "A more refined visual presence for brands that want to feel elevated",
+    badge: "Branding & Web Design Agency",
+    eyebrow: "Creative studio for modern businesses",
+    title: "A more refined visual presence for brands that want to feel elevated.",
     intro:
-      "We create logos, brand identities, graphics, and websites that help businesses look polished, premium, and more memorable across every touchpoint.",
+      "We craft thoughtful brand identities, impactful graphics, and modern websites that help ambitious businesses stand out and grow with confidence.",
     traits: ["Elevated", "Curated", "Editorial"],
-    ctaPrimary: "View Our Work",
-    ctaSecondary: "Start Your Project",
-    trust: [
-      "Logo & Identity Systems",
-      "Website Design + Build",
-      "Graphic Design Assets",
-      "Elevated Brand Direction",
-    ],
-    highlightsEyebrow: "Highlights",
-    highlightsTitle: "Design and digital presence, shaped with intention",
-    highlightsText:
-      "We help businesses build a complete visual presence — from the logo and brand foundation to the graphics and website that bring it all together.",
+    ctaPrimary: "Book a Call",
+    ctaSecondary: "View our work",
+    trustedBy: "Trusted by ambitious brands",
+    logoStrip: ["Lunar Wellness", "Voyage Hotels", "Maison Solé", "Caveau", "Nordik Studio", "Sahara Skin"],
+    servicesEyebrow: "What we do",
+    servicesTitle: "Strategic design. Beautifully executed.",
+    workEyebrow: "Selected work",
+    workTitle: "Design that drives real results.",
+    testimonialsEyebrow: "Kind words from clients",
+    testimonialsTitle: "Trusted by brands that value thoughtful design.",
+    processEyebrow: "Our process",
+    processTitle: "A collaborative process, built around you.",
   },
   pages: {
     services: {
@@ -71,7 +85,7 @@ const en: SiteDictionary = {
       eyebrow: "Contact",
       title: "Tell us about your brand, website, or creative project",
       text:
-        "Whether you need a logo, a full identity, graphic design support, or a new website, we’d love to hear what you’re building.",
+        "Whether you need a logo, a full identity, graphic design support, or a new website, we'd love to hear what you're building.",
     },
   },
   about: {
@@ -83,7 +97,7 @@ const en: SiteDictionary = {
     processTitle: "Clear, collaborative, and curated from start to finish",
     processText:
       "Every project follows a structured path so the result feels polished, cohesive, and aligned with your brand goals.",
-    cta: "Let’s Work Together",
+    cta: "Let's Work Together",
     whyUs: [
       "Elevated creative direction",
       "Branding and web under one roof",
@@ -92,15 +106,18 @@ const en: SiteDictionary = {
     ],
   },
   contactBlock: {
-    eyebrow: "Start your project",
-    title: "Let’s create a brand presence your business will be proud of",
+    eyebrow: "Let's work together",
+    title: "Ready to elevate your brand presence?",
     text:
-      "Tell us what you need — a logo, a full brand identity, graphic design support, or a website — and we’ll help shape the right direction.",
+      "Tell us about your project and let's create something exceptional together.",
+    phone: "+1 (514) 555-0198",
+    email: "hello@webgrafy.co",
+    location: "Montreal, QC, Canada",
     form: {
-      name: "Your name",
-      businessName: "Business name",
+      name: "Full name",
+      businessName: "Company name",
       email: "Email address",
-      service: "Service needed",
+      service: "What do you need help with?",
       message: "Tell us about your project",
       success: "Your inquiry has been received.",
       sending: "Sending...",
@@ -108,92 +125,103 @@ const en: SiteDictionary = {
   },
   services: [
     {
-      title: "Logo Design",
-      description:
-        "Distinctive logos created to give your business a memorable first impression and a strong visual foundation.",
-      items: ["Custom concepts", "Logo variations", "Final brand files"],
-      index: "01",
-    },
-    {
       title: "Brand Identity",
       description:
-        "A cohesive visual system built through typography, color, imagery, and design direction.",
-      items: ["Color palette", "Typography", "Brand guidelines"],
-      index: "02",
+        "Distinctive logos and complete brand systems that capture your essence and resonate.",
+      items: ["Logo systems", "Brand direction", "Guidelines"],
+      index: "01",
     },
     {
       title: "Graphic Design",
       description:
-        "Premium creative assets for presentations, social media, campaigns, packaging, and marketing materials.",
-      items: ["Social graphics", "Presentations", "Marketing assets"],
+        "Print and digital assets that communicate clearly and elevate your brand presence.",
+      items: ["Campaign visuals", "Social media", "Presentation design"],
+      index: "02",
+    },
+    {
+      title: "Web Design",
+      description:
+        "Modern, responsive websites built for performance, clarity and conversion.",
+      items: ["UX-driven layouts", "Responsive pages", "Conversion focus"],
       index: "03",
     },
     {
-      title: "Website Design & Build",
+      title: "Webflow Development",
       description:
-        "Elegant, conversion-focused websites designed to present your brand clearly and professionally online.",
-      items: ["Custom design", "Responsive build", "Contact forms"],
+        "Clean, scalable builds that are fast, secure and easy to manage.",
+      items: ["CMS setup", "Performance", "Easy updates"],
       index: "04",
     },
   ],
   projects: [
     {
-      name: "Maison Studio",
-      category: "Logo Design · Brand Identity",
+      name: "Nordik Studio",
+      category: "Branding, Web Design",
       summary:
-        "A refined identity system created to give the brand a polished, editorial, and premium presence.",
+        "A complete rebrand and website that positioned Nordik as a premium design studio.",
+      result: "68% increase in website inquiries",
+      image: "/images/project-nordik.jpg",
     },
     {
-      name: "Northline Interiors",
-      category: "Website Design · Development",
+      name: "Maison Solé",
+      category: "Branding, Packaging",
       summary:
-        "A calm, structured website direction built to present services more elegantly and increase inquiries.",
+        "Brand identity and packaging that elevated the brand and strengthened shelf presence.",
+      result: "45% increase in retail sales",
+      image: "/images/project-maison.jpg",
     },
     {
-      name: "Luna Beauty",
-      category: "Branding · Graphic Design",
+      name: "Lunar Wellness",
+      category: "Web Design, Webflow",
       summary:
-        "A soft, elevated visual language for a beauty brand seeking more consistency and a more curated image.",
+        "A calming, conversion-focused website that supports growth and builds trust.",
+      result: "52% increase in bookings",
+      image: "/images/project-lunar.jpg",
+    },
+  ],
+  testimonials: [
+    {
+      quote:
+        "Webgrafy understood our vision from day one. The brand and website they delivered exceeded our expectations and our customers love it.",
+      name: "Camille D.",
+      role: "Founder, Maison Solé",
+      avatar: "/images/avatar-camille.jpg",
     },
     {
-      name: "Atelier Bloom",
-      category: "Brand Identity · Graphic Design",
-      summary:
-        "A boutique-inspired visual direction for a modern lifestyle brand with a warm, sophisticated tone.",
+      quote:
+        "Professional, creative and reliable. They turned our ideas into a brand that truly reflects who we are.",
+      name: "Alexandre T.",
+      role: "Co-founder, Nordik Studio",
+      avatar: "/images/avatar-alexandre.jpg",
     },
     {
-      name: "Harbor & Co.",
-      category: "Website Design · Brand Refresh",
-      summary:
-        "A more elevated digital presence designed to simplify the user journey and improve visual consistency.",
-    },
-    {
-      name: "Aster Clinic",
-      category: "Branding · Website Design",
-      summary:
-        "A polished identity and website concept built to feel calm, credible, and premium.",
+      quote:
+        "The new website is fast, beautiful and so easy to manage. Our inquiries have grown significantly.",
+      name: "Sofia R.",
+      role: "Marketing Director, Lunar Wellness",
+      avatar: "/images/avatar-sofia.jpg",
     },
   ],
   processSteps: [
     {
       number: "01",
       title: "Discover",
-      text: "We learn about your business, audience, goals, and aesthetic direction.",
+      text: "We learn about your goals, audience and challenges.",
     },
     {
       number: "02",
-      title: "Design",
-      text: "We develop concepts, visual systems, and layouts aligned with your brand.",
+      title: "Strategize",
+      text: "We define the right direction and create a clear plan.",
     },
     {
       number: "03",
-      title: "Refine",
-      text: "We review, improve, and polish the details until the work feels right.",
+      title: "Design",
+      text: "We craft visuals and experiences that communicate and convert.",
     },
     {
       number: "04",
-      title: "Launch",
-      text: "We deliver final assets or publish the website with clarity and confidence.",
+      title: "Deliver",
+      text: "We build, test and launch with care and precision.",
     },
   ],
 };
@@ -211,38 +239,52 @@ const fr: SiteDictionary = {
     about: "À propos",
     contact: "Contact",
     bookCall: "Prendre rendez-vous",
+    langShort: { en: "EN", fr: "FR" },
   },
   footer: {
     blurb:
-      "Branding, design graphique et création de sites web pour les entreprises qui souhaitent une présence plus raffinée, élevée et mémorable.",
+      "Nous aidons les marques ambitieuses à mieux paraître, mieux communiquer et à grandir avec confiance.",
     navigation: "Navigation",
-    contact: "Contact",
+    services: "Services",
+    resources: "Ressources",
+    contact: "Parlons-en",
+    legal: {
+      privacy: "Politique de confidentialité",
+      terms: "Conditions générales",
+      copyright: "© 2026 Webgrafy. Tous droits réservés.",
+    },
+    resourcesList: ["Études de cas", "Processus", "FAQ", "Blog"],
   },
   common: {
     serviceLabel: "Service",
-    startProject: "Commencer votre projet",
-    sendInquiry: "Envoyer la demande",
     yearLabel: "2026",
+    viewAllProjects: "Voir tous les projets",
+    exploreService: "Découvrir le service",
+    sendInquiry: "Envoyer",
+    replyWindow: "Nous répondons généralement sous 24 heures.",
+    instagram: "Instagram",
+    behance: "Behance",
+    linkedin: "LinkedIn",
   },
   home: {
-    badge: "Éditorial luxe · Branding · Sites web · Design graphique",
+    badge: "Agence de branding & web design",
     eyebrow: "Studio créatif pour entreprises modernes",
-    title: "Une présence visuelle plus raffinée pour les marques qui veulent paraître haut de gamme",
+    title: "Une présence visuelle plus raffinée pour les marques qui veulent paraître haut de gamme.",
     intro:
-      "Nous créons des logos, identités de marque, visuels et sites web qui aident les entreprises à paraître soignées, premium et plus mémorables à chaque point de contact.",
+      "Nous créons des identités de marque réfléchies, des visuels percutants et des sites modernes qui aident les entreprises ambitieuses à se démarquer et à grandir avec confiance.",
     traits: ["Élevé", "Soigné", "Éditorial"],
-    ctaPrimary: "Voir nos projets",
-    ctaSecondary: "Commencer votre projet",
-    trust: [
-      "Systèmes logo & identité",
-      "Design & création de sites",
-      "Supports de design graphique",
-      "Direction de marque haut de gamme",
-    ],
-    highlightsEyebrow: "Points forts",
-    highlightsTitle: "Design et présence digitale pensés avec intention",
-    highlightsText:
-      "Nous aidons les entreprises à construire une présence visuelle complète — du logo et des bases de la marque aux visuels et au site web qui unifient l’ensemble.",
+    ctaPrimary: "Prendre rendez-vous",
+    ctaSecondary: "Voir nos projets",
+    trustedBy: "Approuvé par des marques ambitieuses",
+    logoStrip: ["Lunar Wellness", "Voyage Hotels", "Maison Solé", "Caveau", "Nordik Studio", "Sahara Skin"],
+    servicesEyebrow: "Ce que nous faisons",
+    servicesTitle: "Un design stratégique. Une exécution remarquable.",
+    workEyebrow: "Projets sélectionnés",
+    workTitle: "Un design qui génère de vrais résultats.",
+    testimonialsEyebrow: "Mots de nos clients",
+    testimonialsTitle: "Choisi par des marques qui valorisent un design réfléchi.",
+    processEyebrow: "Notre processus",
+    processTitle: "Un processus collaboratif, construit autour de vous.",
   },
   pages: {
     services: {
@@ -289,15 +331,18 @@ const fr: SiteDictionary = {
     ],
   },
   contactBlock: {
-    eyebrow: "Commencez votre projet",
-    title: "Créons une présence de marque dont votre entreprise sera fière",
+    eyebrow: "Travaillons ensemble",
+    title: "Prêt à élever la présence de votre marque ?",
     text:
-      "Dites-nous ce dont vous avez besoin — un logo, une identité complète, un soutien en design graphique ou un site web — et nous vous aiderons à définir la bonne direction.",
+      "Parlez-nous de votre projet et créons ensemble quelque chose d’exceptionnel.",
+    phone: "+1 (514) 555-0198",
+    email: "hello@webgrafy.co",
+    location: "Montréal, QC, Canada",
     form: {
-      name: "Votre nom",
+      name: "Nom complet",
       businessName: "Nom de l’entreprise",
       email: "Adresse courriel",
-      service: "Service souhaité",
+      service: "De quoi avez-vous besoin ?",
       message: "Parlez-nous de votre projet",
       success: "Votre demande a bien été reçue.",
       sending: "Envoi...",
@@ -305,92 +350,103 @@ const fr: SiteDictionary = {
   },
   services: [
     {
-      title: "Création de logo",
-      description:
-        "Des logos distinctifs conçus pour offrir à votre entreprise une première impression mémorable et une base visuelle forte.",
-      items: ["Concepts sur mesure", "Variations du logo", "Fichiers finaux"],
-      index: "01",
-    },
-    {
       title: "Identité de marque",
       description:
-        "Un système visuel cohérent construit à travers la typographie, la couleur, l’image et la direction artistique.",
-      items: ["Palette de couleurs", "Typographie", "Guide de marque"],
-      index: "02",
+        "Des logos distinctifs et des systèmes de marque complets qui captent votre essence et la rendent mémorable.",
+      items: ["Systèmes de logo", "Direction de marque", "Guide de marque"],
+      index: "01",
     },
     {
       title: "Design graphique",
       description:
-        "Des supports créatifs premium pour présentations, médias sociaux, campagnes, packaging et marketing.",
-      items: ["Visuels sociaux", "Présentations", "Supports marketing"],
+        "Des supports imprimés et digitaux qui communiquent clairement et valorisent votre marque.",
+      items: ["Visuels de campagne", "Réseaux sociaux", "Présentations"],
+      index: "02",
+    },
+    {
+      title: "Web design",
+      description:
+        "Des sites modernes et responsives pensés pour la performance, la clarté et la conversion.",
+      items: ["Mises en page UX", "Pages responsives", "Focus conversion"],
       index: "03",
     },
     {
-      title: "Design & création de site web",
+      title: "Développement Webflow",
       description:
-        "Des sites élégants et pensés pour la conversion, conçus pour présenter votre marque de façon claire et professionnelle en ligne.",
-      items: ["Design sur mesure", "Développement responsive", "Formulaires de contact"],
+        "Des sites propres et évolutifs, rapides, sécurisés et faciles à gérer.",
+      items: ["CMS", "Performance", "Mises à jour faciles"],
       index: "04",
     },
   ],
   projects: [
     {
-      name: "Maison Studio",
-      category: "Création de logo · Identité de marque",
+      name: "Nordik Studio",
+      category: "Branding, Web design",
       summary:
-        "Un système d’identité raffiné créé pour donner à la marque une présence soignée, éditoriale et premium.",
+        "Une refonte complète de la marque et du site qui a positionné Nordik comme un studio de design premium.",
+      result: "68 % d’augmentation des demandes via le site",
+      image: "/images/project-nordik.jpg",
     },
     {
-      name: "Northline Interiors",
-      category: "Design de site · Développement",
+      name: "Maison Solé",
+      category: "Branding, Packaging",
       summary:
-        "Une direction web calme et structurée conçue pour présenter les services avec plus d’élégance et augmenter les demandes.",
+        "Une identité et un packaging qui ont élevé la marque et renforcé sa présence en rayon.",
+      result: "45 % d’augmentation des ventes en retail",
+      image: "/images/project-maison.jpg",
     },
     {
-      name: "Luna Beauty",
-      category: "Branding · Design graphique",
+      name: "Lunar Wellness",
+      category: "Web design, Webflow",
       summary:
-        "Un langage visuel doux et haut de gamme pour une marque beauté cherchant plus de cohérence et une image plus soignée.",
+        "Un site apaisant et pensé pour la conversion, qui soutient la croissance et inspire confiance.",
+      result: "52 % d’augmentation des réservations",
+      image: "/images/project-lunar.jpg",
+    },
+  ],
+  testimonials: [
+    {
+      quote:
+        "Webgrafy a compris notre vision dès le premier jour. La marque et le site livrés ont dépassé nos attentes et nos clients les adorent.",
+      name: "Camille D.",
+      role: "Fondatrice, Maison Solé",
+      avatar: "/images/avatar-camille.jpg",
     },
     {
-      name: "Atelier Bloom",
-      category: "Identité de marque · Design graphique",
-      summary:
-        "Une direction visuelle inspirée des boutiques lifestyle, avec une tonalité chaleureuse et sophistiquée.",
+      quote:
+        "Professionnels, créatifs et fiables. Ils ont transformé nos idées en une marque qui reflète vraiment qui nous sommes.",
+      name: "Alexandre T.",
+      role: "Co-fondateur, Nordik Studio",
+      avatar: "/images/avatar-alexandre.jpg",
     },
     {
-      name: "Harbor & Co.",
-      category: "Design de site · Refonte de marque",
-      summary:
-        "Une présence digitale plus haut de gamme pensée pour simplifier le parcours utilisateur et renforcer la cohérence visuelle.",
-    },
-    {
-      name: "Aster Clinic",
-      category: "Branding · Design de site",
-      summary:
-        "Une identité soignée et un concept de site conçus pour inspirer calme, crédibilité et qualité.",
+      quote:
+        "Le nouveau site est rapide, magnifique et si facile à gérer. Nos demandes ont nettement augmenté.",
+      name: "Sofia R.",
+      role: "Directrice marketing, Lunar Wellness",
+      avatar: "/images/avatar-sofia.jpg",
     },
   ],
   processSteps: [
     {
       number: "01",
-      title: "Découvrir",
-      text: "Nous apprenons à connaître votre entreprise, votre audience, vos objectifs et votre direction esthétique.",
+      title: "Découverte",
+      text: "Nous apprenons à connaître vos objectifs, votre audience et vos enjeux.",
     },
     {
       number: "02",
-      title: "Concevoir",
-      text: "Nous développons des concepts, systèmes visuels et mises en page alignés avec votre marque.",
+      title: "Stratégie",
+      text: "Nous définissons la bonne direction et construisons un plan clair.",
     },
     {
       number: "03",
-      title: "Affiner",
-      text: "Nous révisons, améliorons et peaufinons les détails jusqu’à ce que le résultat soit juste.",
+      title: "Design",
+      text: "Nous créons des visuels et expériences qui communiquent et convertissent.",
     },
     {
       number: "04",
-      title: "Lancer",
-      text: "Nous livrons les éléments finaux ou publions le site avec clarté et confiance.",
+      title: "Livraison",
+      text: "Nous développons, testons et lançons avec soin et précision.",
     },
   ],
 };
