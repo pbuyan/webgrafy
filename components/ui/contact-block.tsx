@@ -67,12 +67,16 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
               <form className="grid gap-4" onSubmit={handleSubmit}>
                 <div className="grid gap-4 md:grid-cols-2">
                   <input
+                    name="name"
+                    required
                     className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none placeholder:text-white/45"
                     placeholder={dict.contactBlock.form.name}
                     value={form.name}
                     onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
                   />
                   <input
+                    name="email"
+                    required
                     className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none placeholder:text-white/45"
                     placeholder={dict.contactBlock.form.email}
                     type="email"
@@ -82,12 +86,15 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
                 </div>
                 <div className="grid gap-4 md:grid-cols-2">
                   <input
+                    name="businessName"
                     className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none placeholder:text-white/45"
                     placeholder={dict.contactBlock.form.businessName}
                     value={form.businessName}
                     onChange={(e) => setForm((prev) => ({ ...prev, businessName: e.target.value }))}
                   />
                   <select
+                    name="service"
+                    required
                     className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none"
                     value={form.service}
                     onChange={(e) => setForm((prev) => ({ ...prev, service: e.target.value }))}
@@ -101,6 +108,8 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
                   </select>
                 </div>
                 <textarea
+                  name="message"
+                  required
                   className="min-h-[120px] rounded-none border border-white/20 bg-transparent px-4 py-3 text-white outline-none placeholder:text-white/45"
                   placeholder={dict.contactBlock.form.message}
                   value={form.message}
