@@ -34,7 +34,7 @@ export default async function HomePage({
             sizes="100vw"
           />
           <div
-            className="absolute inset-0 bg-linear-to-r from-[#0a0a0a] via-[#0a0a0a]/85 to-transparent sm:via-[#0a0a0a]/65"
+            className="absolute inset-0 bg-linear-to-r from-pitch via-pitch/85 to-transparent sm:via-pitch/65"
             aria-hidden
           />
         </div>
@@ -44,8 +44,8 @@ export default async function HomePage({
             <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/70">
               {dict.home.badge}
             </div>
-            <p className="mt-7 text-xs uppercase tracking-[0.22em] text-[#BBA388]">{dict.home.eyebrow}</p>
-            <h1 className="mt-5 max-w-xl text-6xl font-semibold leading-[0.9] tracking-[-0.05em] text-[#f3eee7] [font-family:var(--font-display)] sm:text-7xl">
+            <p className="mt-7 text-xs uppercase tracking-[0.22em] text-brand">{dict.home.eyebrow}</p>
+            <h1 className="mt-5 max-w-xl text-6xl font-semibold leading-[0.9] tracking-[-0.05em] text-surface [font-family:var(--font-display)] sm:text-7xl">
               {dict.home.title}
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-white/78">{dict.home.intro}</p>
@@ -67,10 +67,10 @@ export default async function HomePage({
 
       <LogoStrip title={dict.home.trustedBy} logos={dict.home.logoStrip} />
 
-      <section className="border-b border-[#d9d0c5] bg-[#fbf8f3] py-20">
+      <section className="border-b border-stroke bg-surface-pale py-20">
         <Container>
           <SectionLabel>{dict.home.servicesEyebrow}</SectionLabel>
-          <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-[#1f1b18] [font-family:var(--font-display)] sm:text-6xl">
+          <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
             {dict.home.servicesTitle}
           </h2>
           <div className="mt-10 grid gap-6 lg:grid-cols-4">
@@ -87,16 +87,16 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <section className="border-b border-[#d9d0c5] bg-white py-20">
+      <section className="border-b border-stroke bg-white py-20">
         <Container>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <SectionLabel>{dict.home.workEyebrow}</SectionLabel>
-              <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-[#1f1b18] [font-family:var(--font-display)] sm:text-6xl">
+              <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
                 {dict.home.workTitle}
               </h2>
             </div>
-            <Link href={`/${locale}/work`} className="inline-flex items-center gap-2 text-sm font-medium text-[#2d2925]">
+            <Link href={`/${locale}/work`} className="inline-flex items-center gap-2 text-sm font-medium text-ink-rich">
               {dict.common.viewAllProjects}
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -109,10 +109,10 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <section className="border-b border-[#d9d0c5] bg-[#f7f2ec] py-20">
+      <section className="border-b border-stroke bg-surface-warm py-20">
         <Container>
           <SectionLabel>{dict.home.testimonialsEyebrow}</SectionLabel>
-          <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-[#1f1b18] [font-family:var(--font-display)] sm:text-6xl">
+          <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
             {dict.home.testimonialsTitle}
           </h2>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">

@@ -30,7 +30,7 @@ export function LanguageSwitcher({
     <div
       className={cn(
         "flex items-center gap-1 text-xs uppercase tracking-[0.16em]",
-        isLight ? "text-[#544c43]/90" : "text-white/75",
+        isLight ? "text-ink-base/90" : "text-white/75",
       )}
     >
       {locales.map((item, index) => {
@@ -45,10 +45,10 @@ export function LanguageSwitcher({
               className={cn(
                 active
                   ? isLight
-                    ? "text-[#1f1b18]"
+                    ? "text-ink-strong"
                     : "text-white"
                   : isLight
-                    ? "hover:text-[#1f1b18]"
+                    ? "hover:text-ink-strong"
                     : "hover:text-white",
               )}
             >

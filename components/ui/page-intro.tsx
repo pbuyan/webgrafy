@@ -11,7 +11,7 @@ export function PageIntro({
   text: string;
 }) {
   return (
-    <section className="border-b border-[#d9d0c5]">
+    <section className="border-b border-stroke">
       <Container className="py-20 lg:py-24">
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
           <div>
@@ -20,7 +20,7 @@ export function PageIntro({
               {title}
             </h1>
           </div>
-          <p className="max-w-2xl text-lg leading-8 text-[#544c43]">{text}</p>
+          <p className="max-w-2xl text-lg leading-8 text-ink-base">{text}</p>
         </div>
       </Container>
     </section>
