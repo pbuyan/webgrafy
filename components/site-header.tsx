@@ -15,11 +15,12 @@ type SiteHeaderBarProps = { locale: Locale; dict: SiteDictionary; pathname: stri
 
 function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
-  const langTone = isHome ? ("onDark" as const) : ("onLight" as const);
   /** Hidden while scrolling down the document; shown near top or when scrolling up. */
   const [concealed, setConcealed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
+  const isDarkHeader = isHome || menuOpen;
+  const langTone = isDarkHeader ? ("onDark" as const) : ("onLight" as const);
 
   useLayoutEffect(() => {
     document.documentElement.style.setProperty("--header-offset", concealed ? "0px" : "var(--site-header-height)");
@@ -89,14 +90,17 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
         className={cn(
           "fixed inset-x-0 top-0 z-30 border-b bg-transparent transition-transform duration-300 ease-out will-change-transform",
           concealed ? "pointer-events-none -translate-y-full" : "translate-y-0",
-          isHome ? "border-white/10 text-white" : "border-[#d9d0c5]/80 text-[#1f1b18]",
+          isDarkHeader ? "border-white/10 text-white" : "border-[#d9d0c5]/80 text-[#1f1b18]",
         )}
       >
         <Container className="flex items-center justify-between gap-4 py-5">
           <Link
             href={`/${locale}`}
             onClick={() => setMenuOpen(false)}
-            className={cn("text-3xl font-semibold tracking-[-0.04em]", isHome ? "text-[#f3eee7]" : "text-[#1f1b18]")}
+            className={cn(
+              "text-3xl font-semibold tracking-[-0.04em]",
+              isDarkHeader ? "text-[#f3eee7]" : "text-[#1f1b18]",
+            )}
           >
             {dict.meta.siteName}
           </Link>
@@ -104,7 +108,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           <nav
             className={cn(
               "hidden items-center gap-8 text-sm md:flex",
-              isHome ? "text-white/80" : "text-[#544c43]",
+              isDarkHeader ? "text-white/80" : "text-[#544c43]",
             )}
           >
             {navItems.map((item) => {
@@ -115,8 +119,11 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
                   href={item.href}
                   className={cn(
                     active
-                      ? cn("border-b pb-1", isHome ? "border-white text-white" : "border-[#1f1b18] text-[#1f1b18]")
-                      : isHome
+                      ? cn(
+                          "border-b pb-1",
+                          isDarkHeader ? "border-white text-white" : "border-[#1f1b18] text-[#1f1b18]",
+                        )
+                      : isDarkHeader
                         ? "hover:text-white"
                         : "hover:text-[#1f1b18]",
                   )}
@@ -140,7 +147,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
               aria-expanded={menuOpen}
               className={cn(
                 "flex h-9 w-9 items-center justify-center md:hidden",
-                isHome ? "text-white" : "text-[#1f1b18]",
+                isDarkHeader ? "text-white" : "text-[#1f1b18]",
               )}
             >
               {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
