@@ -4,6 +4,23 @@ import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/i18n/config";
 import type { SiteDictionary } from "@/lib/i18n/types";
 
+type FooterItem = {
+  label: string;
+  href?: string;
+};
+
+function FooterListItem({ item, className }: { item: FooterItem; className?: string }) {
+  if (!item.href) {
+    return <p>{item.label}</p>;
+  }
+
+  return (
+    <Link href={item.href} className={className}>
+      {item.label}
+    </Link>
+  );
+}
+
 export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDictionary }) {
   const navItems = [
     { label: dict.nav.home, href: `/${locale}` },
@@ -14,6 +31,16 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
   ];
 
   const serviceItems = dict.services.map((service) => service.title);
+  const resourceItems: FooterItem[] = [
+    { label: dict.footer.resourcesList[0], href: `/${locale}/work` },
+    { label: dict.footer.resourcesList[1], href: `/${locale}/about` },
+    { label: dict.footer.resourcesList[2] },
+    { label: dict.footer.resourcesList[3] },
+  ];
+  const legalItems: FooterItem[] = [
+    { label: dict.footer.legal.privacy },
+    { label: dict.footer.legal.terms },
+  ];
 
   return (
     <footer className="bg-pitch text-white">
@@ -56,8 +83,8 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
           <div>
             <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.resources}</div>
             <div className="mt-4 grid gap-2 text-sm text-white/78">
-              {dict.footer.resourcesList.map((item) => (
-                <Link key={item} href={`/${locale}`} className="hover:text-white transition-colors">{item}</Link>
+              {resourceItems.map((item) => (
+                <FooterListItem key={item.label} item={item} className="hover:text-white transition-colors" />
               ))}
             </div>
           </div>
@@ -75,8 +102,9 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
         <div className="mt-10 flex flex-col gap-3 border-t border-white/10 pt-5 text-sm text-white/55 md:flex-row md:items-center md:justify-between">
           <p>{dict.footer.legal.copyright}</p>
           <div className="flex items-center gap-6">
-            <Link href={`/${locale}`} className="hover:text-white/80 transition-colors">{dict.footer.legal.privacy}</Link>
-            <Link href={`/${locale}`} className="hover:text-white/80 transition-colors">{dict.footer.legal.terms}</Link>
+            {legalItems.map((item) => (
+              <FooterListItem key={item.label} item={item} className="hover:text-white/80 transition-colors" />
+            ))}
           </div>
         </div>
       </Container>

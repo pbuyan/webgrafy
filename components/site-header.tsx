@@ -15,11 +15,12 @@ type SiteHeaderBarProps = { locale: Locale; dict: SiteDictionary; pathname: stri
 
 function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
-  const langTone = isHome ? ("onDark" as const) : ("onLight" as const);
   /** Hidden while scrolling down the document; shown near top or when scrolling up. */
   const [concealed, setConcealed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const lastScrollY = useRef(0);
+  const isDarkHeader = isHome || menuOpen;
+  const langTone = isDarkHeader ? ("onDark" as const) : ("onLight" as const);
 
   useLayoutEffect(() => {
     document.documentElement.style.setProperty("--header-offset", concealed ? "0px" : "var(--site-header-height)");
