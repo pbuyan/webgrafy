@@ -44,13 +44,13 @@ export default async function HomePage({
             <div className="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.22em] text-white/70">
               {dict.home.badge}
             </div>
-            <p className="mt-7 text-xs uppercase tracking-[0.22em] text-white/60">{dict.home.eyebrow}</p>
+            <p className="mt-7 text-xs uppercase tracking-[0.22em] text-[#BBA388]">{dict.home.eyebrow}</p>
             <h1 className="mt-5 max-w-xl text-6xl font-semibold leading-[0.9] tracking-[-0.05em] text-[#f3eee7] [font-family:var(--font-display)] sm:text-7xl">
               {dict.home.title}
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-white/78">{dict.home.intro}</p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link href={`/${locale}/contact`} className={buttonVariants({ variant: "primary", className: "rounded-none" })}>
+              <Link href={`/${locale}/contact`} className={buttonVariants({ variant: "primary" })}>
                 {dict.home.ctaPrimary}
               </Link>
               <Link href={`/${locale}/work`} className={buttonVariants({ variant: "secondary", className: "gap-2 rounded-none" })}>

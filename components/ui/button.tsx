@@ -7,7 +7,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-[#f3eee7] text-[#111111] hover:bg-[#e7ddd2]",
+        primary: "bg-[#BBA388] text-[#111111] hover:bg-[#C6B19B]",
         secondary: "bg-transparent text-[#f3eee7] hover:text-white",
         dark: "bg-[#111111] text-white hover:opacity-90",
         outline: "border border-[#111111]/15 bg-white/50 text-[#111111] hover:bg-white/70",
@@ -26,7 +26,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {}
+  VariantProps<typeof buttonVariants> { }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
