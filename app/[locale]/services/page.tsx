@@ -31,7 +31,6 @@ export default async function ServicesPage({
                 service={service}
                 index={index}
                 label={dict.common.serviceLabel}
-                exploreLabel={dict.common.exploreService}
               />
             ))}
           </div>

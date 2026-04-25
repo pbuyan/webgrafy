@@ -80,7 +80,7 @@ export default async function HomePage({
                 service={service}
                 index={index}
                 label={dict.common.serviceLabel}
-                exploreLabel={dict.common.exploreService}
+                href={`/${locale}/services`}
               />
             ))}
           </div>

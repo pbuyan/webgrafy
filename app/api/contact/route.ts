@@ -1,10 +1,23 @@
 import { NextResponse } from "next/server";
+import { rateLimit } from "@/lib/rate-limit";
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
 export async function POST(request: Request) {
+  const ip =
+    request.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
+    request.headers.get("x-real-ip") ??
+    "unknown";
+
+  if (rateLimit(ip)) {
+    return NextResponse.json(
+      { error: "Too many requests. Please try again later." },
+      { status: 429 }
+    );
+  }
+
   try {
     const body = await request.json();
 
@@ -33,12 +46,12 @@ export async function POST(request: Request) {
       );
     }
 
+    // TODO: integrate email service (e.g. Resend, SendGrid) to deliver submissions
+    // Example with Resend:
+    //   await resend.emails.send({ from: "...", to: "hello@webgrafy.co", subject: "...", ... })
+
     return NextResponse.json(
-      {
-        success: true,
-        message: "Your inquiry has been received.",
-        data: { name, businessName, email, service, message },
-      },
+      { success: true, message: "Your inquiry has been received." },
       { status: 200 }
     );
   } catch {
