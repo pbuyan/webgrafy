@@ -90,17 +90,14 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
         className={cn(
           "fixed inset-x-0 top-0 z-30 border-b bg-transparent transition-transform duration-300 ease-out will-change-transform",
           concealed ? "pointer-events-none -translate-y-full" : "translate-y-0",
-          isDarkHeader ? "border-white/10 text-white" : "border-[#d9d0c5]/80 text-[#1f1b18]",
+          isHome ? "border-white/10 text-white" : "border-stroke/80 text-ink-strong",
         )}
       >
         <Container className="flex items-center justify-between gap-4 py-5">
           <Link
             href={`/${locale}`}
             onClick={() => setMenuOpen(false)}
-            className={cn(
-              "text-3xl font-semibold tracking-[-0.04em]",
-              isDarkHeader ? "text-[#f3eee7]" : "text-[#1f1b18]",
-            )}
+            className={cn("text-3xl font-semibold tracking-[-0.04em]", isHome ? "text-surface" : "text-ink-strong")}
           >
             {dict.meta.siteName}
           </Link>
@@ -108,7 +105,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           <nav
             className={cn(
               "hidden items-center gap-8 text-sm md:flex",
-              isDarkHeader ? "text-white/80" : "text-[#544c43]",
+              isHome ? "text-white/80" : "text-ink-base",
             )}
           >
             {navItems.map((item) => {
@@ -119,13 +116,10 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
                   href={item.href}
                   className={cn(
                     active
-                      ? cn(
-                          "border-b pb-1",
-                          isDarkHeader ? "border-white text-white" : "border-[#1f1b18] text-[#1f1b18]",
-                        )
-                      : isDarkHeader
+                      ? cn("border-b pb-1", isHome ? "border-white text-white" : "border-ink-strong text-ink-strong")
+                      : isHome
                         ? "hover:text-white"
-                        : "hover:text-[#1f1b18]",
+                        : "hover:text-ink-strong",
                   )}
                 >
                   {item.label}
@@ -147,7 +141,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
               aria-expanded={menuOpen}
               className={cn(
                 "flex h-9 w-9 items-center justify-center md:hidden",
-                isDarkHeader ? "text-white" : "text-[#1f1b18]",
+                isHome ? "text-white" : "text-ink-strong",
               )}
             >
               {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -157,7 +151,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
       </header>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-20 flex flex-col bg-[#0c0c0c] pt-[var(--site-header-height)] md:hidden">
+        <div className="fixed inset-0 z-20 flex flex-col bg-pitch pt-[var(--site-header-height)] md:hidden">
           <nav className="flex flex-col gap-1 px-6 py-8">
             {navItems.map((item) => {
               const active = pathname === item.href;

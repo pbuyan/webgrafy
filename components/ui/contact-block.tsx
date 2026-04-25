@@ -51,7 +51,7 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
   }
 
   return (
-    <section className="bg-[#0c0c0c] py-20 text-white">
+    <section className="bg-pitch py-20 text-white">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>

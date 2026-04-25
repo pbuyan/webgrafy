@@ -43,11 +43,11 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
   ];
 
   return (
-    <footer className="bg-[#0c0c0c] text-white">
+    <footer className="bg-pitch text-white">
       <Container className="border-t border-white/10 py-10">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.7fr_0.7fr_0.7fr_0.9fr]">
           <div>
-            <div className="text-3xl font-semibold tracking-[-0.04em] text-[#f3eee7]">{dict.meta.siteName}</div>
+            <div className="text-3xl font-semibold tracking-[-0.04em] text-surface">{dict.meta.siteName}</div>
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/70">{dict.footer.blurb}</p>
             <div className="mt-5 flex items-center gap-4 text-white/80">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label={dict.common.instagram} className="hover:text-white transition-colors">
