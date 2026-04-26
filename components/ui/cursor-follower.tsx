@@ -47,10 +47,7 @@ export function CursorFollower() {
       }
 
       if (flyRef.current) {
-        const tick = performance.now() * 0.009;
-        const wobbleX = Math.cos(tick) * 9;
-        const wobbleY = Math.sin(tick) * 7;
-        flyRef.current.style.transform = `translate3d(${flyRefPos.current.x + wobbleX}px, ${flyRefPos.current.y + wobbleY}px, 0)`;
+        flyRef.current.style.transform = `translate3d(${flyRefPos.current.x}px, ${flyRefPos.current.y}px, 0)`;
       }
 
       rafRef.current = window.requestAnimationFrame(animate);
