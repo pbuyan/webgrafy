@@ -15,11 +15,13 @@ type SiteHeaderBarProps = { locale: Locale; dict: SiteDictionary; pathname: stri
 
 function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
   const isHome = pathname === `/${locale}` || pathname === `/${locale}/`;
+  const [homeHeaderTheme, setHomeHeaderTheme] = useState<"dark" | "light">("dark");
   /** Hidden while scrolling down the document; shown near top or when scrolling up. */
   const [concealed, setConcealed] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
   const lastScrollY = useRef(0);
-  const isDarkHeader = isHome || menuOpen;
+  const isDarkHeader = menuOpen || (isHome && homeHeaderTheme === "dark");
   const langTone = isDarkHeader ? ("onDark" as const) : ("onLight" as const);
 
   useLayoutEffect(() => {
@@ -75,6 +77,32 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    if (!isHome) return;
+
+    let frame = 0;
+    const syncHeaderTheme = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(() => {
+        const headerHeight = headerRef.current?.getBoundingClientRect().height ?? 0;
+        const probeY = Math.max(0, Math.round(headerHeight + 1));
+        const elements = document.elementsFromPoint(window.innerWidth / 2, probeY);
+        const probe = elements.find((el) => !headerRef.current?.contains(el)) ?? null;
+        const sectionTheme = probe?.closest("[data-header-theme]")?.getAttribute("data-header-theme");
+        setHomeHeaderTheme(sectionTheme === "light" ? "light" : "dark");
+      });
+    };
+
+    syncHeaderTheme();
+    window.addEventListener("scroll", syncHeaderTheme, { passive: true });
+    window.addEventListener("resize", syncHeaderTheme);
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", syncHeaderTheme);
+      window.removeEventListener("resize", syncHeaderTheme);
+    };
+  }, [isHome]);
+
   const navItems = [
     { label: dict.nav.home, href: `/${locale}` },
     { label: dict.nav.services, href: `/${locale}/services` },
@@ -86,6 +114,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
   return (
     <>
       <header
+        ref={headerRef}
         {...(concealed ? { inert: true } : {})}
         className={cn(
           "fixed inset-x-0 top-0 z-30 border-b bg-transparent transition-transform duration-300 ease-out will-change-transform",
@@ -93,7 +122,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           isHome ? "border-white/10 text-white" : "border-stroke/80 text-ink-strong",
         )}
       >
-        <Container className="flex items-center justify-between gap-4 py-5">
+        <Container className="flex items-center justify-between gap-4 py-4">
           <Link
             href={`/${locale}`}
             onClick={() => setMenuOpen(false)}
@@ -105,7 +134,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           <nav
             className={cn(
               "hidden items-center gap-8 text-sm md:flex",
-              isHome ? "text-white/80" : "text-ink-base",
+              isDarkHeader ? "text-white/80" : "text-ink-base",
             )}
           >
             {navItems.map((item) => {
@@ -116,10 +145,10 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
                   href={item.href}
                   className={cn(
                     active
-                      ? cn("border-b pb-1", isHome ? "border-white text-white" : "border-ink-strong text-ink-strong")
-                      : isHome
+                      ? cn("border-b pb-1", isDarkHeader ? "border-white text-white" : "border-ink-strong text-ink-strong")
+                      : isDarkHeader
                         ? "hover:text-white"
-                        : "hover:text-ink-strong",
+                        : "hover:text-ink-strong", 'uppercase',
                   )}
                 >
                   {item.label}
@@ -131,7 +160,10 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           <div className="flex items-center gap-4">
             <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone={langTone} />
             <Link href={`/${locale}/contact`} className="hidden md:block">
-              <Button variant="primary" size="sm" className="rounded-none">
+              <Button
+                variant="outline"
+                size="sm"
+              >
                 {dict.nav.bookCall}
               </Button>
             </Link>
@@ -151,7 +183,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
       </header>
 
       {menuOpen && (
-        <div className="fixed inset-0 z-20 flex flex-col bg-pitch pt-[var(--site-header-height)] md:hidden">
+        <div className="fixed inset-0 z-20 flex flex-col bg-pitch pt-(--site-header-height) md:hidden">
           <nav className="flex flex-col gap-1 px-6 py-8">
             {navItems.map((item) => {
               const active = pathname === item.href;
@@ -172,7 +204,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           </nav>
           <div className="px-6">
             <Link href={`/${locale}/contact`} onClick={() => setMenuOpen(false)}>
-              <Button variant="primary" className="w-full rounded-none">
+              <Button variant="outline" className="w-full rounded-none">
                 {dict.nav.bookCall}
               </Button>
             </Link>
