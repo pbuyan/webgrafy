@@ -79,7 +79,7 @@ const en: SiteDictionary = {
       eyebrow: "About",
       title: "A creative studio focused on refined branding and modern digital presence",
       text:
-        "We help businesses express their value through thoughtful visuals, cohesive brand systems, and websites designed to feel polished, clear, and elevated.",
+        "Webgrafy is a Montréal-based design practice working at the intersection of identity, print and the web. We were founded in 2018 to do one thing well — help small and mid-sized businesses look like the companies they intend to become — and we've kept the team small so we can keep doing it.",
     },
     contact: {
       eyebrow: "Contact",
@@ -304,7 +304,7 @@ const fr: SiteDictionary = {
       eyebrow: "À propos",
       title: "Un studio créatif axé sur le branding raffiné et la présence digitale moderne",
       text:
-        "Nous aidons les entreprises à exprimer leur valeur grâce à des visuels réfléchis, des systèmes de marque cohérents et des sites web conçus pour être soignés, clairs et haut de gamme.",
+        "Webgrafy est un studio de design basé à Montréal travaillant à l'intersection de l'identité, du print et du web. Nous avons été fondés en 2018 pour faire une chose bien — aider les petites et moyennes entreprises à paraître comme les entreprises qu'elles souhaitent devenir — et nous avons gardé l'équipe petite pour pouvoir continuer à le faire.",
     },
     contact: {
       eyebrow: "Contact",

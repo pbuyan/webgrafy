@@ -1,9 +1,8 @@
-import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { ProcessTimeline } from "@/components/ui/process-timeline";
 import { SectionLabel } from "@/components/ui/section-label";
-import { Button } from "@/components/ui/button";
+import { ContactBlock } from "@/components/ui/contact-block";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
 
@@ -52,13 +51,7 @@ export default async function AboutPage({
         steps={dict.processSteps}
       />
 
-      <section className="py-16">
-        <Container className="flex justify-center">
-          <Link href={`/${locale}/contact`}>
-            <Button variant="dark">{dict.about.cta}</Button>
-          </Link>
-        </Container>
-      </section>
+      <ContactBlock locale={locale} dict={dict} />
     </>
   );
 }

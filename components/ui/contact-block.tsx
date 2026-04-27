@@ -60,9 +60,24 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
               {dict.contactBlock.title}
             </h2>
             <p className="mt-6 max-w-lg text-lg leading-8 text-white/70">{dict.contactBlock.text}</p>
+            <div className="space-y-5 text-sm text-white/72">
+              <p>{dict.common.replyWindow}</p>
+              <div className="flex items-start gap-3">
+                <Mail className="mt-0.5 h-4 w-4" />
+                <span>{dict.contactBlock.email}</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <Phone className="mt-0.5 h-4 w-4" />
+                <span>{dict.contactBlock.phone}</span>
+              </div>
+              <div className="flex items-start gap-3">
+                <MapPin className="mt-0.5 h-4 w-4" />
+                <span>{dict.contactBlock.location}</span>
+              </div>
+            </div>
           </div>
 
-          <div className="grid gap-8 lg:grid-cols-[1fr_260px]">
+          <div className="grid gap-8">
             <div className="rounded-[1.6rem] border border-white/10 bg-black/30 p-6">
               <form className="grid gap-4" onSubmit={handleSubmit}>
                 <div className="grid gap-4 md:grid-cols-2">
@@ -117,27 +132,12 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
                 />
                 {error ? <p className="text-sm text-red-400">{error}</p> : null}
                 {success ? <p className="text-sm text-green-400">{success}</p> : null}
-                <Button variant="primary" className="w-fit rounded-none" disabled={loading}>
+                <Button variant="primary" className="w-fit" disabled={loading}>
                   {loading ? dict.contactBlock.form.sending : dict.common.sendInquiry}
                 </Button>
               </form>
             </div>
 
-            <div className="space-y-5 text-sm text-white/72">
-              <p>{dict.common.replyWindow}</p>
-              <div className="flex items-start gap-3">
-                <Mail className="mt-0.5 h-4 w-4" />
-                <span>{dict.contactBlock.email}</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-4 w-4" />
-                <span>{dict.contactBlock.phone}</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4" />
-                <span>{dict.contactBlock.location}</span>
-              </div>
-            </div>
           </div>
         </div>
       </Container>
