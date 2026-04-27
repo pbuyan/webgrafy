@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { useLayoutEffect, useEffect, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { cn } from "@/lib/utils";
 import type { Locale } from "@/lib/i18n/config";
@@ -158,13 +158,11 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone={langTone} />
-            <Link href={`/${locale}/about#contact`} className="hidden md:block">
-              <Button
-                variant="outline"
-                size="sm"
-              >
-                {dict.nav.contact}
-              </Button>
+            <Link
+              href={`/${locale}/about#contact`}
+              className={cn("hidden md:block", buttonVariants({ variant: "outline", size: "sm" }))}
+            >
+              {dict.nav.contact}
             </Link>
             <button
               onClick={() => setMenuOpen((prev) => !prev)}
@@ -202,10 +200,12 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
             })}
           </nav>
           <div className="px-6">
-            <Link href={`/${locale}/about#contact`} onClick={() => setMenuOpen(false)}>
-              <Button variant="outline" className="w-full rounded-none">
-                {dict.nav.contact}
-              </Button>
+            <Link
+              href={`/${locale}/about#contact`}
+              onClick={() => setMenuOpen(false)}
+              className={buttonVariants({ variant: "outline", className: "w-full rounded-none" })}
+            >
+              {dict.nav.contact}
             </Link>
           </div>
         </div>
