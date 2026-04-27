@@ -237,7 +237,7 @@ const fr: SiteDictionary = {
     services: "Services",
     work: "Projets",
     about: "À propos",
-    contact: "Contact",
+    contact: "Contactez-nous",
     bookCall: "Prendre rendez-vous",
     langShort: { en: "EN", fr: "FR" },
   },
