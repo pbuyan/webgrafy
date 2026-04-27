@@ -8,6 +8,7 @@ import { ProcessTimeline } from "@/components/ui/process-timeline";
 import { ProjectCard } from "@/components/ui/project-card";
 import { SectionLabel } from "@/components/ui/section-label";
 import { ServiceCard } from "@/components/ui/service-card";
+import { ServicesMarquee } from "@/components/ui/services-marquee";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
@@ -72,12 +73,13 @@ export default async function HomePage({
         {/* </Container> */}
       </section>
 
-      <div data-header-theme="light">
+      {/* <div data-header-theme="light">
         <LogoStrip title={dict.home.trustedBy} logos={dict.home.logoStrip} />
-      </div>
+      </div> */}
 
-      <section data-header-theme="light" className="border-b border-stroke bg-surface-pale py-20">
-        <Container>
+      <section data-header-theme="light" className="border-b border-stroke bg-surface-pale pt-16 pb-20">
+        <ServicesMarquee />
+        <Container className="pt-16">
           <SectionLabel>{dict.home.servicesEyebrow}</SectionLabel>
           <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
             {dict.home.servicesTitle}

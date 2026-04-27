@@ -82,3 +82,76 @@ textarea::placeholder {
   color: inherit;
   opacity: 0.55;
 }
+
+/* Infinite right-to-left marquee.
+   The track is rendered with the same items twice; translating by -50%
+   exactly aligns the second copy with the original start position,
+   producing a seamless loop. Each item carries its own padding-right
+   instead of using flex `gap` so spacing is identical across the seam. */
+.marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 8%,
+    black 92%,
+    transparent 100%
+  );
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: marquee-rtl 48s linear infinite;
+  will-change: transform;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+.marquee-item-wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.marquee-item {
+  flex: 0 0 auto;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.marquee-divider {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 2rem;
+}
+
+@keyframes marquee-rtl {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
