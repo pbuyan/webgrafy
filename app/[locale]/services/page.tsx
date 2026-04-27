@@ -36,7 +36,7 @@ export default async function ServicesPage({
           </div>
 
           <div className="mt-12 flex justify-center">
-            <Link href={`/${locale}/contact`}>
+            <Link href={`/${locale}/about#contact`}>
               <Button variant="dark">{dict.pages.services.cta}</Button>
             </Link>
           </div>

@@ -108,6 +108,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
     { label: dict.nav.services, href: `/${locale}/services` },
     { label: dict.nav.work, href: `/${locale}/work` },
     { label: dict.nav.about, href: `/${locale}/about` },
+    { label: dict.nav.contact, href: `/${locale}/about#contact` },
   ];
 
   return (
@@ -158,7 +159,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
 
           <div className="flex items-center gap-4">
             <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone={langTone} />
-            <Link href={`/${locale}/about#contact-block`} className="hidden md:block">
+            <Link href={`/${locale}/about#contact`} className="hidden md:block">
               <Button
                 variant="outline"
                 size="sm"
@@ -202,7 +203,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
             })}
           </nav>
           <div className="px-6">
-            <Link href={`/${locale}/about#contact-block`} onClick={() => setMenuOpen(false)}>
+            <Link href={`/${locale}/about#contact`} onClick={() => setMenuOpen(false)}>
               <Button variant="outline" className="w-full rounded-none">
                 {dict.nav.contact}
               </Button>

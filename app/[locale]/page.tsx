@@ -51,7 +51,7 @@ export default async function HomePage({
             </h1>
             <p className="mt-6 max-w-lg text-lg leading-8 text-white/78">{dict.home.intro}</p>
             <div className="mt-10 flex flex-wrap items-center gap-4">
-              <Link href={`/${locale}/contact`} className={buttonVariants({ variant: "primary" })}>
+              <Link href={`/${locale}/about#contact`} className={buttonVariants({ variant: "primary" })}>
                 {dict.home.ctaPrimary}
               </Link>
               <Link
