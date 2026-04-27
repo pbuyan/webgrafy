@@ -15,7 +15,7 @@ const initialState = {
   message: "",
 };
 
-export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDictionary }) {
+export function ContactBlock({ locale, dict, id }: { locale: Locale; dict: SiteDictionary; id?: string }) {
   const [form, setForm] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -51,7 +51,7 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
   }
 
   return (
-    <section className="bg-pitch py-20 text-white">
+    <section id={id} className="bg-pitch py-20 text-white">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
           <div>
