@@ -3,6 +3,7 @@ import { ContactBlock } from "@/components/ui/contact-block";
 import { PageIntro } from "@/components/ui/page-intro";
 import { ProcessTimeline } from "@/components/ui/process-timeline";
 import { SectionLabel } from "@/components/ui/section-label";
+import { ContactBlock } from "@/components/ui/contact-block";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
 
@@ -51,7 +52,7 @@ export default async function AboutPage({
         steps={dict.processSteps}
       />
 
-      <ContactBlock id="contact" locale={locale} dict={dict} />
+      <ContactBlock locale={locale} dict={dict} />
     </>
   );
 }

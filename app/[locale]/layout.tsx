@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { HtmlLang } from "@/components/html-lang";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { CursorFollower } from "@/components/ui/cursor-follower";
 import { defaultLocale, isValidLocale, locales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
@@ -57,6 +58,7 @@ export default async function LocaleLayout({
 
   return (
     <>
+      <CursorFollower />
       <HtmlLang locale={locale as Locale} />
       <SiteHeader locale={locale as Locale} dict={dict} />
       <main className="site-main">{children}</main>

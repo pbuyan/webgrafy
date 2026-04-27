@@ -8,6 +8,7 @@ import { ProcessTimeline } from "@/components/ui/process-timeline";
 import { ProjectCard } from "@/components/ui/project-card";
 import { SectionLabel } from "@/components/ui/section-label";
 import { ServiceCard } from "@/components/ui/service-card";
+import { ServicesMarquee } from "@/components/ui/services-marquee";
 import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
@@ -23,10 +24,10 @@ export default async function HomePage({
 
   return (
     <>
-      <section className="relative -mt-20 overflow-hidden pt-20 text-white">
+      <section data-header-theme="dark" className="relative -mt-20 overflow-hidden pt-20 text-white">
         <div className="pointer-events-none absolute inset-0">
           <Image
-            src="/images/hero-bg.png"
+            src="/images/hero-bg-bright.png"
             alt=""
             fill
             priority
@@ -53,9 +54,16 @@ export default async function HomePage({
               <Link href={`/${locale}/about#contact`} className={buttonVariants({ variant: "primary" })}>
                 {dict.home.ctaPrimary}
               </Link>
-              <Link href={`/${locale}/work`} className={buttonVariants({ variant: "secondary", className: "gap-2 rounded-none" })}>
+              <Link
+                href={`/${locale}/work`}
+                className={buttonVariants({
+                  variant: "secondary",
+                  className:
+                    "group gap-2",
+                })}
+              >
                 {dict.home.ctaSecondary}
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>
@@ -65,10 +73,13 @@ export default async function HomePage({
         {/* </Container> */}
       </section>
 
-      <LogoStrip title={dict.home.trustedBy} logos={dict.home.logoStrip} />
+      {/* <div data-header-theme="light">
+        <LogoStrip title={dict.home.trustedBy} logos={dict.home.logoStrip} />
+      </div> */}
 
-      <section className="border-b border-stroke bg-surface-pale py-20">
-        <Container>
+      <section data-header-theme="light" className="border-b border-stroke bg-surface-pale pt-16 pb-20">
+        <ServicesMarquee />
+        <Container className="pt-16">
           <SectionLabel>{dict.home.servicesEyebrow}</SectionLabel>
           <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
             {dict.home.servicesTitle}
@@ -87,7 +98,7 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <section className="border-b border-stroke bg-white py-20">
+      <section data-header-theme="light" className="border-b border-stroke bg-white py-20">
         <Container>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -96,9 +107,12 @@ export default async function HomePage({
                 {dict.home.workTitle}
               </h2>
             </div>
-            <Link href={`/${locale}/work`} className="inline-flex items-center gap-2 text-sm font-medium text-ink-rich">
+            <Link
+              href={`/${locale}/work`}
+              className="group inline-flex items-center gap-2 text-sm font-medium text-ink-rich transition-colors hover:text-ink-strong"
+            >
               {dict.common.viewAllProjects}
-              <ArrowRight className="h-4 w-4" />
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
@@ -109,7 +123,7 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <section className="border-b border-stroke bg-surface-warm py-20">
+      <section data-header-theme="light" className="border-b border-stroke bg-surface-warm py-20">
         <Container>
           <SectionLabel>{dict.home.testimonialsEyebrow}</SectionLabel>
           <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
@@ -123,13 +137,17 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <ProcessTimeline
-        eyebrow={dict.home.processEyebrow}
-        title={dict.home.processTitle}
-        steps={dict.processSteps}
-      />
+      <div data-header-theme="light">
+        <ProcessTimeline
+          eyebrow={dict.home.processEyebrow}
+          title={dict.home.processTitle}
+          steps={dict.processSteps}
+        />
+      </div>
 
-      <ContactBlock locale={locale} dict={dict} />
+      <div data-header-theme="dark">
+        <ContactBlock locale={locale} dict={dict} />
+      </div>
     </>
   );
 }
