@@ -110,13 +110,15 @@ export function ContactBlock({ locale, dict }: { locale: Locale; dict: SiteDicti
                   <select
                     name="service"
                     required
-                    className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none"
+                    className={`rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 outline-none ${form.service ? "text-white" : "text-white/45"}`}
                     value={form.service}
                     onChange={(e) => setForm((prev) => ({ ...prev, service: e.target.value }))}
                   >
-                    <option value="" className="text-black">{dict.contactBlock.form.service}</option>
+                    <option value="" className="bg-black text-white">
+                      {dict.contactBlock.form.service}
+                    </option>
                     {dict.services.map((service) => (
-                      <option key={service.title} value={service.title} className="text-black">
+                      <option key={service.title} value={service.title} className="bg-black text-white">
                         {service.title}
                       </option>
                     ))}
