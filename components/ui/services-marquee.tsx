@@ -72,11 +72,9 @@ export function ServicesMarquee() {
         {sequence.map((entry, index) => (
           <span key={`${entry.copy}-${entry.id}-${index}`} className="marquee-item-wrap">
             <span className="marquee-item">{entry.node}</span>
-            {index < sequence.length - 1 ? (
-              <span className="marquee-divider">
-                <Dot />
-              </span>
-            ) : null}
+            <span className="marquee-divider">
+              <Dot />
+            </span>
           </span>
         ))}
       </div>
