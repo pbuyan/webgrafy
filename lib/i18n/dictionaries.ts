@@ -123,6 +123,15 @@ const en: SiteDictionary = {
       sending: "Sending...",
     },
   },
+  marqueeItems: [
+    { id: "logos", before: "Logos ", em: "& marks" },
+    { id: "brand-systems", before: "Brand systems" },
+    { id: "packaging", em: "Packaging" },
+    { id: "websites", before: "Websites" },
+    { id: "editorial", em: "Editorial", after: " print" },
+    { id: "signage", before: "Signage" },
+    { id: "book-covers", before: "Book covers" },
+  ],
   services: [
     {
       title: "Brand Identity",
@@ -348,6 +357,15 @@ const fr: SiteDictionary = {
       sending: "Envoi...",
     },
   },
+  marqueeItems: [
+    { id: "logos", before: "Logos ", em: "& marques" },
+    { id: "brand-systems", before: "Systèmes de marque" },
+    { id: "packaging", em: "Emballage" },
+    { id: "websites", before: "Sites web" },
+    { id: "editorial", em: "Éditorial", after: " print" },
+    { id: "signage", before: "Signalétique" },
+    { id: "book-covers", before: "Couvertures de livres" },
+  ],
   services: [
     {
       title: "Identité de marque",

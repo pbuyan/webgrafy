@@ -1,3 +1,10 @@
+export type MarqueeLabel = {
+  id: string;
+  before?: string;
+  em?: string;
+  after?: string;
+};
+
 export type ServiceItem = {
   title: string;
   description: string;
@@ -119,6 +126,7 @@ export type SiteDictionary = {
       sending: string;
     };
   };
+  marqueeItems: MarqueeLabel[];
   services: ServiceItem[];
   projects: ProjectItem[];
   testimonials: TestimonialItem[];

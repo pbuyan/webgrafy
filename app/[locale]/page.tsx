@@ -78,7 +78,7 @@ export default async function HomePage({
       </div> */}
 
       <section data-header-theme="light" className="border-b border-stroke bg-surface-pale pt-16 pb-20">
-        <ServicesMarquee />
+        <ServicesMarquee items={dict.marqueeItems} />
         <Container className="pt-16">
           <SectionLabel>{dict.home.servicesEyebrow}</SectionLabel>
           <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
