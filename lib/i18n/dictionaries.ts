@@ -77,10 +77,12 @@ const en: SiteDictionary = {
         "Choose a clear starting point for your business identity. Each package is structured to deliver professional files and revisions so you know exactly what you're getting.",
       tiersHeading: "Create your business startup packages",
       getStarted: "Get started",
+      popularLabel: "Most popular",
       tiers: [
         {
           name: "Logo",
           price: "$200",
+          description: "A polished mark to launch your brand with confidence.",
           includes: [
             "4 logo concepts",
             "3 revisions",
@@ -91,6 +93,8 @@ const en: SiteDictionary = {
         {
           name: "Branding",
           price: "$500",
+          description: "A cohesive identity system across logo, print and stationery.",
+          popular: true,
           includes: [
             "Logo",
             "Business card, letterhead, and envelope",
@@ -102,9 +106,92 @@ const en: SiteDictionary = {
         {
           name: "Corporate identity",
           price: "From $1500",
+          description: "A complete identity, social presence and website — start to finish.",
           includes: ["Logo", "Branding", "Social media design", "Website design"],
         },
       ],
+      includedHeading: "Every package",
+      includedTitle: "What's always included",
+      includedText:
+        "Every Webgrafy package is delivered with the same standard of care, the same hands-on direction, and the same commitment to a final result you'll be proud to share.",
+      guarantees: [
+        {
+          title: "Hands-on creative direction",
+          text: "You work directly with the designers leading your project — no account managers, no hand-offs.",
+        },
+        {
+          title: "Print and digital-ready files",
+          text: "All deliverables are exported in the formats you need for web, print and partners.",
+        },
+        {
+          title: "Full ownership of the work",
+          text: "Once delivered, every asset is yours to use, evolve and license without restriction.",
+        },
+        {
+          title: "A clear, structured timeline",
+          text: "Each project follows a defined schedule with checkpoints so you always know what's next.",
+        },
+      ],
+      addOnsHeading: "Add-ons",
+      addOnsTitle: "Tailor your package to your needs",
+      addOnsText:
+        "Need something more specific? Layer in extra deliverables to extend any package and shape it around your business.",
+      addOns: [
+        {
+          title: "Extra revision round",
+          price: "+$120",
+          description: "An additional cycle of refinements on logo or stationery deliverables.",
+        },
+        {
+          title: "Social media templates",
+          price: "+$280",
+          description: "A set of editable templates for posts, stories and reels in your brand system.",
+        },
+        {
+          title: "Brand guidelines document",
+          price: "+$450",
+          description: "A polished PDF guide covering logo usage, typography, colour and tone.",
+        },
+        {
+          title: "Additional website page",
+          price: "+$300",
+          description: "A custom-designed page added to your website scope, on-brand and responsive.",
+        },
+      ],
+      faqHeading: "FAQ",
+      faqTitle: "Common questions about our packages",
+      faqs: [
+        {
+          question: "How long does each package take?",
+          answer:
+            "Logo packages are delivered in around 2 weeks, Branding in 3 to 4 weeks, and Corporate identity in 6 to 8 weeks depending on scope.",
+        },
+        {
+          question: "What happens after I choose a package?",
+          answer:
+            "We start with a short discovery call to align on goals, then send a written proposal, a project schedule and an initial invoice (50%) before kickoff.",
+        },
+        {
+          question: "Can I customise a package?",
+          answer:
+            "Yes — packages are a starting point. We regularly tailor scope and deliverables to fit your business, and add-ons can be combined with any tier.",
+        },
+        {
+          question: "Do I own the final files?",
+          answer:
+            "Absolutely. Once the project is paid in full, you own every final asset and source file we deliver.",
+        },
+        {
+          question: "How do payments work?",
+          answer:
+            "We invoice 50% to begin and 50% at delivery. For larger scopes we can break payments into project milestones.",
+        },
+      ],
+      customHeading: "Custom scope",
+      customTitle: "Need something larger or more bespoke?",
+      customText:
+        "If your project doesn't fit a standard package — multi-brand systems, ongoing design partnerships, complex websites — we'd love to design a custom proposal with you.",
+      customCta: "Request a custom quote",
     },
     work: {
       eyebrow: "Work",
@@ -348,10 +435,12 @@ const fr: SiteDictionary = {
         "Choisissez un point de départ clair pour l’identité de votre entreprise. Chaque forfait est structuré pour livrer des fichiers professionnels et des révisions, avec des livrables clairement définis.",
       tiersHeading: "Créez vos forfaits de démarrage pour entreprise",
       getStarted: "Commencer",
+      popularLabel: "Le plus populaire",
       tiers: [
         {
           name: "Logo",
           price: "200 $",
+          description: "Une marque soignée pour lancer votre entreprise avec confiance.",
           includes: [
             "4 concepts de logo",
             "3 révisions",
@@ -362,6 +451,8 @@ const fr: SiteDictionary = {
         {
           name: "Image de marque",
           price: "500 $",
+          description: "Un système d’identité cohérent — logo, papeterie et impression.",
+          popular: true,
           includes: [
             "Logo",
             "Carte d’affaires, en-tête de lettre et enveloppe",
@@ -373,9 +464,92 @@ const fr: SiteDictionary = {
         {
           name: "Identité corporative",
           price: "À partir de 1500 $",
+          description: "Une identité complète, présence sociale et site web — de A à Z.",
           includes: ["Logo", "Image de marque", "Design pour médias sociaux", "Design de site web"],
         },
       ],
+      includedHeading: "Tous les forfaits",
+      includedTitle: "Ce qui est toujours inclus",
+      includedText:
+        "Chaque forfait Webgrafy bénéficie du même soin, de la même direction créative impliquée et du même engagement envers un résultat dont vous serez fier.",
+      guarantees: [
+        {
+          title: "Direction créative impliquée",
+          text: "Vous échangez directement avec les designers qui pilotent votre projet — sans intermédiaire.",
+        },
+        {
+          title: "Fichiers prêts pour le print et le digital",
+          text: "Tous les livrables sont exportés dans les formats nécessaires pour le web, l’impression et vos partenaires.",
+        },
+        {
+          title: "Pleine propriété des livrables",
+          text: "Une fois livrés, tous les fichiers vous appartiennent et peuvent être utilisés sans restriction.",
+        },
+        {
+          title: "Un calendrier clair et structuré",
+          text: "Chaque projet suit un calendrier défini avec des points de validation à chaque étape.",
+        },
+      ],
+      addOnsHeading: "Options",
+      addOnsTitle: "Adaptez votre forfait à vos besoins",
+      addOnsText:
+        "Besoin de quelque chose de plus précis ? Ajoutez des livrables complémentaires pour étendre n’importe quel forfait selon votre activité.",
+      addOns: [
+        {
+          title: "Tour de révisions supplémentaire",
+          price: "+120 $",
+          description: "Un cycle additionnel d’ajustements sur les livrables logo ou papeterie.",
+        },
+        {
+          title: "Modèles pour réseaux sociaux",
+          price: "+280 $",
+          description: "Un ensemble de modèles éditables pour publications, stories et reels, dans votre identité.",
+        },
+        {
+          title: "Guide de marque",
+          price: "+450 $",
+          description: "Un PDF complet couvrant l’usage du logo, la typographie, les couleurs et le ton.",
+        },
+        {
+          title: "Page de site additionnelle",
+          price: "+300 $",
+          description: "Une page personnalisée ajoutée à votre projet web, fidèle à votre marque et responsive.",
+        },
+      ],
+      faqHeading: "FAQ",
+      faqTitle: "Questions fréquentes sur nos forfaits",
+      faqs: [
+        {
+          question: "Combien de temps prend chaque forfait ?",
+          answer:
+            "Le forfait Logo est livré en environ 2 semaines, Image de marque en 3 à 4 semaines, et Identité corporative en 6 à 8 semaines selon le périmètre.",
+        },
+        {
+          question: "Que se passe-t-il après avoir choisi un forfait ?",
+          answer:
+            "Nous commençons par un appel de découverte, puis nous envoyons une proposition écrite, un calendrier et une première facture (50 %) avant le démarrage.",
+        },
+        {
+          question: "Puis-je personnaliser un forfait ?",
+          answer:
+            "Oui — les forfaits sont un point de départ. Nous adaptons régulièrement le périmètre et les options peuvent être ajoutées à tout niveau.",
+        },
+        {
+          question: "Suis-je propriétaire des fichiers finaux ?",
+          answer:
+            "Absolument. Une fois le projet réglé en totalité, vous êtes propriétaire de tous les livrables et fichiers sources.",
+        },
+        {
+          question: "Comment fonctionnent les paiements ?",
+          answer:
+            "Nous facturons 50 % au démarrage et 50 % à la livraison. Pour les projets plus larges, nous pouvons échelonner par jalons.",
+        },
+      ],
+      customHeading: "Sur mesure",
+      customTitle: "Besoin de quelque chose de plus large ou sur mesure ?",
+      customText:
+        "Si votre projet ne correspond pas à un forfait standard — systèmes multi-marques, partenariats design continus, sites complexes — nous serions ravis de bâtir une proposition sur mesure avec vous.",
+      customCta: "Demander un devis sur mesure",
     },
     work: {
       eyebrow: "Projets",
