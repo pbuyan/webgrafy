@@ -37,6 +37,24 @@ export type PackageTierItem = {
   name: string;
   price: string;
   includes: string[];
+  popular?: boolean;
+  description?: string;
+};
+
+export type PackageGuaranteeItem = {
+  title: string;
+  text: string;
+};
+
+export type PackageAddOnItem = {
+  title: string;
+  price: string;
+  description: string;
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
 };
 
 export type SiteDictionary = {
@@ -108,7 +126,23 @@ export type SiteDictionary = {
       text: string;
       tiersHeading: string;
       getStarted: string;
+      popularLabel: string;
       tiers: PackageTierItem[];
+      includedHeading: string;
+      includedTitle: string;
+      includedText: string;
+      guarantees: PackageGuaranteeItem[];
+      addOnsHeading: string;
+      addOnsTitle: string;
+      addOnsText: string;
+      addOns: PackageAddOnItem[];
+      faqHeading: string;
+      faqTitle: string;
+      faqs: FaqItem[];
+      customHeading: string;
+      customTitle: string;
+      customText: string;
+      customCta: string;
     };
     work: { eyebrow: string; title: string; text: string };
     about: { eyebrow: string; title: string; text: string };
