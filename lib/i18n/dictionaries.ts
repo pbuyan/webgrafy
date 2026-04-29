@@ -311,6 +311,15 @@ const en: SiteDictionary = {
       result: "52% increase in bookings",
       image: "/images/project-lunar.jpg",
     },
+    {
+      name: "Papillon de l'Espoir",
+      category: "Web Design, Next.js",
+      summary:
+        "A bilingual website for a Montreal nonprofit providing emotional support to people navigating illness, caregiving, and recovery.",
+      result: "A warm, accessible platform serving the Montreal community in English and French",
+      image: "/images/project-papillon.jpg",
+      url: "https://papillondelespoir.ca/en",
+    },
   ],
   testimonials: [
     {
@@ -668,6 +677,15 @@ const fr: SiteDictionary = {
         "Un site apaisant et pensé pour la conversion, qui soutient la croissance et inspire confiance.",
       result: "52 % d’augmentation des réservations",
       image: "/images/project-lunar.jpg",
+    },
+    {
+      name: "Papillon de l’Espoir",
+      category: "Web design, Next.js",
+      summary:
+        "Un site bilingue pour un organisme à but non lucratif montréalais offrant un soutien émotionnel aux personnes touchées par la maladie, les proches aidants et ceux en rétablissement.",
+      result: "Une plateforme chaleureuse et accessible servant la communauté montréalaise en français et en anglais",
+      image: "/images/project-papillon.jpg",
+      url: "https://papillondelespoir.ca/fr",
     },
   ],
   testimonials: [

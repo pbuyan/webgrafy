@@ -18,6 +18,7 @@ export type ProjectItem = {
   summary: string;
   result: string;
   image: string;
+  url?: string;
 };
 
 export type TestimonialItem = {
