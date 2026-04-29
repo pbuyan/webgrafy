@@ -26,13 +26,13 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
     { label: dict.nav.home, href: `/${locale}` },
     { label: dict.nav.services, href: `/${locale}/services` },
     { label: dict.nav.packages, href: `/${locale}/packages` },
-    { label: dict.nav.work, href: `/${locale}/work` },
+    { label: dict.nav.portfolio, href: `/${locale}/portfolio` },
     { label: dict.nav.about, href: `/${locale}/about` },
   ];
 
   const serviceItems = dict.services.map((service) => service.title);
   const resourceItems: FooterItem[] = [
-    { label: dict.footer.resourcesList[0], href: `/${locale}/work` },
+    { label: dict.footer.resourcesList[0], href: `/${locale}/portfolio` },
     { label: dict.footer.resourcesList[1], href: `/${locale}/about` },
     { label: dict.footer.resourcesList[2] },
     { label: dict.footer.resourcesList[3] },
