@@ -122,7 +122,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           isHome ? "border-white/10 text-white" : "border-stroke/80 text-ink-strong",
         )}
       >
-        <Container className="flex items-center justify-between gap-4 py-4">
+        <Container className="flex items-center justify-between gap-4 h-(--site-header-height)">
           <Link
             href={`/${locale}`}
             onClick={() => setMenuOpen(false)}
