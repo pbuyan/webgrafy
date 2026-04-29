@@ -122,7 +122,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           isHome ? "border-white/10 text-white" : "border-stroke/80 text-ink-strong",
         )}
       >
-        <Container className="flex items-center justify-between gap-4 py-4">
+        <Container className="flex items-center justify-between gap-4 h-(--site-header-height)">
           <Link
             href={`/${locale}`}
             onClick={() => setMenuOpen(false)}
@@ -158,7 +158,9 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           </nav>
 
           <div className="flex items-center gap-4">
-            <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone={langTone} />
+            <div className="hidden md:block">
+              <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone={langTone} />
+            </div>
             <Link
               href={`/${locale}/about#contact`}
               className={cn("hidden md:block", buttonVariants({ variant: "outline", size: "sm" }))}
@@ -200,7 +202,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
               );
             })}
           </nav>
-          <div className="px-6">
+          <div className="px-6 flex flex-col gap-4">
             <Link
               href={`/${locale}/about#contact`}
               onClick={() => setMenuOpen(false)}
@@ -208,6 +210,9 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
             >
               {dict.nav.contact}
             </Link>
+            <div className="flex justify-center">
+              <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone="onDark" />
+            </div>
           </div>
         </div>
       )}
