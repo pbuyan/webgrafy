@@ -33,6 +33,12 @@ export type ProcessItem = {
   text: string;
 };
 
+export type PackageTierItem = {
+  name: string;
+  price: string;
+  includes: string[];
+};
+
 export type SiteDictionary = {
   meta: {
     siteName: string;
@@ -41,6 +47,7 @@ export type SiteDictionary = {
   nav: {
     home: string;
     services: string;
+    packages: string;
     work: string;
     about: string;
     contact: string;
@@ -95,6 +102,14 @@ export type SiteDictionary = {
   };
   pages: {
     services: { eyebrow: string; title: string; text: string; cta: string };
+    packages: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      tiersHeading: string;
+      getStarted: string;
+      tiers: PackageTierItem[];
+    };
     work: { eyebrow: string; title: string; text: string };
     about: { eyebrow: string; title: string; text: string };
     contact: { eyebrow: string; title: string; text: string };

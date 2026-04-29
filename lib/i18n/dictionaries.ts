@@ -10,6 +10,7 @@ const en: SiteDictionary = {
   nav: {
     home: "Home",
     services: "Services",
+    packages: "Packages",
     work: "Work",
     about: "About",
     contact: "Contact",
@@ -68,6 +69,42 @@ const en: SiteDictionary = {
       text:
         "From logo design to full website creation, our services are designed to help businesses look more polished, consistent, and credible across every touchpoint.",
       cta: "Ask About a Project",
+    },
+    packages: {
+      eyebrow: "Packages",
+      title: "Startup-friendly bundles for logo, branding, and full identity",
+      text:
+        "Choose a clear starting point for your business identity. Each package is structured to deliver professional files and revisions so you know exactly what you're getting.",
+      tiersHeading: "Create your business startup packages",
+      getStarted: "Get started",
+      tiers: [
+        {
+          name: "Logo",
+          price: "$200",
+          includes: [
+            "4 logo concepts",
+            "3 revisions",
+            "Professional logo artwork files",
+            "Full colour, grayscale, and black & white versions",
+          ],
+        },
+        {
+          name: "Branding",
+          price: "$500",
+          includes: [
+            "Logo",
+            "Business card, letterhead, and envelope",
+            "2 initial stationery concepts",
+            "3 stationery revisions",
+            "Professional print-ready artwork files",
+          ],
+        },
+        {
+          name: "Corporate identity",
+          price: "From $1500",
+          includes: ["Logo", "Branding", "Social media design", "Website design"],
+        },
+      ],
     },
     work: {
       eyebrow: "Work",
@@ -244,6 +281,7 @@ const fr: SiteDictionary = {
   nav: {
     home: "Accueil",
     services: "Services",
+    packages: "Forfaits",
     work: "Projets",
     about: "À propos",
     contact: "Contactez-nous",
@@ -302,6 +340,42 @@ const fr: SiteDictionary = {
       text:
         "Du logo à la création complète du site web, nos services sont conçus pour aider les entreprises à paraître plus soignées, cohérentes et crédibles sur tous les points de contact.",
       cta: "Parler de votre projet",
+    },
+    packages: {
+      eyebrow: "Forfaits",
+      title: "Des ensembles pensés pour le logo, l’image de marque et l’identité complète",
+      text:
+        "Choisissez un point de départ clair pour l’identité de votre entreprise. Chaque forfait est structuré pour livrer des fichiers professionnels et des révisions, avec des livrables clairement définis.",
+      tiersHeading: "Créez vos forfaits de démarrage pour entreprise",
+      getStarted: "Commencer",
+      tiers: [
+        {
+          name: "Logo",
+          price: "200 $",
+          includes: [
+            "4 concepts de logo",
+            "3 révisions",
+            "Fichiers de logo professionnels",
+            "Versions couleur complète, niveaux de gris et noir et blanc",
+          ],
+        },
+        {
+          name: "Image de marque",
+          price: "500 $",
+          includes: [
+            "Logo",
+            "Carte d’affaires, en-tête de lettre et enveloppe",
+            "2 concepts initiaux de papeterie",
+            "3 révisions de papeterie",
+            "Fichiers prêts à imprimer",
+          ],
+        },
+        {
+          name: "Identité corporative",
+          price: "À partir de 1500 $",
+          includes: ["Logo", "Image de marque", "Design pour médias sociaux", "Design de site web"],
+        },
+      ],
     },
     work: {
       eyebrow: "Projets",

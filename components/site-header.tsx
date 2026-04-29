@@ -106,6 +106,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
   const navItems = [
     { label: dict.nav.home, href: `/${locale}` },
     { label: dict.nav.services, href: `/${locale}/services` },
+    { label: dict.nav.packages, href: `/${locale}/packages` },
     { label: dict.nav.work, href: `/${locale}/work` },
     { label: dict.nav.about, href: `/${locale}/about` },
   ];
