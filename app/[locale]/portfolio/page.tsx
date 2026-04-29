@@ -4,7 +4,7 @@ import { ProjectCard } from "@/components/ui/project-card";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
 
-export default async function WorkPage({
+export default async function PortfolioPage({
   params,
 }: {
   params: Promise<{ locale: Locale }>;
@@ -15,9 +15,9 @@ export default async function WorkPage({
   return (
     <>
       <PageIntro
-        eyebrow={dict.pages.work.eyebrow}
-        title={dict.pages.work.title}
-        text={dict.pages.work.text}
+        eyebrow={dict.pages.portfolio.eyebrow}
+        title={dict.pages.portfolio.title}
+        text={dict.pages.portfolio.text}
       />
 
       <section className="py-20">

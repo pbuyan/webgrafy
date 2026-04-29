@@ -66,7 +66,7 @@ export type SiteDictionary = {
     home: string;
     services: string;
     packages: string;
-    work: string;
+    portfolio: string;
     about: string;
     contact: string;
     bookCall: string;
@@ -144,7 +144,7 @@ export type SiteDictionary = {
       customText: string;
       customCta: string;
     };
-    work: { eyebrow: string; title: string; text: string };
+    portfolio: { eyebrow: string; title: string; text: string };
     about: { eyebrow: string; title: string; text: string };
     contact: { eyebrow: string; title: string; text: string };
   };

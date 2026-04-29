@@ -11,7 +11,7 @@ const en: SiteDictionary = {
     home: "Home",
     services: "Services",
     packages: "Packages",
-    work: "Work",
+    portfolio: "Portfolio",
     about: "About",
     contact: "Contact",
     bookCall: "Book a Call",
@@ -193,8 +193,8 @@ const en: SiteDictionary = {
         "If your project doesn't fit a standard package — multi-brand systems, ongoing design partnerships, complex websites — we'd love to design a custom proposal with you.",
       customCta: "Request a custom quote",
     },
-    work: {
-      eyebrow: "Work",
+    portfolio: {
+      eyebrow: "Portfolio",
       title: "Selected projects shaped with a premium editorial point of view",
       text:
         "A curated collection of branding, graphic design, and website projects created to help businesses feel more refined, more consistent, and more memorable.",
@@ -369,7 +369,7 @@ const fr: SiteDictionary = {
     home: "Accueil",
     services: "Services",
     packages: "Forfaits",
-    work: "Projets",
+    portfolio: "Portfolio",
     about: "À propos",
     contact: "Contactez-nous",
     bookCall: "Prendre rendez-vous",
@@ -551,8 +551,8 @@ const fr: SiteDictionary = {
         "Si votre projet ne correspond pas à un forfait standard — systèmes multi-marques, partenariats design continus, sites complexes — nous serions ravis de bâtir une proposition sur mesure avec vous.",
       customCta: "Demander un devis sur mesure",
     },
-    work: {
-      eyebrow: "Projets",
+    portfolio: {
+      eyebrow: "Portfolio",
       title: "Une sélection de projets façonnés avec une direction éditoriale premium",
       text:
         "Une collection soignée de projets de branding, design graphique et sites web créés pour aider les entreprises à paraître plus raffinées, cohérentes et mémorables.",

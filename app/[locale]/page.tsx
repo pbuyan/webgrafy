@@ -55,7 +55,7 @@ export default async function HomePage({
                 {dict.home.ctaPrimary}
               </Link>
               <Link
-                href={`/${locale}/work`}
+                href={`/${locale}/portfolio`}
                 className={buttonVariants({
                   variant: "secondary",
                   className:
@@ -108,7 +108,7 @@ export default async function HomePage({
               </h2>
             </div>
             <Link
-              href={`/${locale}/work`}
+              href={`/${locale}/portfolio`}
               className="group inline-flex items-center gap-2 text-sm font-medium text-ink-rich transition-colors hover:text-ink-strong"
             >
               {dict.common.viewAllProjects}
