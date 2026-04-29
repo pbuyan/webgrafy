@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 type Project = {
   name: string;
@@ -6,6 +7,7 @@ type Project = {
   summary: string;
   result: string;
   image: string;
+  url?: string;
 };
 
 export function ProjectCard({
@@ -19,8 +21,8 @@ export function ProjectCard({
 }) {
   const bg = ["bg-tint-1", "bg-tint-2", "bg-tint-3"][index % 3];
 
-  return (
-    <article className="overflow-hidden rounded-[1.6rem] border border-stroke bg-white shadow-[0_16px_40px_rgba(0,0,0,0.05)]">
+  const inner = (
+    <>
       <div className={`p-4 ${bg}`}>
         <div className="overflow-hidden rounded-[1.2rem] border border-stroke bg-white/60">
           <Image src={project.image} alt={project.name} width={700} height={420} className="h-[210px] w-full object-cover" />
@@ -35,6 +37,18 @@ export function ProjectCard({
         <p className="mt-3 text-sm leading-7 text-ink-base">{project.summary}</p>
         <p className="mt-5 text-sm font-medium text-ink-rich">↑ {project.result}</p>
       </div>
-    </article>
+    </>
   );
+
+  const cardClass = "overflow-hidden rounded-[1.6rem] border border-stroke bg-white shadow-[0_16px_40px_rgba(0,0,0,0.05)]";
+
+  if (project.url) {
+    return (
+      <Link href={project.url} target="_blank" rel="noopener noreferrer" className={`${cardClass} block transition-shadow hover:shadow-[0_24px_56px_rgba(0,0,0,0.10)]`}>
+        <article>{inner}</article>
+      </Link>
+    );
+  }
+
+  return <article className={cardClass}>{inner}</article>;
 }
