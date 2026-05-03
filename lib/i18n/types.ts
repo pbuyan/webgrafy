@@ -58,6 +58,16 @@ export type FaqItem = {
   answer: string;
 };
 
+export type IndustryItem = {
+  name: string;
+  description: string;
+};
+
+export type PillarItem = {
+  title: string;
+  text: string;
+};
+
 export type SiteDictionary = {
   meta: {
     siteName: string;
@@ -120,7 +130,25 @@ export type SiteDictionary = {
     processTitle: string;
   };
   pages: {
-    services: { eyebrow: string; title: string; text: string; cta: string };
+    services: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      cta: string;
+      industriesEyebrow: string;
+      industriesTitle: string;
+      industriesText: string;
+      industries: IndustryItem[];
+      processEyebrow: string;
+      processTitle: string;
+      whyEyebrow: string;
+      whyTitle: string;
+      whyText: string;
+      pillars: PillarItem[];
+      faqEyebrow: string;
+      faqTitle: string;
+      faqs: FaqItem[];
+    };
     packages: {
       eyebrow: string;
       title: string;

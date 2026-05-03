@@ -69,6 +69,100 @@ const en: SiteDictionary = {
       text:
         "At Webgrafy, we help small and medium businesses look professional, attract more customers, and grow both online and offline. From websites and branding to social media graphics, printed marketing materials, packaging, and local SEO, we create everything your business needs to build a strong and consistent presence.",
       cta: "Ask About a Project",
+      industriesEyebrow: "Who we work with",
+      industriesTitle: "Trusted by ambitious small and medium businesses",
+      industriesText:
+        "We partner with founders and marketing teams across Montréal and beyond — from main-street businesses building their first identity to established companies refreshing how they show up online.",
+      industries: [
+        {
+          name: "Restaurants & cafés",
+          description:
+            "Menus, signage, and digital presence that match the experience guests have at the table.",
+        },
+        {
+          name: "Retail & boutiques",
+          description:
+            "Packaging, in-store materials, and websites that turn first-time visitors into loyal customers.",
+        },
+        {
+          name: "Wellness & beauty",
+          description:
+            "Calm, premium identities and booking-ready websites for studios, spas, and clinics.",
+        },
+        {
+          name: "Professional services",
+          description:
+            "Refined branding and clear websites for accountants, lawyers, consultants, and agencies.",
+        },
+        {
+          name: "Real estate & hospitality",
+          description:
+            "Editorial-quality identities, brochures, and listings that elevate every touchpoint.",
+        },
+        {
+          name: "Nonprofits & associations",
+          description:
+            "Approachable, accessible communication that strengthens trust with members and donors.",
+        },
+      ],
+      processEyebrow: "How we work",
+      processTitle: "A clear path from first conversation to launch",
+      whyEyebrow: "Why Webgrafy",
+      whyTitle: "Design partners, not just suppliers",
+      whyText:
+        "We've kept our team small on purpose so every project gets senior attention. You work directly with the people creating your brand — no layers, no surprises.",
+      pillars: [
+        {
+          title: "Bilingual by default",
+          text: "We design and build in English and French — natural for Québec audiences and ready for growth across Canada.",
+        },
+        {
+          title: "Strategy before pixels",
+          text: "Every engagement starts with understanding your customers, your market, and the outcomes that actually move your business.",
+        },
+        {
+          title: "Print and digital under one roof",
+          text: "From a business card to a multi-page website, your visual system stays cohesive across every channel.",
+        },
+        {
+          title: "Built to grow with you",
+          text: "We hand off organized files, templates, and guidelines so your team can keep producing on-brand without us.",
+        },
+      ],
+      faqEyebrow: "FAQ",
+      faqTitle: "Common questions about our services",
+      faqs: [
+        {
+          question: "Do I have to commit to a full project, or can I start small?",
+          answer:
+            "You can start with a single deliverable — a logo, a one-page site, a flyer — and add scope later. Many clients begin with one piece and expand once they see how we work.",
+        },
+        {
+          question: "Can you work with my existing brand?",
+          answer:
+            "Yes. We regularly extend or refresh existing brands, design new collateral within established guidelines, or build a website on top of an identity you already love.",
+        },
+        {
+          question: "Do you offer ongoing design support?",
+          answer:
+            "We do. After a launch, many clients keep us on a monthly retainer for new campaigns, social content, additional pages, and print runs as they grow.",
+        },
+        {
+          question: "Are your websites bilingual?",
+          answer:
+            "Yes — we design and build in English, French, or both, with proper locale routing, SEO, and editable content for each language.",
+        },
+        {
+          question: "Will my website be easy to update myself?",
+          answer:
+            "We build on platforms you can manage day-to-day — Webflow, WordPress, or a headless CMS — and we always include a short training session so your team is comfortable from launch day.",
+        },
+        {
+          question: "How much does a project cost?",
+          answer:
+            "Logos start at $200, complete branding from $500, and websites typically range from $2,500 to $12,000 depending on scope. We send a detailed estimate after our discovery call.",
+        },
+      ],
     },
     packages: {
       eyebrow: "Packages",
@@ -453,6 +547,100 @@ const fr: SiteDictionary = {
       text:
         "Chez Webgrafy, nous aidons les petites et moyennes entreprises à paraître professionnelles, à attirer plus de clients et à croître en ligne comme hors ligne. Des sites web et de l’image de marque aux visuels pour les médias sociaux, aux supports imprimés, à l’emballage et au référencement local, nous créons tout ce dont votre entreprise a besoin pour bâtir une présence forte et cohérente.",
       cta: "Parler de votre projet",
+      industriesEyebrow: "Avec qui nous travaillons",
+      industriesTitle: "Choisi par des PME ambitieuses",
+      industriesText:
+        "Nous accompagnons des fondateurs et des équipes marketing à Montréal et ailleurs — des commerces de quartier qui bâtissent leur première identité aux entreprises établies qui modernisent leur présence en ligne.",
+      industries: [
+        {
+          name: "Restaurants et cafés",
+          description:
+            "Menus, signalétique et présence numérique à la hauteur de l’expérience vécue à table.",
+        },
+        {
+          name: "Boutiques et commerces",
+          description:
+            "Emballages, supports en magasin et sites qui transforment les visiteurs en clients fidèles.",
+        },
+        {
+          name: "Bien-être et beauté",
+          description:
+            "Identités calmes et haut de gamme et sites prêts à recevoir des réservations pour studios, spas et cliniques.",
+        },
+        {
+          name: "Services professionnels",
+          description:
+            "Branding raffiné et sites clairs pour comptables, avocats, consultants et agences.",
+        },
+        {
+          name: "Immobilier et hôtellerie",
+          description:
+            "Identités, brochures et fiches de qualité éditoriale qui valorisent chaque point de contact.",
+        },
+        {
+          name: "OBNL et associations",
+          description:
+            "Une communication accessible et chaleureuse qui renforce la confiance des membres et donateurs.",
+        },
+      ],
+      processEyebrow: "Comment nous travaillons",
+      processTitle: "Un parcours clair de la première discussion au lancement",
+      whyEyebrow: "Pourquoi Webgrafy",
+      whyTitle: "Des partenaires de design, pas de simples fournisseurs",
+      whyText:
+        "Nous avons gardé une petite équipe par choix afin que chaque projet bénéficie d’une attention sénior. Vous échangez directement avec les personnes qui créent votre marque — sans intermédiaire, sans surprise.",
+      pillars: [
+        {
+          title: "Bilingues par défaut",
+          text: "Nous concevons en français et en anglais — naturel pour le public québécois et prêt pour la croissance partout au Canada.",
+        },
+        {
+          title: "La stratégie avant les pixels",
+          text: "Chaque projet commence par comprendre vos clients, votre marché et les résultats qui font réellement avancer votre entreprise.",
+        },
+        {
+          title: "Print et digital sous un même toit",
+          text: "D’une carte d’affaires à un site multi-pages, votre système visuel reste cohérent sur tous les canaux.",
+        },
+        {
+          title: "Pensé pour évoluer avec vous",
+          text: "Nous livrons des fichiers organisés, des modèles et des guides afin que votre équipe puisse continuer à produire sans nous.",
+        },
+      ],
+      faqEyebrow: "FAQ",
+      faqTitle: "Questions fréquentes sur nos services",
+      faqs: [
+        {
+          question: "Faut-il s’engager sur un projet complet ou peut-on commencer petit ?",
+          answer:
+            "Vous pouvez démarrer avec un seul livrable — un logo, une page de site, un dépliant — et étendre la portée plus tard. Beaucoup de clients commencent par un élément et élargissent une fois qu’ils ont vu notre façon de travailler.",
+        },
+        {
+          question: "Pouvez-vous travailler avec ma marque actuelle ?",
+          answer:
+            "Oui. Nous prolongeons ou rafraîchissons régulièrement des marques existantes, créons de nouveaux supports dans une charte établie ou bâtissons un site à partir d’une identité que vous appréciez déjà.",
+        },
+        {
+          question: "Offrez-vous un soutien design en continu ?",
+          answer:
+            "Oui. Après un lancement, beaucoup de clients nous gardent en forfait mensuel pour les nouvelles campagnes, le contenu social, des pages additionnelles et leurs impressions au fil de leur croissance.",
+        },
+        {
+          question: "Vos sites sont-ils bilingues ?",
+          answer:
+            "Oui — nous concevons en français, en anglais ou les deux, avec un routage par langue, un SEO adapté et un contenu éditable dans chaque langue.",
+        },
+        {
+          question: "Pourrai-je mettre à jour mon site facilement ?",
+          answer:
+            "Nous construisons sur des plateformes que vous pouvez gérer au quotidien — Webflow, WordPress ou un CMS headless — et nous incluons toujours une courte formation pour que votre équipe soit autonome dès le lancement.",
+        },
+        {
+          question: "Combien coûte un projet ?",
+          answer:
+            "Les logos débutent à 200 $, l’image de marque complète à partir de 500 $, et les sites web vont généralement de 2 500 $ à 12 000 $ selon la portée. Nous envoyons une estimation détaillée après notre appel de découverte.",
+        },
+      ],
     },
     packages: {
       eyebrow: "Forfaits",
