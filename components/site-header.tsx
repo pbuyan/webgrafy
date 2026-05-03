@@ -117,9 +117,11 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
         ref={headerRef}
         {...(concealed ? { inert: true } : {})}
         className={cn(
-          "fixed inset-x-0 top-0 z-30 border-b bg-transparent transition-transform duration-300 ease-out will-change-transform",
+          "fixed inset-x-0 top-0 z-30 border-b backdrop-blur-md backdrop-saturate-150 transition-transform duration-300 ease-out will-change-transform",
           concealed ? "pointer-events-none -translate-y-full" : "translate-y-0",
-          isHome ? "border-white/10 text-white" : "border-stroke/80 text-ink-strong",
+          isDarkHeader
+            ? "border-white/10 bg-pitch/40 text-white"
+            : "border-stroke/60 bg-white/60 text-ink-strong",
         )}
       >
         <Container className="flex items-center justify-between gap-4 h-(--site-header-height)">
