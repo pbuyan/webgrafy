@@ -173,7 +173,15 @@ export type SiteDictionary = {
       customText: string;
       customCta: string;
     };
-    portfolio: { eyebrow: string; title: string; text: string };
+    portfolio: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      servicesEyebrow: string;
+      servicesTitle: string;
+      servicesText: string;
+      serviceVisuals: { name: string; caption: string }[];
+    };
     about: { eyebrow: string; title: string; text: string };
     contact: { eyebrow: string; title: string; text: string };
   };
