@@ -292,6 +292,42 @@ const en: SiteDictionary = {
       title: "Selected projects shaped with a premium editorial point of view",
       text:
         "A curated collection of branding, graphic design, and website projects created to help businesses feel more refined, more consistent, and more memorable.",
+      servicesEyebrow: "What we craft",
+      servicesTitle: "Visual systems built across every surface your business shows up on",
+      servicesText:
+        "From a refined logo to packaging that earns shelf space, every deliverable is designed to feel cohesive — and to look at home wherever your customers find you.",
+      serviceVisuals: [
+        {
+          name: "Logos & marks",
+          caption:
+            "Distinctive monograms, wordmarks, and lockups crafted around how you sound, not just how you look.",
+        },
+        {
+          name: "Stationery & branding",
+          caption:
+            "Cards, letterheads, and brand collateral that turn an identity into a daily, repeatable experience.",
+        },
+        {
+          name: "Websites",
+          caption:
+            "Editorial, conversion-minded sites built bilingually and ready to grow with your business.",
+        },
+        {
+          name: "Packaging & labels",
+          caption:
+            "Considered packaging, labels, and product systems engineered to perform on the shelf.",
+        },
+        {
+          name: "Editorial & print",
+          caption:
+            "Brochures, lookbooks, and printed pieces that carry the tone of your brand into the physical world.",
+        },
+        {
+          name: "Social & digital",
+          caption:
+            "Templates and content systems that keep every post on-brand without slowing your team down.",
+        },
+      ],
     },
     about: {
       eyebrow: "About",
@@ -770,6 +806,42 @@ const fr: SiteDictionary = {
       title: "Une sélection de projets façonnés avec une direction éditoriale premium",
       text:
         "Une collection soignée de projets de branding, design graphique et sites web créés pour aider les entreprises à paraître plus raffinées, cohérentes et mémorables.",
+      servicesEyebrow: "Ce que nous concevons",
+      servicesTitle: "Des systèmes visuels pensés pour toutes les surfaces où votre entreprise apparaît",
+      servicesText:
+        "D’un logo raffiné à un emballage qui se distingue en rayon, chaque livrable est conçu pour rester cohérent — et avoir l’air à sa place partout où vos clients vous croisent.",
+      serviceVisuals: [
+        {
+          name: "Logos et marques",
+          caption:
+            "Monogrammes, signatures et déclinaisons pensés autour de votre ton, pas seulement de votre apparence.",
+        },
+        {
+          name: "Papeterie et image de marque",
+          caption:
+            "Cartes, en-têtes et supports qui transforment une identité en expérience quotidienne.",
+        },
+        {
+          name: "Sites web",
+          caption:
+            "Des sites éditoriaux et orientés conversion, bilingues et prêts à grandir avec votre entreprise.",
+        },
+        {
+          name: "Emballage et étiquettes",
+          caption:
+            "Emballages, étiquettes et systèmes produit conçus pour performer sur le rayon.",
+        },
+        {
+          name: "Éditorial et impression",
+          caption:
+            "Brochures, lookbooks et imprimés qui prolongent le ton de votre marque dans le monde physique.",
+        },
+        {
+          name: "Réseaux sociaux et digital",
+          caption:
+            "Modèles et systèmes de contenu qui gardent chaque publication fidèle à la marque sans ralentir votre équipe.",
+        },
+      ],
     },
     about: {
       eyebrow: "À propos",
