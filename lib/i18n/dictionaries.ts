@@ -65,9 +65,9 @@ const en: SiteDictionary = {
   pages: {
     services: {
       eyebrow: "Services",
-      title: "Creative services that shape a complete and elevated brand presence",
+      title: "Everything your business needs to look professional and grow",
       text:
-        "From logo design to full website creation, our services are designed to help businesses look more polished, consistent, and credible across every touchpoint.",
+        "At Webgrafy, we help small and medium businesses look professional, attract more customers, and grow both online and offline. From websites and branding to social media graphics, printed marketing materials, packaging, and local SEO, we create everything your business needs to build a strong and consistent presence.",
       cta: "Ask About a Project",
     },
     packages: {
@@ -258,32 +258,49 @@ const en: SiteDictionary = {
   ],
   services: [
     {
-      title: "Brand Identity",
+      title: "Digital Services",
       description:
-        "Distinctive logos and complete brand systems that capture your essence and resonate.",
-      items: ["Logo systems", "Brand direction", "Guidelines"],
+        "Build your online presence and reach more customers with websites and digital marketing tailored to your business.",
+      items: [
+        "Websites",
+        "E-commerce",
+        "SEO",
+        "Google Business Profile",
+        "Social media design",
+        "Digital ads",
+        "Email marketing",
+        "Content",
+      ],
       index: "01",
     },
     {
-      title: "Graphic Design",
+      title: "Print Services",
       description:
-        "Print and digital assets that communicate clearly and elevate your brand presence.",
-      items: ["Campaign visuals", "Social media", "Presentation design"],
+        "High-quality printed materials that give your business a professional presence in person, on the shelf, and in your community.",
+      items: [
+        "Business cards",
+        "Flyers & brochures",
+        "Menus",
+        "Packaging",
+        "Labels",
+        "Gift certificates",
+        "Event materials",
+        "Banners & signage",
+      ],
       index: "02",
     },
     {
-      title: "Web Design",
+      title: "Branding Services",
       description:
-        "Modern, responsive websites built for performance, clarity and conversion.",
-      items: ["UX-driven layouts", "Responsive pages", "Conversion focus"],
+        "Build a strong, consistent identity with a logo, brand system, and templates that grow with your business.",
+      items: [
+        "Logos",
+        "Brand identity",
+        "Brand refresh",
+        "Visual guidelines",
+        "Ready-to-use templates",
+      ],
       index: "03",
-    },
-    {
-      title: "Webflow Development",
-      description:
-        "Clean, scalable builds that are fast, secure and easy to manage.",
-      items: ["CMS setup", "Performance", "Easy updates"],
-      index: "04",
     },
   ],
   projects: [
@@ -432,9 +449,9 @@ const fr: SiteDictionary = {
   pages: {
     services: {
       eyebrow: "Services",
-      title: "Des services créatifs qui façonnent une présence de marque complète et haut de gamme",
+      title: "Tout ce dont votre entreprise a besoin pour paraître professionnelle et croître",
       text:
-        "Du logo à la création complète du site web, nos services sont conçus pour aider les entreprises à paraître plus soignées, cohérentes et crédibles sur tous les points de contact.",
+        "Chez Webgrafy, nous aidons les petites et moyennes entreprises à paraître professionnelles, à attirer plus de clients et à croître en ligne comme hors ligne. Des sites web et de l’image de marque aux visuels pour les médias sociaux, aux supports imprimés, à l’emballage et au référencement local, nous créons tout ce dont votre entreprise a besoin pour bâtir une présence forte et cohérente.",
       cta: "Parler de votre projet",
     },
     packages: {
@@ -625,32 +642,49 @@ const fr: SiteDictionary = {
   ],
   services: [
     {
-      title: "Identité de marque",
+      title: "Services numériques",
       description:
-        "Des logos distinctifs et des systèmes de marque complets qui captent votre essence et la rendent mémorable.",
-      items: ["Systèmes de logo", "Direction de marque", "Guide de marque"],
+        "Bâtissez votre présence en ligne et rejoignez plus de clients grâce à des sites web et un marketing numérique adaptés à votre entreprise.",
+      items: [
+        "Sites web",
+        "Commerce en ligne",
+        "Référencement (SEO)",
+        "Fiche Google Business",
+        "Visuels pour médias sociaux",
+        "Publicités numériques",
+        "Marketing par courriel",
+        "Contenu",
+      ],
       index: "01",
     },
     {
-      title: "Design graphique",
+      title: "Services d’impression",
       description:
-        "Des supports imprimés et digitaux qui communiquent clairement et valorisent votre marque.",
-      items: ["Visuels de campagne", "Réseaux sociaux", "Présentations"],
+        "Des supports imprimés de haute qualité qui donnent à votre entreprise une présence professionnelle en personne, en magasin et dans votre communauté.",
+      items: [
+        "Cartes d’affaires",
+        "Dépliants et brochures",
+        "Menus",
+        "Emballage",
+        "Étiquettes",
+        "Cartes-cadeaux",
+        "Matériel d’événement",
+        "Bannières et signalétique",
+      ],
       index: "02",
     },
     {
-      title: "Web design",
+      title: "Services de branding",
       description:
-        "Des sites modernes et responsives pensés pour la performance, la clarté et la conversion.",
-      items: ["Mises en page UX", "Pages responsives", "Focus conversion"],
+        "Construisez une identité forte et cohérente avec un logo, un système de marque et des modèles qui évoluent avec votre entreprise.",
+      items: [
+        "Logos",
+        "Identité de marque",
+        "Rafraîchissement de marque",
+        "Charte graphique",
+        "Modèles prêts à l’emploi",
+      ],
       index: "03",
-    },
-    {
-      title: "Développement Webflow",
-      description:
-        "Des sites propres et évolutifs, rapides, sécurisés et faciles à gérer.",
-      items: ["CMS", "Performance", "Mises à jour faciles"],
-      index: "04",
     },
   ],
   projects: [
