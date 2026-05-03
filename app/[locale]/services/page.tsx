@@ -24,7 +24,7 @@ export default async function ServicesPage({
 
       <section className="py-20">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-3">
             {dict.services.map((service, index) => (
               <ServiceCard
                 key={service.title}
