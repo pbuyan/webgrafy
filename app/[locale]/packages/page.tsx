@@ -31,8 +31,8 @@ export default async function PackagesPage({
                 <article
                   key={tier.name}
                   className={`relative flex flex-col border bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.06)] ${isPopular
-                      ? "border-ink-strong ring-1 ring-ink-strong"
-                      : "border-stroke"
+                    ? "border-ink-strong ring-1 ring-ink-strong"
+                    : "border-stroke"
                     }`}
                 >
                   {isPopular && (
@@ -92,12 +92,12 @@ export default async function PackagesPage({
                 >
                   <div
                     className={`mb-5 h-10 w-10 rounded-full ${index === 0
-                        ? "bg-ink"
-                        : index === 1
-                          ? "bg-warm-mid"
-                          : index === 2
-                            ? "border border-stroke bg-white"
-                            : "bg-warm-light"
+                      ? "bg-ink"
+                      : index === 1
+                        ? "bg-warm-mid"
+                        : index === 2
+                          ? "border border-stroke bg-white"
+                          : "bg-warm-light"
                       }`}
                   />
                   <h3 className="text-lg font-semibold leading-7 text-ink-rich">{item.title}</h3>
