@@ -29,7 +29,7 @@ const en: SiteDictionary = {
       terms: "Terms & Conditions",
       copyright: "© 2026 Webgrafy. All rights reserved.",
     },
-    resourcesList: ["Case Studies", "Process", "FAQs", "Blog"],
+    resourcesList: ["Case Studies", "Process", "FAQs"],
   },
   common: {
     serviceLabel: "Service",
@@ -341,6 +341,68 @@ const en: SiteDictionary = {
       text:
         "Whether you need a logo, a full identity, graphic design support, or a new website, we'd love to hear what you're building.",
     },
+    privacy: {
+      eyebrow: "Legal",
+      title: "Privacy Policy",
+      lastUpdated: "Last updated: January 1, 2026",
+      sections: [
+        {
+          heading: "Information We Collect",
+          body: "We collect information you provide directly to us through our contact form, including your name, company name, email address, and project details. We do not collect any information automatically beyond standard server logs.",
+        },
+        {
+          heading: "How We Use Your Information",
+          body: "We use the information you submit solely to respond to your inquiry and to provide the design services you request. We do not sell, rent, or share your personal information with third parties for marketing purposes.",
+        },
+        {
+          heading: "Data Retention",
+          body: "We retain your contact information for as long as necessary to fulfill your project and for a reasonable period thereafter for record-keeping purposes. You may request deletion of your data at any time by contacting us.",
+        },
+        {
+          heading: "Cookies",
+          body: "This website does not use tracking cookies or third-party analytics. No personally identifiable information is collected through cookies.",
+        },
+        {
+          heading: "Your Rights",
+          body: "Under applicable Canadian privacy law (PIPEDA), you have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at hello@webgrafy.co.",
+        },
+        {
+          heading: "Contact",
+          body: "If you have questions about this policy, please reach out to us at hello@webgrafy.co or by mail at Webgrafy, Montréal, QC, Canada.",
+        },
+      ],
+    },
+    terms: {
+      eyebrow: "Legal",
+      title: "Terms & Conditions",
+      lastUpdated: "Last updated: January 1, 2026",
+      sections: [
+        {
+          heading: "Services",
+          body: "Webgrafy provides branding, graphic design, and web design services to clients on a project basis. The specific scope, deliverables, timeline, and fees for each project are defined in a written proposal or agreement signed by both parties.",
+        },
+        {
+          heading: "Payment",
+          body: "Projects require a deposit before work begins, with the remaining balance due upon completion or as outlined in the project agreement. Late payments may incur a monthly service charge.",
+        },
+        {
+          heading: "Intellectual Property",
+          body: "Upon receipt of full payment, Webgrafy transfers ownership of final approved deliverables to the client. Webgrafy retains the right to display the work in its portfolio. All working files, source assets, and design systems remain the property of Webgrafy unless explicitly included in the project agreement.",
+        },
+        {
+          heading: "Revisions",
+          body: "Each project includes a defined number of revision rounds as outlined in the proposal. Requests beyond the included revisions will be quoted separately and require written approval.",
+        },
+        {
+          heading: "Limitation of Liability",
+          body: "Webgrafy's liability is limited to the amount paid for the specific project. We are not liable for any indirect, incidental, or consequential damages arising from the use of our deliverables.",
+        },
+        {
+          heading: "Governing Law",
+          body: "These terms are governed by the laws of the Province of Québec and the federal laws of Canada applicable therein.",
+        },
+      ],
+    },
   },
   about: {
     approachEyebrow: "Our approach",
@@ -543,7 +605,7 @@ const fr: SiteDictionary = {
       terms: "Conditions générales",
       copyright: "© 2026 Webgrafy. Tous droits réservés.",
     },
-    resourcesList: ["Études de cas", "Processus", "FAQ", "Blog"],
+    resourcesList: ["Études de cas", "Processus", "FAQ"],
   },
   common: {
     serviceLabel: "Service",
@@ -854,6 +916,68 @@ const fr: SiteDictionary = {
       title: "Parlez-nous de votre marque, site web ou projet créatif",
       text:
         "Que vous ayez besoin d’un logo, d’une identité complète, d’un soutien en design graphique ou d’un nouveau site web, nous serions ravis de découvrir votre projet.",
+    },
+    privacy: {
+      eyebrow: "Légal",
+      title: "Politique de confidentialité",
+      lastUpdated: "Dernière mise à jour : 1er janvier 2026",
+      sections: [
+        {
+          heading: "Informations que nous collectons",
+          body: "Nous collectons les informations que vous nous fournissez directement via notre formulaire de contact, notamment votre nom, le nom de votre entreprise, votre adresse courriel et les détails de votre projet. Nous ne collectons aucune information automatiquement au-delà des journaux serveur standard.",
+        },
+        {
+          heading: "Utilisation de vos informations",
+          body: "Nous utilisons les informations soumises uniquement pour répondre à votre demande et fournir les services de design que vous sollicitez. Nous ne vendons, ne louons ni ne partageons vos informations personnelles avec des tiers à des fins commerciales.",
+        },
+        {
+          heading: "Conservation des données",
+          body: "Nous conservons vos coordonnées aussi longtemps que nécessaire pour mener à bien votre projet, puis pendant une période raisonnable à des fins d’archivage. Vous pouvez demander la suppression de vos données à tout moment en nous contactant.",
+        },
+        {
+          heading: "Témoins (cookies)",
+          body: "Ce site web n’utilise pas de témoins de suivi ni d’outils d’analyse tiers. Aucune information personnelle identifiable n’est collectée via des témoins.",
+        },
+        {
+          heading: "Vos droits",
+          body: "En vertu de la loi canadienne applicable en matière de protection de la vie privée (LPRPDE), vous avez le droit d’accéder à vos informations personnelles, de les corriger ou d’en demander la suppression. Pour exercer ces droits, veuillez nous contacter à hello@webgrafy.co.",
+        },
+        {
+          heading: "Contact",
+          body: "Pour toute question relative à cette politique, contactez-nous à hello@webgrafy.co ou par courrier à Webgrafy, Montréal, QC, Canada.",
+        },
+      ],
+    },
+    terms: {
+      eyebrow: "Légal",
+      title: "Conditions générales",
+      lastUpdated: "Dernière mise à jour : 1er janvier 2026",
+      sections: [
+        {
+          heading: "Services",
+          body: "Webgrafy fournit des services de branding, de design graphique et de conception web à ses clients sur une base de projet. La portée, les livrables, le calendrier et les honoraires de chaque projet sont définis dans une proposition ou un contrat écrit signé par les deux parties.",
+        },
+        {
+          heading: "Paiement",
+          body: "Les projets requièrent un dépôt avant le début des travaux, le solde restant étant dû à la livraison ou selon les modalités définies dans l’accord de projet. Les paiements en retard peuvent entraîner des frais de service mensuels.",
+        },
+        {
+          heading: "Propriété intellectuelle",
+          body: "À réception du paiement intégral, Webgrafy transfère la propriété des livrables finaux approuvés au client. Webgrafy conserve le droit de présenter le travail dans son portfolio. Tous les fichiers de travail, ressources sources et systèmes de design demeurent la propriété de Webgrafy, sauf mention explicite dans l’accord de projet.",
+        },
+        {
+          heading: "Révisions",
+          body: "Chaque projet inclut un nombre défini de rondes de révision tel que précisé dans la proposition. Les demandes dépassant les révisions incluses feront l’objet d’un devis séparé et devront être approuvées par écrit.",
+        },
+        {
+          heading: "Limitation de responsabilité",
+          body: "La responsabilité de Webgrafy est limitée au montant payé pour le projet concerné. Nous ne sommes pas responsables des dommages indirects, accessoires ou consécutifs découlant de l’utilisation de nos livrables.",
+        },
+        {
+          heading: "Droit applicable",
+          body: "Ces conditions sont régies par les lois de la province de Québec et les lois fédérales du Canada qui s’y appliquent.",
+        },
+      ],
     },
   },
   about: {

@@ -1,5 +1,15 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 import { rateLimit } from "@/lib/rate-limit";
+
+const toEmail = process.env.CONTACT_EMAIL ?? "hello@webgrafy.co";
+
+// Lazily instantiated so the module loads without RESEND_API_KEY at build time.
+let resend: Resend | null = null;
+function getResend(): Resend {
+  if (!resend) resend = new Resend(process.env.RESEND_API_KEY);
+  return resend;
+}
 
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -46,9 +56,20 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: integrate email service (e.g. Resend, SendGrid) to deliver submissions
-    // Example with Resend:
-    //   await resend.emails.send({ from: "...", to: "hello@webgrafy.co", subject: "...", ... })
+    await getResend().emails.send({
+      from: "Webgrafy Contact <noreply@webgrafy.com>",
+      to: [toEmail],
+      replyTo: email,
+      subject: `New inquiry from ${name}${businessName ? ` (${businessName})` : ""}`,
+      html: `
+        <p><strong>Name:</strong> ${name}</p>
+        ${businessName ? `<p><strong>Company:</strong> ${businessName}</p>` : ""}
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Message:</strong></p>
+        <p style="white-space:pre-wrap">${message}</p>
+      `,
+    });
 
     return NextResponse.json(
       { success: true, message: "Your inquiry has been received." },
