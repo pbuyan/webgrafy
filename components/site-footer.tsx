@@ -30,16 +30,18 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
     { label: dict.nav.about, href: `/${locale}/about` },
   ];
 
-  const serviceItems = dict.services.map((service) => service.title);
+  const serviceItems = dict.services.map((service) => ({
+    label: service.title,
+    href: `/${locale}/services`,
+  }));
   const resourceItems: FooterItem[] = [
     { label: dict.footer.resourcesList[0], href: `/${locale}/portfolio` },
     { label: dict.footer.resourcesList[1], href: `/${locale}/about` },
-    { label: dict.footer.resourcesList[2] },
-    { label: dict.footer.resourcesList[3] },
+    { label: dict.footer.resourcesList[2], href: `/${locale}/packages#faq` },
   ];
   const legalItems: FooterItem[] = [
-    { label: dict.footer.legal.privacy },
-    { label: dict.footer.legal.terms },
+    { label: dict.footer.legal.privacy, href: `/${locale}/privacy` },
+    { label: dict.footer.legal.terms, href: `/${locale}/terms` },
   ];
 
   return (
@@ -75,7 +77,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
             <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.services}</div>
             <div className="mt-4 grid gap-2 text-sm text-white/78">
               {serviceItems.map((item) => (
-                <p key={item}>{item}</p>
+                <FooterListItem key={item.label} item={item} className="hover:text-white transition-colors" />
               ))}
             </div>
           </div>
@@ -92,9 +94,9 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
           <div>
             <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.contact}</div>
             <div className="mt-4 grid gap-2 text-sm text-white/78">
-              <p>hello@webgrafy.co</p>
-              <p>+1 (514) 555-0198</p>
-              <p>Montreal, QC, Canada</p>
+              <p>{dict.contactBlock.email}</p>
+              <p>{dict.contactBlock.phone}</p>
+              <p>{dict.contactBlock.location}</p>
             </div>
           </div>
         </div>

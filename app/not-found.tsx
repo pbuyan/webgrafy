@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { defaultLocale } from "@/lib/i18n/config";
 
 export default function NotFound() {
   return (
@@ -15,7 +16,7 @@ export default function NotFound() {
             The page you are looking for may have moved, been renamed, or no longer exists.
           </p>
           <div className="mt-10 flex justify-center">
-            <Link href="/en">
+            <Link href={`/${defaultLocale}`}>
               <Button variant="dark">Back to Home</Button>
             </Link>
           </div>

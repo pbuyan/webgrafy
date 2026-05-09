@@ -134,7 +134,7 @@ export default async function PackagesPage({
         </Container>
       </section>
 
-      <section className="border-b border-stroke bg-white py-20">
+      <section id="faq" className="border-b border-stroke bg-white py-20">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>

@@ -184,6 +184,18 @@ export type SiteDictionary = {
     };
     about: { eyebrow: string; title: string; text: string };
     contact: { eyebrow: string; title: string; text: string };
+    privacy: {
+      eyebrow: string;
+      title: string;
+      lastUpdated: string;
+      sections: { heading: string; body: string }[];
+    };
+    terms: {
+      eyebrow: string;
+      title: string;
+      lastUpdated: string;
+      sections: { heading: string; body: string }[];
+    };
   };
   about: {
     approachEyebrow: string;

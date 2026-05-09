@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { locales } from "@/lib/i18n/config";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.webgrafy.com";
-const pages = ["", "/services", "/packages", "/portfolio", "/about", "/contact"];
+const pages = ["", "/services", "/packages", "/portfolio", "/about", "/contact", "/privacy", "/terms"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return locales.flatMap((locale) =>

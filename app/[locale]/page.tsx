@@ -3,7 +3,6 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ContactBlock } from "@/components/ui/contact-block";
 import { Container } from "@/components/ui/container";
-import { LogoStrip } from "@/components/ui/logo-strip";
 import { ProcessTimeline } from "@/components/ui/process-timeline";
 import { ProjectCard } from "@/components/ui/project-card";
 import { SectionLabel } from "@/components/ui/section-label";
@@ -72,10 +71,6 @@ export default async function HomePage({
         </div>
         {/* </Container> */}
       </section>
-
-      {/* <div data-header-theme="light">
-        <LogoStrip title={dict.home.trustedBy} logos={dict.home.logoStrip} />
-      </div> */}
 
       <section data-header-theme="light" className="border-b border-stroke bg-surface-pale pt-16 pb-20">
         <ServicesMarquee items={dict.marqueeItems} />
