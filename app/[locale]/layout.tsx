@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { HtmlLang } from "@/components/html-lang";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { CookieConsent } from "@/components/ui/cookie-consent";
 import { CursorFollower } from "@/components/ui/cursor-follower";
 import { defaultLocale, isValidLocale, locales, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -63,6 +64,7 @@ export default async function LocaleLayout({
       <SiteHeader locale={locale as Locale} dict={dict} />
       <main className="site-main">{children}</main>
       <SiteFooter locale={locale as Locale} dict={dict} />
+      <CookieConsent locale={locale as Locale} dict={dict} />
     </>
   );
 }
