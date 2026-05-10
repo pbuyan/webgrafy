@@ -224,6 +224,12 @@ export type SiteDictionary = {
       sending: string;
     };
   };
+  cookieConsent: {
+    message: string;
+    privacyLinkText: string;
+    accept: string;
+    decline: string;
+  };
   marqueeItems: MarqueeLabel[];
   services: ServiceItem[];
   projects: ProjectItem[];

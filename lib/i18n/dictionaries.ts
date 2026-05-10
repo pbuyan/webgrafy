@@ -439,6 +439,13 @@ const en: SiteDictionary = {
       sending: "Sending...",
     },
   },
+  cookieConsent: {
+    message:
+      "We use essential cookies to make this site work. No tracking or advertising cookies are used.",
+    privacyLinkText: "Privacy Policy",
+    accept: "Accept",
+    decline: "Decline",
+  },
   marqueeItems: [
     { id: "logos", before: "Logos ", em: "& marks" },
     { id: "brand-systems", before: "Brand systems" },
@@ -1014,6 +1021,13 @@ const fr: SiteDictionary = {
       success: "Votre demande a bien été reçue.",
       sending: "Envoi...",
     },
+  },
+  cookieConsent: {
+    message:
+      "Nous utilisons des cookies essentiels au bon fonctionnement de ce site. Aucun cookie de suivi ou publicitaire n'est utilisé.",
+    privacyLinkText: "Politique de confidentialité",
+    accept: "Accepter",
+    decline: "Refuser",
   },
   marqueeItems: [
     { id: "logos", before: "Logos ", em: "& marques" },
