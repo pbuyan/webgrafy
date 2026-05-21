@@ -10,6 +10,8 @@ pnpm build        # production build
 pnpm lint         # run ESLint (next/core-web-vitals + typescript rules)
 ```
 
+Use `pnpm` exclusively — not npm or yarn.
+
 There are no tests configured. TypeScript checking is done via the build (`pnpm build`) — there is no standalone `tsc` script.
 
 ## Architecture
@@ -53,7 +55,7 @@ const dict = await getDictionary(locale);
 
 ### Design tokens
 
-Tailwind v4 with all custom tokens declared in the `@theme {}` block in `app/globals.css`. Palette groups:
+Tailwind v4 with all custom tokens declared in the `@theme {}` block in `app/globals.css`. Config is in `postcss.config.mjs` — there is no `tailwind.config.js`. Palette groups:
 
 - **brand** — `brand`, `brand-light` (warm beige)
 - **pitch** — near-black for footer/contact/mobile nav
@@ -71,6 +73,11 @@ Use `cn()` from `lib/utils.ts` (wraps `clsx` + `tailwind-merge`) for conditional
 - **`shadcn/ui` style config** is in `components.json` (new-york style, no CSS variables, icon library: lucide). New shadcn components can be added with `pnpm dlx shadcn@latest add <component>`.
 - All links between locale pages are prefixed with `/${locale}/...` — never hardcode `/en/` or `/fr/`.
 
+### TypeScript
+
+- Strict mode is enabled. No implicit `any`. JavaScript files are not allowed (`allowJs: false`).
+- Use path alias `@/` for all imports from the project root (set in `tsconfig.json`).
+
 ### API routes
 
 `app/api/contact/route.ts` — POST endpoint for the contact form. Validates fields server-side, applies in-memory rate limiting (5 requests/min per IP) via `lib/rate-limit.ts`. **Email delivery is not yet wired up** — there is a TODO comment where an email service (e.g. Resend) should be called. The rate limiter is single-process only; replace with a Redis-backed solution (e.g. `@upstash/ratelimit`) before deploying to serverless/edge.
@@ -82,7 +89,3 @@ Copy `env.example` to `.env.local`. The only variable is:
 NEXT_PUBLIC_BASE_URL=https://www.webgrafy.com
 ```
 Used in `app/sitemap.ts` and `app/robots.ts`.
-
-### Path alias
-
-`@/*` resolves to the project root (set in `tsconfig.json`). Always use `@/` imports rather than relative paths.
