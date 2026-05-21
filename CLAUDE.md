@@ -8,11 +8,15 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 pnpm dev          # start dev server at localhost:3000
 pnpm build        # production build
 pnpm lint         # run ESLint (next/core-web-vitals + typescript rules)
+pnpm test         # run Vitest (single pass)
+pnpm test:watch   # run Vitest in watch mode
 ```
 
 Use `pnpm` exclusively — not npm or yarn.
 
-There are no tests configured. TypeScript checking is done via the build (`pnpm build`) — there is no standalone `tsc` script.
+TypeScript checking is done via the build (`pnpm build`) — there is no standalone `tsc` script.
+
+Tests live alongside source files as `*.test.ts` / `*.test.tsx`. Import from `vitest` explicitly (`import { describe, expect, it } from "vitest"`). The setup file (`vitest.setup.ts`) extends Vitest's `expect` with `@testing-library/jest-dom` matchers. Server Components and Next.js internals are not testable in jsdom — test pure logic and client components only.
 
 ## Architecture
 
