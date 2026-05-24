@@ -27,7 +27,7 @@ export default async function PortfolioPage({
 
       <section className="py-20">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+          <div className="grid gap-6 lg:grid-cols-2">
             {dict.projects.map((project, index) => (
               <ProjectCard key={project.name} project={project} index={index} yearLabel={dict.common.yearLabel} />
             ))}

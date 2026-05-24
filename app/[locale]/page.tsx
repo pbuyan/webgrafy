@@ -79,7 +79,7 @@ export default async function HomePage({
           <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
             {dict.home.servicesTitle}
           </h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {dict.services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -110,7 +110,7 @@ export default async function HomePage({
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
             </Link>
           </div>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 lg:grid-cols-2">
             {dict.projects.map((project, index) => (
               <ProjectCard key={project.name} project={project} index={index} yearLabel={dict.common.yearLabel} />
             ))}

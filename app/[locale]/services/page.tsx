@@ -24,7 +24,7 @@ export default async function ServicesPage({
 
       <section className="border-b border-stroke bg-white py-20">
         <Container>
-          <div className="grid gap-6 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {dict.services.map((service, index) => (
               <ServiceCard
                 key={service.title}
@@ -86,15 +86,14 @@ export default async function ServicesPage({
                   className="rounded-[1.5rem] border border-stroke bg-surface-warm p-6"
                 >
                   <div
-                    className={`mb-5 h-10 w-10 rounded-full ${
-                      index === 0
-                        ? "bg-ink"
-                        : index === 1
-                          ? "bg-warm-mid"
-                          : index === 2
-                            ? "border border-stroke bg-white"
-                            : "bg-warm-light"
-                    }`}
+                    className={`mb-5 h-10 w-10 rounded-full ${index === 0
+                      ? "bg-ink"
+                      : index === 1
+                        ? "bg-warm-mid"
+                        : index === 2
+                          ? "border border-stroke bg-white"
+                          : "bg-warm-light"
+                      }`}
                   />
                   <h3 className="text-lg font-semibold leading-7 text-ink-rich">{pillar.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-ink-soft">{pillar.text}</p>
