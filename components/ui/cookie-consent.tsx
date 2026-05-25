@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -9,6 +9,40 @@ import type { SiteDictionary } from "@/lib/i18n/types";
 
 const STORAGE_KEY = "cookie-consent";
 
+type ConsentChoice = "accepted" | "declined";
+type ConsentState = ConsentChoice | "none";
+
+const listeners = new Set<() => void>();
+
+function subscribe(listener: () => void) {
+  listeners.add(listener);
+  const onStorage = (event: StorageEvent) => {
+    if (event.key === STORAGE_KEY) emitChange();
+  };
+  window.addEventListener("storage", onStorage);
+  return () => {
+    listeners.delete(listener);
+    window.removeEventListener("storage", onStorage);
+  };
+}
+
+function emitChange() {
+  for (const listener of listeners) {
+    listener();
+  }
+}
+
+function getConsentState(): ConsentState {
+  const stored = localStorage.getItem(STORAGE_KEY);
+  if (stored === "accepted" || stored === "declined") return stored;
+  return "none";
+}
+
+/** Hide the banner during SSR; client snapshot reads localStorage. */
+function getServerConsentState(): ConsentState {
+  return "accepted";
+}
+
 export function CookieConsent({
   locale,
   dict,
@@ -16,16 +50,17 @@ export function CookieConsent({
   locale: Locale;
   dict: SiteDictionary;
 }) {
-  const [visible, setVisible] = useState(false);
+  const consent = useSyncExternalStore(
+    subscribe,
+    getConsentState,
+    getServerConsentState,
+  );
   const c = dict.cookieConsent;
+  const visible = consent === "none";
 
-  useEffect(() => {
-    if (!localStorage.getItem(STORAGE_KEY)) setVisible(true);
-  }, []);
-
-  function dismiss(choice: "accepted" | "declined") {
+  function dismiss(choice: ConsentChoice) {
     localStorage.setItem(STORAGE_KEY, choice);
-    setVisible(false);
+    emitChange();
   }
 
   if (!visible) return null;
@@ -53,18 +88,21 @@ export function CookieConsent({
 
         <div className="flex shrink-0 items-center gap-3">
           <button
+            type="button"
             onClick={() => dismiss("declined")}
             className="text-xs uppercase tracking-[0.16em] text-white/50 hover:text-white/80 transition-colors"
           >
             {c.decline}
           </button>
           <button
+            type="button"
             onClick={() => dismiss("accepted")}
             className="inline-flex items-center rounded-full bg-brand px-5 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-ink hover:bg-brand-light transition-colors"
           >
             {c.accept}
           </button>
           <button
+            type="button"
             onClick={() => dismiss("declined")}
             aria-label="Close"
             className="text-white/40 hover:text-white/70 transition-colors"

@@ -8,7 +8,8 @@ import { ProjectCard } from "@/components/ui/project-card";
 import { SectionLabel } from "@/components/ui/section-label";
 import { ServiceCard } from "@/components/ui/service-card";
 import { ServicesMarquee } from "@/components/ui/services-marquee";
-import { TestimonialCard } from "@/components/ui/testimonial-card";
+import { TestimonialsCarousel } from "@/components/ui/testimonials-carousel";
+import { getHomeTestimonials } from "@/lib/testimonials";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
 import { buttonVariants } from "@/components/ui/button";
@@ -118,17 +119,21 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <section data-header-theme="light" className="border-b border-stroke bg-surface-warm py-20">
+      <section data-header-theme="light" className="border-b border-stroke bg-surface-warm py-14 lg:py-16">
         <Container>
           <SectionLabel>{dict.home.testimonialsEyebrow}</SectionLabel>
           <h2 className="mt-3 text-5xl font-semibold tracking-[-0.04em] text-ink-strong [font-family:var(--font-display)] sm:text-6xl">
             {dict.home.testimonialsTitle}
           </h2>
-          <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {dict.testimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} testimonial={testimonial} />
-            ))}
-          </div>
+          <TestimonialsCarousel
+            testimonials={getHomeTestimonials(dict.testimonials)}
+            regionLabel={dict.home.testimonialsTitle}
+            labels={{
+              prev: dict.home.testimonialsPrev,
+              next: dict.home.testimonialsNext,
+              dotLabel: dict.home.testimonialsDotLabel,
+            }}
+          />
         </Container>
       </section>
 

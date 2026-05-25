@@ -25,7 +25,8 @@ export type TestimonialItem = {
   quote: string;
   name: string;
   role: string;
-  avatar: string;
+  avatar?: string;
+  featured?: boolean;
 };
 
 export type ProcessItem = {
@@ -126,6 +127,9 @@ export type SiteDictionary = {
     workTitle: string;
     testimonialsEyebrow: string;
     testimonialsTitle: string;
+    testimonialsPrev: string;
+    testimonialsNext: string;
+    testimonialsDotLabel: string;
     processEyebrow: string;
     processTitle: string;
   };

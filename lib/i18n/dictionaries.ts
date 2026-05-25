@@ -59,6 +59,9 @@ const en: SiteDictionary = {
     workTitle: "Design that drives real results.",
     testimonialsEyebrow: "Kind words from clients",
     testimonialsTitle: "Trusted by brands that value thoughtful design.",
+    testimonialsPrev: "Previous testimonials",
+    testimonialsNext: "Next testimonials",
+    testimonialsDotLabel: "Go to slide {n}",
     processEyebrow: "Our process",
     processTitle: "A collaborative process, built around you.",
   },
@@ -554,24 +557,129 @@ const en: SiteDictionary = {
   testimonials: [
     {
       quote:
-        "Webgrafy understood our vision from day one. The brand and website they delivered exceeded our expectations and our customers love it.",
+        "Webgrafy transformed our outdated website into a polished, modern online presence. The new design feels premium, professional, and much easier for clients to navigate.",
+      name: "Daniel Carter",
+      role: "Carter Home Services",
+      featured: true,
+    },
+    {
+      quote:
+        "We needed a website that clearly explained our services and encouraged people to contact us. Webgrafy delivered exactly that — clean, elegant, and conversion-focused.",
+      name: "Dr. Emily Laurent",
+      role: "Laurent Wellness Clinic",
+    },
+    {
+      quote:
+        "The website looks beautiful on desktop and mobile. Everything feels intentional, from the layout to the contact form. It gave our business a much stronger first impression.",
+      name: "Maya L.",
+      role: "Willow & Ash Aesthetics",
+    },
+    {
+      quote:
+        "Webgrafy understood our brand quickly and created a website that finally feels aligned with the quality of our work.",
+      name: "Elena R.",
+      role: "North & Pine Interiors",
+    },
+    {
+      quote:
+        "Our logo and brand identity now feel refined, consistent, and memorable. Webgrafy helped us look like a real established brand.",
+      name: "Clara Bennett",
+      role: "Maison Belle Boutique",
+      featured: true,
+    },
+    {
+      quote:
+        "The brand direction, colors, typography, and logo variations gave us a complete visual system we can use everywhere.",
+      name: "Sophie Martin",
+      role: "Oak & Linen Home",
+    },
+    {
+      quote:
+        "We came with only a basic idea, and Webgrafy turned it into a clean, elegant identity that fits our audience perfectly.",
+      name: "Adam Pierce",
+      role: "BrightPath Studio",
+    },
+    {
+      quote:
+        "The branding process was smooth and thoughtful. The final result feels elevated without being overcomplicated.",
+      name: "Isabelle Roy",
+      role: "Roy & Co. Market",
+    },
+    {
+      quote:
+        "Webgrafy created beautiful marketing materials that made our business look more professional across social media, email, and print.",
+      name: "Marcus Lee",
+      role: "Everly Events",
+      featured: true,
+    },
+    {
+      quote:
+        "The social media templates saved us so much time. Now our posts look consistent, branded, and much more polished.",
+      name: "Noémie P.",
+      role: "Studio Verve Hair",
+    },
+    {
+      quote:
+        "Our presentation went from basic to premium. Webgrafy organized the information clearly and made the design look high-end.",
+      name: "Laura Singh",
+      role: "Summit Sales Group",
+    },
+    {
+      quote:
+        "We needed graphics for a campaign launch, and everything came together beautifully — banners, social posts, and promotional visuals.",
+      name: "Olivier Tremblay",
+      role: "Local Harvest Café",
+    },
+    {
+      quote:
+        "Webgrafy designed our flyers and business cards with a clean, professional look. The printed materials now match the quality of our services.",
+      name: "Sofia Martinez",
+      role: "Harbor House Wellness",
+    },
+    {
+      quote:
+        "Our brochures look elegant and easy to read. Customers immediately understood what we offer.",
+      name: "Rachel Nguyen",
+      role: "Bloom Health Studio",
+    },
+    {
+      quote:
+        "The packaging and label design gave our product a much stronger shelf presence. It looks more premium and trustworthy.",
       name: "Camille D.",
-      role: "Founder, Maison Solé",
-      avatar: "/images/avatar-camille.jpg",
+      role: "Serein Botanica",
+      featured: true,
     },
     {
       quote:
-        "Professional, creative and reliable. They turned our ideas into a brand that truly reflects who we are.",
-      name: "Alexandre T.",
-      role: "Co-founder, Nordik Studio",
-      avatar: "/images/avatar-alexandre.jpg",
+        "Webgrafy helped us set up and improve our Google Business Profile. Our business looks more complete and professional when people search for us.",
+      name: "Dr. Noah Bell",
+      role: "Bell Family Clinic",
+      featured: true,
     },
     {
       quote:
-        "The new website is fast, beautiful and so easy to manage. Our inquiries have grown significantly.",
-      name: "Sofia R.",
-      role: "Marketing Director, Lunar Wellness",
-      avatar: "/images/avatar-sofia.jpg",
+        "The Google profile updates, photos, service descriptions, and visual consistency made a big difference in how our business appears online.",
+      name: "Chloé Dubois",
+      role: "Atelier Chloé Salon",
+    },
+    {
+      quote:
+        "Having Webgrafy as ongoing design support has been a huge help. We can request updates, graphics, and small website changes without stress.",
+      name: "Peter Wallace",
+      role: "Wallace Repair Co.",
+      featured: true,
+    },
+    {
+      quote:
+        "Webgrafy feels like an extension of our team. They understand our style and keep everything consistent across website, print, and social media.",
+      name: "Amelia Brooks",
+      role: "Brooks & Bloom Boutique",
+    },
+    {
+      quote:
+        "Every project feels thoughtful, elegant, and well organized. Webgrafy helped us build a visual presence we are proud to share.",
+      name: "Sarah Mitchell",
+      role: "Mitchell Legal Studio",
     },
   ],
   processSteps: [
@@ -656,6 +764,9 @@ const fr: SiteDictionary = {
     workTitle: "Un design qui génère de vrais résultats.",
     testimonialsEyebrow: "Mots de nos clients",
     testimonialsTitle: "Choisi par des marques qui valorisent un design réfléchi.",
+    testimonialsPrev: "Témoignages précédents",
+    testimonialsNext: "Témoignages suivants",
+    testimonialsDotLabel: "Aller à la diapositive {n}",
     processEyebrow: "Notre processus",
     processTitle: "Un processus collaboratif, construit autour de vous.",
   },
@@ -1151,24 +1262,129 @@ const fr: SiteDictionary = {
   testimonials: [
     {
       quote:
-        "Webgrafy a compris notre vision dès le premier jour. La marque et le site livrés ont dépassé nos attentes et nos clients les adorent.",
+        "Webgrafy a transformé notre site web désuet en une présence en ligne soignée et moderne. Le nouveau design paraît premium, professionnel et beaucoup plus facile à parcourir pour nos clients.",
+      name: "Daniel Carter",
+      role: "Carter Home Services",
+      featured: true,
+    },
+    {
+      quote:
+        "Nous avions besoin d'un site qui explique clairement nos services et encourage les gens à nous contacter. Webgrafy a livré exactement cela — propre, élégant et axé sur la conversion.",
+      name: "Dr. Emily Laurent",
+      role: "Laurent Wellness Clinic",
+    },
+    {
+      quote:
+        "Le site est magnifique sur ordinateur et mobile. Tout paraît intentionnel, de la mise en page au formulaire de contact. Il a donné à notre entreprise une première impression bien plus forte.",
+      name: "Maya L.",
+      role: "Willow & Ash Aesthetics",
+    },
+    {
+      quote:
+        "Webgrafy a compris notre marque rapidement et a créé un site qui correspond enfin à la qualité de notre travail.",
+      name: "Elena R.",
+      role: "North & Pine Interiors",
+    },
+    {
+      quote:
+        "Notre logo et notre identité de marque paraissent maintenant raffinés, cohérents et mémorables. Webgrafy nous a aidés à ressembler à une vraie marque établie.",
+      name: "Clara Bennett",
+      role: "Maison Belle Boutique",
+      featured: true,
+    },
+    {
+      quote:
+        "La direction de marque, les couleurs, la typographie et les déclinaisons du logo nous ont donné un système visuel complet utilisable partout.",
+      name: "Sophie Martin",
+      role: "Oak & Linen Home",
+    },
+    {
+      quote:
+        "Nous sommes arrivés avec seulement une idée de base, et Webgrafy l'a transformée en une identité propre et élégante qui correspond parfaitement à notre public.",
+      name: "Adam Pierce",
+      role: "BrightPath Studio",
+    },
+    {
+      quote:
+        "Le processus de branding s'est déroulé sans accroc et de façon réfléchie. Le résultat final paraît élevé sans être trop compliqué.",
+      name: "Isabelle Roy",
+      role: "Roy & Co. Market",
+    },
+    {
+      quote:
+        "Webgrafy a créé de beaux supports marketing qui ont rendu notre entreprise plus professionnelle sur les réseaux sociaux, par courriel et en impression.",
+      name: "Marcus Lee",
+      role: "Everly Events",
+      featured: true,
+    },
+    {
+      quote:
+        "Les modèles pour les réseaux sociaux nous ont fait gagner tellement de temps. Nos publications sont maintenant cohérentes, alignées sur la marque et bien plus soignées.",
+      name: "Noémie P.",
+      role: "Studio Verve Hair",
+    },
+    {
+      quote:
+        "Notre présentation est passée de basique à premium. Webgrafy a organisé l'information clairement et a donné un look haut de gamme au design.",
+      name: "Laura Singh",
+      role: "Summit Sales Group",
+    },
+    {
+      quote:
+        "Nous avions besoin de visuels pour un lancement de campagne, et tout s'est harmonieusement assemblé — bannières, publications sociales et visuels promotionnels.",
+      name: "Olivier Tremblay",
+      role: "Local Harvest Café",
+    },
+    {
+      quote:
+        "Webgrafy a conçu nos dépliants et cartes d'affaires avec un look propre et professionnel. Les imprimés correspondent maintenant à la qualité de nos services.",
+      name: "Sofia Martinez",
+      role: "Harbor House Wellness",
+    },
+    {
+      quote:
+        "Nos brochures paraissent élégantes et faciles à lire. Les clients ont immédiatement compris ce que nous offrons.",
+      name: "Rachel Nguyen",
+      role: "Bloom Health Studio",
+    },
+    {
+      quote:
+        "Le design d'emballage et d'étiquette a donné à notre produit une présence en rayon bien plus forte. Il paraît plus premium et digne de confiance.",
       name: "Camille D.",
-      role: "Fondatrice, Maison Solé",
-      avatar: "/images/avatar-camille.jpg",
+      role: "Serein Botanica",
+      featured: true,
     },
     {
       quote:
-        "Professionnels, créatifs et fiables. Ils ont transformé nos idées en une marque qui reflète vraiment qui nous sommes.",
-      name: "Alexandre T.",
-      role: "Co-fondateur, Nordik Studio",
-      avatar: "/images/avatar-alexandre.jpg",
+        "Webgrafy nous a aidés à configurer et améliorer notre profil Google Business. Notre entreprise paraît plus complète et professionnelle quand les gens nous recherchent.",
+      name: "Dr. Noah Bell",
+      role: "Bell Family Clinic",
+      featured: true,
     },
     {
       quote:
-        "Le nouveau site est rapide, magnifique et si facile à gérer. Nos demandes ont nettement augmenté.",
-      name: "Sofia R.",
-      role: "Directrice marketing, Lunar Wellness",
-      avatar: "/images/avatar-sofia.jpg",
+        "Les mises à jour du profil Google, les photos, les descriptions de services et la cohérence visuelle ont fait une grande différence dans la façon dont notre entreprise apparaît en ligne.",
+      name: "Chloé Dubois",
+      role: "Atelier Chloé Salon",
+    },
+    {
+      quote:
+        "Avoir Webgrafy comme soutien design continu a été d'une grande aide. Nous pouvons demander des mises à jour, des visuels et de petits changements sur le site sans stress.",
+      name: "Peter Wallace",
+      role: "Wallace Repair Co.",
+      featured: true,
+    },
+    {
+      quote:
+        "Webgrafy fait partie de notre équipe. Ils comprennent notre style et gardent tout cohérent sur le site, l'impression et les réseaux sociaux.",
+      name: "Amelia Brooks",
+      role: "Brooks & Bloom Boutique",
+    },
+    {
+      quote:
+        "Chaque projet paraît réfléchi, élégant et bien organisé. Webgrafy nous a aidés à bâtir une présence visuelle dont nous sommes fiers de partager.",
+      name: "Sarah Mitchell",
+      role: "Mitchell Legal Studio",
     },
   ],
   processSteps: [
