@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useLayoutEffect, useEffect, useRef, useState } from "react";
@@ -128,9 +129,16 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
           <Link
             href={`/${locale}`}
             onClick={() => setMenuOpen(false)}
-            className={cn("text-3xl font-semibold tracking-[-0.04em]", isHome ? "text-surface" : "text-ink-strong")}
+            className="shrink-0"
           >
-            {dict.meta.siteName}
+            <Image
+              src={isDarkHeader ? "/logo-white.png" : "/logo-black.png"}
+              alt={dict.meta.siteName}
+              width={180}
+              height={36}
+              priority
+              className="h-9 w-auto"
+            />
           </Link>
 
           <nav
