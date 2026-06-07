@@ -21,6 +21,11 @@ export type ProjectItem = {
   url?: string;
 };
 
+export type ProjectCategoryItem = {
+  name: string;
+  image: string;
+};
+
 export type TestimonialItem = {
   quote: string;
   name: string;
@@ -236,6 +241,7 @@ export type SiteDictionary = {
   };
   marqueeItems: MarqueeLabel[];
   services: ServiceItem[];
+  projectsCategories: ProjectCategoryItem[];
   projects: ProjectItem[];
   testimonials: TestimonialItem[];
   processSteps: ProcessItem[];

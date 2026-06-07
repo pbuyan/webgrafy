@@ -4,7 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { ContactBlock } from "@/components/ui/contact-block";
 import { Container } from "@/components/ui/container";
 import { ProcessTimeline } from "@/components/ui/process-timeline";
-import { ProjectCard } from "@/components/ui/project-card";
 import { SectionLabel } from "@/components/ui/section-label";
 import { ServiceCard } from "@/components/ui/service-card";
 import { ServicesMarquee } from "@/components/ui/services-marquee";
@@ -13,6 +12,7 @@ import { getHomeTestimonials } from "@/lib/testimonials";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
 import { buttonVariants } from "@/components/ui/button";
+import { ProjectCategoriesCard } from '@/components/ui/project-categories-card';
 
 export default async function HomePage({
   params,
@@ -112,8 +112,8 @@ export default async function HomePage({
             </Link>
           </div>
           <div className="mt-10 grid gap-6 lg:grid-cols-2">
-            {dict.projects.map((project, index) => (
-              <ProjectCard key={project.name} project={project} index={index} yearLabel={dict.common.yearLabel} />
+            {dict.projectsCategories.map((category, index) => (
+              <ProjectCategoriesCard key={category.name} category={category} index={index} />
             ))}
           </div>
         </Container>

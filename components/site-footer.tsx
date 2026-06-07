@@ -47,56 +47,58 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
   return (
     <footer className="bg-pitch text-white">
       <Container className="border-t border-white/10 py-10">
-        <div className="grid gap-10 lg:grid-cols-[1.1fr_0.7fr_0.7fr_0.7fr_0.9fr]">
+        <div className="flex lg:flex-row flex-col gap-10 justify-between">
           <div>
             <div className="text-3xl font-semibold tracking-[-0.04em] text-surface">{dict.meta.siteName}</div>
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/70">{dict.footer.blurb}</p>
-            <div className="mt-5 flex items-center gap-4 text-white/80">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label={dict.common.instagram} className="hover:text-white transition-colors">
-                <Instagram className="h-5 w-5" />
-              </a>
-              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label={dict.common.behance} className="hover:text-white transition-colors">
-                <Pen className="h-5 w-5" />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label={dict.common.linkedin} className="hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
-          <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.navigation}</div>
-            <div className="mt-4 grid gap-2 text-sm text-white/78">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href}>{item.label}</Link>
-              ))}
+          <div className="flex md:flex-row flex-col md:gap-24 gap-10">
+            <div>
+              <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.navigation}</div>
+              <div className="mt-4 grid gap-2 text-sm text-white/78">
+                {navItems.map((item) => (
+                  <Link key={item.href} href={item.href}>{item.label}</Link>
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div>
+            {/* <div>
             <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.services}</div>
             <div className="mt-4 grid gap-2 text-sm text-white/78">
               {serviceItems.map((item) => (
                 <FooterListItem key={item.label} item={item} className="hover:text-white transition-colors" />
               ))}
             </div>
-          </div>
+          </div> */}
 
-          <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.resources}</div>
-            <div className="mt-4 grid gap-2 text-sm text-white/78">
-              {resourceItems.map((item) => (
-                <FooterListItem key={item.label} item={item} className="hover:text-white transition-colors" />
-              ))}
+            <div>
+              <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.resources}</div>
+              <div className="mt-4 grid gap-2 text-sm text-white/78">
+                {resourceItems.map((item) => (
+                  <FooterListItem key={item.label} item={item} className="hover:text-white transition-colors" />
+                ))}
+              </div>
             </div>
-          </div>
 
-          <div>
-            <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.contact}</div>
-            <div className="mt-4 grid gap-2 text-sm text-white/78">
-              <p>{dict.contactBlock.email}</p>
-              <p>{dict.contactBlock.phone}</p>
-              <p>{dict.contactBlock.location}</p>
+            <div>
+              <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.contact}</div>
+              <div className="mt-4 grid gap-2 text-sm text-white/78">
+                <p>{dict.contactBlock.email}</p>
+                <p>{dict.contactBlock.phone}</p>
+                <p>{dict.contactBlock.location}</p>
+              </div>
+              <div className="mt-5 flex items-center gap-4 text-white/80">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label={dict.common.instagram} className="hover:text-white transition-colors">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label={dict.common.behance} className="hover:text-white transition-colors">
+                  <Pen className="h-5 w-5" />
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label={dict.common.linkedin} className="hover:text-white transition-colors">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

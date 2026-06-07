@@ -47,9 +47,9 @@ const en: SiteDictionary = {
     eyebrow: "Creative studio for modern businesses",
     title: "A more refined visual presence for brands that want to feel elevated.",
     intro:
-      "We craft thoughtful brand identities, impactful graphics, and modern websites that help ambitious businesses stand out and grow with confidence.",
+      "We help businesses look professional and get more customers through design, websites, and branding.",
     traits: ["Elevated", "Curated", "Editorial"],
-    ctaPrimary: "Book a Call",
+    ctaPrimary: "Start your project",
     ctaSecondary: "View our work",
     trustedBy: "Trusted by ambitious brands",
     logoStrip: ["Lunar Wellness", "Voyage Hotels", "Maison Solé", "Caveau", "Nordik Studio", "Sahara Skin"],
@@ -519,6 +519,24 @@ const en: SiteDictionary = {
       index: "04",
     },
   ],
+  projectsCategories: [
+    {
+      name: "Beauty",
+      image: "/images/portfolio/projects/categories/beauty.png",
+    },
+    {
+      name: "Health & Wellness",
+      image: "/images/portfolio/projects/categories/gym.png",
+    },
+    {
+      name: "Real Estate & Construction",
+      image: "/images/portfolio/projects/categories/real-estate.png",
+    },
+    {
+      name: "Restaurants & Cafés",
+      image: "/images/portfolio/projects/categories/restaurants-cafes.png",
+    },
+  ],
   projects: [
     {
       name: "Nordik Studio",
@@ -752,9 +770,9 @@ const fr: SiteDictionary = {
     eyebrow: "Studio créatif pour entreprises modernes",
     title: "Une présence visuelle plus raffinée pour les marques qui veulent paraître haut de gamme.",
     intro:
-      "Nous créons des identités de marque réfléchies, des visuels percutants et des sites modernes qui aident les entreprises ambitieuses à se démarquer et à grandir avec confiance.",
+      "Nous aidons les petites entreprises à paraître professionnelles et à attirer plus de clients grâce au design, aux sites web et au branding.",
     traits: ["Élevé", "Soigné", "Éditorial"],
-    ctaPrimary: "Prendre rendez-vous",
+    ctaPrimary: "Commencer votre projet",
     ctaSecondary: "Voir nos projets",
     trustedBy: "Approuvé par des marques ambitieuses",
     logoStrip: ["Lunar Wellness", "Voyage Hotels", "Maison Solé", "Caveau", "Nordik Studio", "Sahara Skin"],
@@ -1222,6 +1240,24 @@ const fr: SiteDictionary = {
         "Design de campagnes saisonnières",
       ],
       index: "04",
+    },
+  ],
+  projectsCategories: [
+    {
+      name: "Beauté",
+      image: "/images/portfolio/projects/categories/beauty.png",
+    },
+    {
+      name: "Santé et bien-être",
+      image: "/images/portfolio/projects/categories/gym.png",
+    },
+    {
+      name: "Immobilier et construction",
+      image: "/images/portfolio/projects/categories/real-estate.png",
+    },
+    {
+      name: "Restaurants et cafés",
+      image: "/images/portfolio/projects/categories/restaurants-cafes.png",
     },
   ],
   projects: [

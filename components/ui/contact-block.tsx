@@ -61,19 +61,7 @@ export function ContactBlock({ locale, dict, id }: { locale: Locale; dict: SiteD
             </h2>
             <p className="mt-6 max-w-lg text-lg leading-8 text-white/70">{dict.contactBlock.text}</p>
             <div className="space-y-5 text-sm text-white/72">
-              <p>{dict.common.replyWindow}</p>
-              <div className="flex items-start gap-3">
-                <Mail className="mt-0.5 h-4 w-4" />
-                <span>{dict.contactBlock.email}</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <Phone className="mt-0.5 h-4 w-4" />
-                <span>{dict.contactBlock.phone}</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <MapPin className="mt-0.5 h-4 w-4" />
-                <span>{dict.contactBlock.location}</span>
-              </div>
+              <p className="mt-3 text-brand">{dict.common.replyWindow}</p>
             </div>
           </div>
 
