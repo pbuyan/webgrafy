@@ -8,34 +8,7 @@ import { Container } from "@/components/ui/container";
 import { SectionLabel } from "@/components/ui/section-label";
 import { cn } from "@/lib/utils";
 
-type VisualLabel = { name: string; caption: string };
-
-const VISUAL_ASSETS = [
-  {
-    src: "/images/portfolio/gemini/logos-marks.png",
-    alt: "Logos, wordmarks, and brand marks",
-  },
-  {
-    src: "/images/portfolio/gemini/stationary-branding.png",
-    alt: "Stationery and branded print materials",
-  },
-  {
-    src: "/images/portfolio/gemini/websites.png",
-    alt: "Website layouts and digital experience design",
-  },
-  {
-    src: "/images/portfolio/gemini/packaging-labels.png",
-    alt: "Packaging design and product labels",
-  },
-  {
-    src: "/images/portfolio/gemini/editorial-print.png",
-    alt: "Editorial layout and print design",
-  },
-  {
-    src: "/images/portfolio/gemini/social-digital.png",
-    alt: "Social media and digital campaign assets",
-  },
-] as const;
+type VisualLabel = { name: string; caption: string; src: string };
 
 const thumbnailSizes = "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw";
 const lightboxSizes = "(max-width: 1280px) 92vw, 1120px";
@@ -54,8 +27,6 @@ export function ServiceVisuals({
   const [activeCardIndex, setActiveCardIndex] = useState<number | null>(null);
   const dialogRef = useRef<HTMLDialogElement>(null);
   const titleId = useId();
-
-  const visualsLength = VISUAL_ASSETS.length;
 
   const closeDialog = useCallback(() => {
     dialogRef.current?.close();
@@ -82,8 +53,7 @@ export function ServiceVisuals({
     };
   }, [activeCardIndex]);
 
-  const activeAsset =
-    activeCardIndex !== null ? VISUAL_ASSETS[activeCardIndex % visualsLength] : null;
+  const activeLabel = activeCardIndex !== null ? labels[activeCardIndex] : null;
 
   const tints = ["bg-tint-1", "bg-tint-2", "bg-tint-3", "bg-tint-2", "bg-tint-1", "bg-tint-3"];
 
@@ -102,7 +72,6 @@ export function ServiceVisuals({
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {labels.map((label, index) => {
-            const asset = VISUAL_ASSETS[index % visualsLength];
             const bg = tints[index % tints.length];
             return (
               <article
@@ -123,7 +92,7 @@ export function ServiceVisuals({
                     aria-label={`Open full size preview: ${label.name}`}
                   >
                     <Image
-                      src={asset.src}
+                      src={label.src}
                       alt=""
                       fill
                       role="presentation"
@@ -154,9 +123,9 @@ export function ServiceVisuals({
           "open:flex open:max-h-dvh open:w-full open:max-w-screen open:overscroll-contain open:flex-col"
         )}
         onClose={handleDialogClose}
-        aria-labelledby={activeAsset ? titleId : undefined}
+        aria-labelledby={activeLabel ? titleId : undefined}
       >
-        {activeAsset ? (
+        {activeLabel ? (
           <div
             className="flex min-h-dvh flex-1 items-center justify-center p-4 sm:p-8"
             onMouseDown={(e) => {
@@ -179,12 +148,12 @@ export function ServiceVisuals({
                 <XIcon className="h-5 w-5 shrink-0" aria-hidden />
               </button>
               <p id={titleId} className="sr-only">
-                {activeAsset.alt}
+                {activeLabel.name}
               </p>
               <figure className="overflow-hidden rounded-2xl border border-stroke bg-surface-muted shadow-xl">
                 <Image
-                  src={activeAsset.src}
-                  alt={activeAsset.alt}
+                  src={activeLabel.src}
+                  alt={activeLabel.name}
                   width={1920}
                   height={1440}
                   className="max-h-[min(82dvh,calc(100dvh-5rem))] w-full object-contain"

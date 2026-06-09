@@ -189,7 +189,7 @@ export type SiteDictionary = {
       servicesEyebrow: string;
       servicesTitle: string;
       servicesText: string;
-      serviceVisuals: { name: string; caption: string }[];
+      serviceVisuals: { name: string; caption: string; src: string }[];
     };
     about: { eyebrow: string; title: string; text: string };
     contact: { eyebrow: string; title: string; text: string };

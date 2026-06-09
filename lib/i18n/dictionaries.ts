@@ -45,14 +45,22 @@ const en: SiteDictionary = {
   home: {
     badge: "Branding & Web Design Agency",
     eyebrow: "Creative studio for modern businesses",
-    title: "A more refined visual presence for brands that want to feel elevated.",
+    title:
+      "A more refined visual presence for brands that want to feel elevated.",
     intro:
       "We help businesses look professional and get more customers through design, websites, and branding.",
     traits: ["Elevated", "Curated", "Editorial"],
     ctaPrimary: "Start your project",
     ctaSecondary: "View our work",
     trustedBy: "Trusted by ambitious brands",
-    logoStrip: ["Lunar Wellness", "Voyage Hotels", "Maison Solé", "Caveau", "Nordik Studio", "Sahara Skin"],
+    logoStrip: [
+      "Lunar Wellness",
+      "Voyage Hotels",
+      "Maison Solé",
+      "Caveau",
+      "Nordik Studio",
+      "Sahara Skin",
+    ],
     servicesEyebrow: "What we do",
     servicesTitle: "Strategic design. Beautifully executed.",
     workEyebrow: "Selected work",
@@ -69,8 +77,7 @@ const en: SiteDictionary = {
     services: {
       eyebrow: "Services",
       title: "Everything your business needs to look professional and grow",
-      text:
-        "At Webgrafy, we help small and medium businesses look professional, attract more customers, and grow both online and offline. From websites and branding to social media graphics, printed marketing materials, packaging, and local SEO, we create everything your business needs to build a strong and consistent presence.",
+      text: "At Webgrafy, we help small and medium businesses look professional, attract more customers, and grow both online and offline. From websites and branding to social media graphics, printed marketing materials, packaging, and local SEO, we create everything your business needs to build a strong and consistent presence.",
       cta: "Ask About a Project",
       industriesEyebrow: "Who we work with",
       industriesTitle: "Trusted by ambitious small and medium businesses",
@@ -136,7 +143,8 @@ const en: SiteDictionary = {
       faqTitle: "Common questions about our services",
       faqs: [
         {
-          question: "Do I have to commit to a full project, or can I start small?",
+          question:
+            "Do I have to commit to a full project, or can I start small?",
           answer:
             "You can start with a single deliverable — a logo, a one-page site, a flyer — and add scope later. Many clients begin with one piece and expand once they see how we work.",
         },
@@ -170,8 +178,7 @@ const en: SiteDictionary = {
     packages: {
       eyebrow: "Packages",
       title: "Startup-friendly bundles for logo, branding, and full identity",
-      text:
-        "Choose a clear starting point for your business identity. Each package is structured to deliver professional files and revisions so you know exactly what you're getting.",
+      text: "Choose a clear starting point for your business identity. Each package is structured to deliver professional files and revisions so you know exactly what you're getting.",
       tiersHeading: "Create your business startup packages",
       getStarted: "Get started",
       popularLabel: "Most popular",
@@ -190,7 +197,8 @@ const en: SiteDictionary = {
         {
           name: "Branding",
           price: "$500",
-          description: "A cohesive identity system across logo, print and stationery.",
+          description:
+            "A cohesive identity system across logo, print and stationery.",
           popular: true,
           includes: [
             "Logo",
@@ -203,8 +211,14 @@ const en: SiteDictionary = {
         {
           name: "Corporate identity",
           price: "From $1500",
-          description: "A complete identity, social presence and website — start to finish.",
-          includes: ["Logo", "Branding", "Social media design", "Website design"],
+          description:
+            "A complete identity, social presence and website — start to finish.",
+          includes: [
+            "Logo",
+            "Branding",
+            "Social media design",
+            "Website design",
+          ],
         },
       ],
       includedHeading: "Every package",
@@ -237,22 +251,26 @@ const en: SiteDictionary = {
         {
           title: "Extra revision round",
           price: "+$120",
-          description: "An additional cycle of refinements on logo or stationery deliverables.",
+          description:
+            "An additional cycle of refinements on logo or stationery deliverables.",
         },
         {
           title: "Social media templates",
           price: "+$280",
-          description: "A set of editable templates for posts, stories and reels in your brand system.",
+          description:
+            "A set of editable templates for posts, stories and reels in your brand system.",
         },
         {
           title: "Brand guidelines document",
           price: "+$450",
-          description: "A polished PDF guide covering logo usage, typography, colour and tone.",
+          description:
+            "A polished PDF guide covering logo usage, typography, colour and tone.",
         },
         {
           title: "Additional website page",
           price: "+$300",
-          description: "A custom-designed page added to your website scope, on-brand and responsive.",
+          description:
+            "A custom-designed page added to your website scope, on-brand and responsive.",
         },
       ],
       faqHeading: "FAQ",
@@ -293,56 +311,61 @@ const en: SiteDictionary = {
     portfolio: {
       eyebrow: "Portfolio",
       title: "Selected projects shaped with a premium editorial point of view",
-      text:
-        "A curated collection of branding, graphic design, and website projects created to help businesses feel more refined, more consistent, and more memorable.",
+      text: "A curated collection of branding, graphic design, and website projects created to help businesses feel more refined, more consistent, and more memorable.",
       servicesEyebrow: "What we craft",
-      servicesTitle: "Visual systems built across every surface your business shows up on",
+      servicesTitle:
+        "Creative work designed to help small businesses look professional, consistent, and ready to grow.",
       servicesText:
-        "From a refined logo to packaging that earns shelf space, every deliverable is designed to feel cohesive — and to look at home wherever your customers find you.",
+        "Explore a selection of visual concepts across branding, websites, packaging, print, and digital marketing — created to show how a strong identity can work across every customer touchpoint.",
       serviceVisuals: [
         {
-          name: "Logos & marks",
+          name: "Logo Design",
           caption:
-            "Distinctive monograms, wordmarks, and lockups crafted around how you sound, not just how you look.",
+            "Distinctive logo concepts built to give each business a clear and memorable first impression.",
+          src: "/images/portfolio/projects/logo.png",
         },
         {
-          name: "Stationery & branding",
+          name: "Stationery & Brand Identity",
           caption:
-            "Cards, letterheads, and brand collateral that turn an identity into a daily, repeatable experience.",
+            "Complete visual identity systems that bring the brand together across everyday business materials.",
+          src: "/images/portfolio/projects/stationary.png",
         },
         {
-          name: "Websites",
+          name: "Website Design",
           caption:
-            "Editorial, conversion-minded sites built bilingually and ready to grow with your business.",
+            "Website concepts created to make businesses look credible, modern, and easy to understand online.",
+          src: "/images/portfolio/projects/website.png",
         },
         {
-          name: "Packaging & labels",
+          name: "Packaging & Labels",
           caption:
-            "Considered packaging, labels, and product systems engineered to perform on the shelf.",
+            "Product packaging and label concepts designed to make brands feel premium, recognizable, and shelf-ready.",
+          src: "/images/portfolio/projects/packaging.png",
         },
         {
-          name: "Editorial & print",
+          name: "Brochures, Lookbooks & Printed Pieces",
           caption:
-            "Brochures, lookbooks, and printed pieces that carry the tone of your brand into the physical world.",
+            "Printed marketing materials designed to present products, services, and brand stories in a clear and attractive way.",
+          src: "/images/portfolio/projects/brochures.png",
         },
         {
-          name: "Social & digital",
+          name: "Social Media & Digital Presentations",
           caption:
-            "Templates and content systems that keep every post on-brand without slowing your team down.",
+            "Branded social media visuals created to help businesses show up consistently online.",
+          src: "/images/portfolio/projects/social-media.png",
         },
       ],
     },
     about: {
       eyebrow: "About",
-      title: "A creative studio focused on refined branding and modern digital presence",
-      text:
-        "Webgrafy is a Montréal-based design practice working at the intersection of identity, print and the web. We were founded in 2018 to do one thing well — help small and mid-sized businesses look like the companies they intend to become — and we've kept the team small so we can keep doing it.",
+      title:
+        "A creative studio focused on refined branding and modern digital presence",
+      text: "Webgrafy is a Montréal-based design practice working at the intersection of identity, print and the web. We were founded in 2018 to do one thing well — help small and mid-sized businesses look like the companies they intend to become — and we've kept the team small so we can keep doing it.",
     },
     contact: {
       eyebrow: "Contact",
       title: "Tell us about your brand, website, or creative project",
-      text:
-        "Whether you need a logo, a full identity, graphic design support, or a new website, we'd love to hear what you're building.",
+      text: "Whether you need a logo, a full identity, graphic design support, or a new website, we'd love to hear what you're building.",
     },
     privacy: {
       eyebrow: "Legal",
@@ -409,7 +432,8 @@ const en: SiteDictionary = {
   },
   about: {
     approachEyebrow: "Our approach",
-    approachTitle: "A premium visual language with a thoughtful process behind it",
+    approachTitle:
+      "A premium visual language with a thoughtful process behind it",
     approachText:
       "We combine refined creative direction with practical business thinking so every project feels intentional, contemporary, and aligned with the image our clients want to build.",
     processEyebrow: "Process",
@@ -427,8 +451,7 @@ const en: SiteDictionary = {
   contactBlock: {
     eyebrow: "Let's work together",
     title: "Ready to elevate your brand presence?",
-    text:
-      "Tell us about your project and let's create something exceptional together.",
+    text: "Tell us about your project and let's create something exceptional together.",
     phone: "+1 (514) 555-0198",
     email: "hello@webgrafy.co",
     location: "Montreal, QC, Canada",
@@ -567,7 +590,8 @@ const en: SiteDictionary = {
       category: "Web Design, Next.js",
       summary:
         "A bilingual website for a Montreal nonprofit providing emotional support to people navigating illness, caregiving, and recovery.",
-      result: "A warm, accessible platform serving the Montreal community in English and French",
+      result:
+        "A warm, accessible platform serving the Montreal community in English and French",
       image: "/images/project-papillon.jpg",
       url: "https://papillondelespoir.ca/en",
     },
@@ -768,20 +792,29 @@ const fr: SiteDictionary = {
   home: {
     badge: "Agence de branding & web design",
     eyebrow: "Studio créatif pour entreprises modernes",
-    title: "Une présence visuelle plus raffinée pour les marques qui veulent paraître haut de gamme.",
+    title:
+      "Une présence visuelle plus raffinée pour les marques qui veulent paraître haut de gamme.",
     intro:
       "Nous aidons les petites entreprises à paraître professionnelles et à attirer plus de clients grâce au design, aux sites web et au branding.",
     traits: ["Élevé", "Soigné", "Éditorial"],
     ctaPrimary: "Commencer votre projet",
     ctaSecondary: "Voir nos projets",
     trustedBy: "Approuvé par des marques ambitieuses",
-    logoStrip: ["Lunar Wellness", "Voyage Hotels", "Maison Solé", "Caveau", "Nordik Studio", "Sahara Skin"],
+    logoStrip: [
+      "Lunar Wellness",
+      "Voyage Hotels",
+      "Maison Solé",
+      "Caveau",
+      "Nordik Studio",
+      "Sahara Skin",
+    ],
     servicesEyebrow: "Ce que nous faisons",
     servicesTitle: "Un design stratégique. Une exécution remarquable.",
     workEyebrow: "Projets sélectionnés",
     workTitle: "Un design qui génère de vrais résultats.",
     testimonialsEyebrow: "Mots de nos clients",
-    testimonialsTitle: "Choisi par des marques qui valorisent un design réfléchi.",
+    testimonialsTitle:
+      "Choisi par des marques qui valorisent un design réfléchi.",
     testimonialsPrev: "Témoignages précédents",
     testimonialsNext: "Témoignages suivants",
     testimonialsDotLabel: "Aller à la diapositive {n}",
@@ -791,9 +824,9 @@ const fr: SiteDictionary = {
   pages: {
     services: {
       eyebrow: "Services",
-      title: "Tout ce dont votre entreprise a besoin pour paraître professionnelle et croître",
-      text:
-        "Chez Webgrafy, nous aidons les petites et moyennes entreprises à paraître professionnelles, à attirer plus de clients et à croître en ligne comme hors ligne. Des sites web et de l’image de marque aux visuels pour les médias sociaux, aux supports imprimés, à l’emballage et au référencement local, nous créons tout ce dont votre entreprise a besoin pour bâtir une présence forte et cohérente.",
+      title:
+        "Tout ce dont votre entreprise a besoin pour paraître professionnelle et croître",
+      text: "Chez Webgrafy, nous aidons les petites et moyennes entreprises à paraître professionnelles, à attirer plus de clients et à croître en ligne comme hors ligne. Des sites web et de l’image de marque aux visuels pour les médias sociaux, aux supports imprimés, à l’emballage et au référencement local, nous créons tout ce dont votre entreprise a besoin pour bâtir une présence forte et cohérente.",
       cta: "Parler de votre projet",
       industriesEyebrow: "Avec qui nous travaillons",
       industriesTitle: "Choisi par des PME ambitieuses",
@@ -859,7 +892,8 @@ const fr: SiteDictionary = {
       faqTitle: "Questions fréquentes sur nos services",
       faqs: [
         {
-          question: "Faut-il s’engager sur un projet complet ou peut-on commencer petit ?",
+          question:
+            "Faut-il s’engager sur un projet complet ou peut-on commencer petit ?",
           answer:
             "Vous pouvez démarrer avec un seul livrable — un logo, une page de site, un dépliant — et étendre la portée plus tard. Beaucoup de clients commencent par un élément et élargissent une fois qu’ils ont vu notre façon de travailler.",
         },
@@ -892,9 +926,9 @@ const fr: SiteDictionary = {
     },
     packages: {
       eyebrow: "Forfaits",
-      title: "Des ensembles pensés pour le logo, l’image de marque et l’identité complète",
-      text:
-        "Choisissez un point de départ clair pour l’identité de votre entreprise. Chaque forfait est structuré pour livrer des fichiers professionnels et des révisions, avec des livrables clairement définis.",
+      title:
+        "Des ensembles pensés pour le logo, l’image de marque et l’identité complète",
+      text: "Choisissez un point de départ clair pour l’identité de votre entreprise. Chaque forfait est structuré pour livrer des fichiers professionnels et des révisions, avec des livrables clairement définis.",
       tiersHeading: "Créez vos forfaits de démarrage pour entreprise",
       getStarted: "Commencer",
       popularLabel: "Le plus populaire",
@@ -902,7 +936,8 @@ const fr: SiteDictionary = {
         {
           name: "Logo",
           price: "200 $",
-          description: "Une marque soignée pour lancer votre entreprise avec confiance.",
+          description:
+            "Une marque soignée pour lancer votre entreprise avec confiance.",
           includes: [
             "4 concepts de logo",
             "3 révisions",
@@ -913,7 +948,8 @@ const fr: SiteDictionary = {
         {
           name: "Image de marque",
           price: "500 $",
-          description: "Un système d’identité cohérent — logo, papeterie et impression.",
+          description:
+            "Un système d’identité cohérent — logo, papeterie et impression.",
           popular: true,
           includes: [
             "Logo",
@@ -926,8 +962,14 @@ const fr: SiteDictionary = {
         {
           name: "Identité corporative",
           price: "À partir de 1500 $",
-          description: "Une identité complète, présence sociale et site web — de A à Z.",
-          includes: ["Logo", "Image de marque", "Design pour médias sociaux", "Design de site web"],
+          description:
+            "Une identité complète, présence sociale et site web — de A à Z.",
+          includes: [
+            "Logo",
+            "Image de marque",
+            "Design pour médias sociaux",
+            "Design de site web",
+          ],
         },
       ],
       includedHeading: "Tous les forfaits",
@@ -960,22 +1002,26 @@ const fr: SiteDictionary = {
         {
           title: "Tour de révisions supplémentaire",
           price: "+120 $",
-          description: "Un cycle additionnel d’ajustements sur les livrables logo ou papeterie.",
+          description:
+            "Un cycle additionnel d’ajustements sur les livrables logo ou papeterie.",
         },
         {
           title: "Modèles pour réseaux sociaux",
           price: "+280 $",
-          description: "Un ensemble de modèles éditables pour publications, stories et reels, dans votre identité.",
+          description:
+            "Un ensemble de modèles éditables pour publications, stories et reels, dans votre identité.",
         },
         {
           title: "Guide de marque",
           price: "+450 $",
-          description: "Un PDF complet couvrant l’usage du logo, la typographie, les couleurs et le ton.",
+          description:
+            "Un PDF complet couvrant l’usage du logo, la typographie, les couleurs et le ton.",
         },
         {
           title: "Page de site additionnelle",
           price: "+300 $",
-          description: "Une page personnalisée ajoutée à votre projet web, fidèle à votre marque et responsive.",
+          description:
+            "Une page personnalisée ajoutée à votre projet web, fidèle à votre marque et responsive.",
         },
       ],
       faqHeading: "FAQ",
@@ -1015,57 +1061,63 @@ const fr: SiteDictionary = {
     },
     portfolio: {
       eyebrow: "Portfolio",
-      title: "Une sélection de projets façonnés avec une direction éditoriale premium",
-      text:
-        "Une collection soignée de projets de branding, design graphique et sites web créés pour aider les entreprises à paraître plus raffinées, cohérentes et mémorables.",
+      title:
+        "Une sélection de projets façonnés avec une direction éditoriale premium",
+      text: "Une collection soignée de projets de branding, design graphique et sites web créés pour aider les entreprises à paraître plus raffinées, cohérentes et mémorables.",
       servicesEyebrow: "Ce que nous concevons",
-      servicesTitle: "Des systèmes visuels pensés pour toutes les surfaces où votre entreprise apparaît",
+      servicesTitle:
+        "Un travail créatif conçu pour aider les petites entreprises à paraître professionnelles, cohérentes et prêtes à croître.",
       servicesText:
-        "D’un logo raffiné à un emballage qui se distingue en rayon, chaque livrable est conçu pour rester cohérent — et avoir l’air à sa place partout où vos clients vous croisent.",
+        "Explorez une sélection de concepts visuels en branding, sites web, emballage, impression et marketing digital — créés pour montrer comment une identité forte peut fonctionner à chaque point de contact client.",
       serviceVisuals: [
         {
-          name: "Logos et marques",
+          name: "Conception de logo",
           caption:
-            "Monogrammes, signatures et déclinaisons pensés autour de votre ton, pas seulement de votre apparence.",
+            "Des concepts de logo distinctifs conçus pour donner à chaque entreprise une première impression claire et mémorable.",
+          src: "/images/portfolio/projects/logo.png",
         },
         {
-          name: "Papeterie et image de marque",
+          name: "Papeterie et identité de marque",
           caption:
-            "Cartes, en-têtes et supports qui transforment une identité en expérience quotidienne.",
+            "Des systèmes d’identité visuelle complets qui unifient la marque sur les supports professionnels du quotidien.",
+          src: "/images/portfolio/projects/stationary.png",
         },
         {
-          name: "Sites web",
+          name: "Conception de site web",
           caption:
-            "Des sites éditoriaux et orientés conversion, bilingues et prêts à grandir avec votre entreprise.",
+            "Des concepts de site web créés pour rendre les entreprises crédibles, modernes et faciles à comprendre en ligne.",
+          src: "/images/portfolio/projects/website.png",
         },
         {
           name: "Emballage et étiquettes",
           caption:
-            "Emballages, étiquettes et systèmes produit conçus pour performer sur le rayon.",
+            "Des concepts d’emballage et d’étiquettes conçus pour donner aux marques un aspect premium, reconnaissable et prêt pour le rayon.",
+          src: "/images/portfolio/projects/packaging.png",
         },
         {
-          name: "Éditorial et impression",
+          name: "Brochures, lookbooks et imprimés",
           caption:
-            "Brochures, lookbooks et imprimés qui prolongent le ton de votre marque dans le monde physique.",
+            "Des supports marketing imprimés conçus pour présenter produits, services et histoires de marque de façon claire et attrayante.",
+          src: "/images/portfolio/projects/brochures.png",
         },
         {
-          name: "Réseaux sociaux et digital",
+          name: "Réseaux sociaux et présentations digitales",
           caption:
-            "Modèles et systèmes de contenu qui gardent chaque publication fidèle à la marque sans ralentir votre équipe.",
+            "Des visuels de réseaux sociaux cohérents avec la marque, créés pour aider les entreprises à se présenter uniformément en ligne.",
+          src: "/images/portfolio/projects/social-media.png",
         },
       ],
     },
     about: {
       eyebrow: "À propos",
-      title: "Un studio créatif axé sur le branding raffiné et la présence digitale moderne",
-      text:
-        "Webgrafy est un studio de design basé à Montréal travaillant à l'intersection de l'identité, du print et du web. Nous avons été fondés en 2018 pour faire une chose bien — aider les petites et moyennes entreprises à paraître comme les entreprises qu'elles souhaitent devenir — et nous avons gardé l'équipe petite pour pouvoir continuer à le faire.",
+      title:
+        "Un studio créatif axé sur le branding raffiné et la présence digitale moderne",
+      text: "Webgrafy est un studio de design basé à Montréal travaillant à l'intersection de l'identité, du print et du web. Nous avons été fondés en 2018 pour faire une chose bien — aider les petites et moyennes entreprises à paraître comme les entreprises qu'elles souhaitent devenir — et nous avons gardé l'équipe petite pour pouvoir continuer à le faire.",
     },
     contact: {
       eyebrow: "Contact",
       title: "Parlez-nous de votre marque, site web ou projet créatif",
-      text:
-        "Que vous ayez besoin d’un logo, d’une identité complète, d’un soutien en design graphique ou d’un nouveau site web, nous serions ravis de découvrir votre projet.",
+      text: "Que vous ayez besoin d’un logo, d’une identité complète, d’un soutien en design graphique ou d’un nouveau site web, nous serions ravis de découvrir votre projet.",
     },
     privacy: {
       eyebrow: "Légal",
@@ -1132,7 +1184,8 @@ const fr: SiteDictionary = {
   },
   about: {
     approachEyebrow: "Notre approche",
-    approachTitle: "Un langage visuel premium soutenu par un processus réfléchi",
+    approachTitle:
+      "Un langage visuel premium soutenu par un processus réfléchi",
     approachText:
       "Nous combinons une direction créative raffinée à une réflexion business concrète pour que chaque projet paraisse intentionnel, contemporain et aligné avec l’image que nos clients souhaitent construire.",
     processEyebrow: "Processus",
@@ -1150,8 +1203,7 @@ const fr: SiteDictionary = {
   contactBlock: {
     eyebrow: "Travaillons ensemble",
     title: "Prêt à élever la présence de votre marque ?",
-    text:
-      "Parlez-nous de votre projet et créons ensemble quelque chose d’exceptionnel.",
+    text: "Parlez-nous de votre projet et créons ensemble quelque chose d’exceptionnel.",
     phone: "+1 (514) 555-0198",
     email: "hello@webgrafy.co",
     location: "Montréal, QC, Canada",
@@ -1290,7 +1342,8 @@ const fr: SiteDictionary = {
       category: "Web design, Next.js",
       summary:
         "Un site bilingue pour un organisme à but non lucratif montréalais offrant un soutien émotionnel aux personnes touchées par la maladie, les proches aidants et ceux en rétablissement.",
-      result: "Une plateforme chaleureuse et accessible servant la communauté montréalaise en français et en anglais",
+      result:
+        "Une plateforme chaleureuse et accessible servant la communauté montréalaise en français et en anglais",
       image: "/images/project-papillon.jpg",
       url: "https://papillondelespoir.ca/fr",
     },
