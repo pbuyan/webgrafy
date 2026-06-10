@@ -22,7 +22,10 @@ export function ProcessTimeline({
         </h2>
 
         <div className="relative mt-12 hidden border-t border-stroke-mid md:block">
-          <div className="grid grid-cols-4 gap-8 pt-10">
+          <div
+            className="grid gap-8 pt-10"
+            style={{ gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))` }}
+          >
             {steps.map((step) => (
               <div key={step.number} className="relative">
                 <div className="absolute -top-[2.65rem] left-0 h-3 w-3 rounded-full bg-black" />

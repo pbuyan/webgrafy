@@ -115,7 +115,7 @@ const en: SiteDictionary = {
             "Approachable, accessible communication that strengthens trust with members and donors.",
         },
       ],
-      processEyebrow: "How we work",
+      processEyebrow: "Our process",
       processTitle: "A clear path from first conversation to launch",
       whyEyebrow: "Why Webgrafy",
       whyTitle: "Design partners, not just suppliers",
@@ -171,142 +171,343 @@ const en: SiteDictionary = {
         {
           question: "How much does a project cost?",
           answer:
-            "Logos start at $200, complete branding from $500, and websites typically range from $2,500 to $12,000 depending on scope. We send a detailed estimate after our discovery call.",
+            "Brand Starter begins at $450, Business Identity from $950, and websites typically start at $2,500 depending on scope. We send a detailed estimate after our discovery call.",
         },
       ],
     },
     packages: {
       eyebrow: "Packages",
-      title: "Startup-friendly bundles for logo, branding, and full identity",
-      text: "Choose a clear starting point for your business identity. Each package is structured to deliver professional files and revisions so you know exactly what you're getting.",
-      tiersHeading: "Create your business startup packages",
-      getStarted: "Get started",
+      title: "Packages Built for Small Businesses That Need to Look Professional Fast",
+      text: "Choose the right starting point for your business — whether you need a logo, a full brand identity, a website, print materials, or ongoing creative support. Webgrafy helps small and medium businesses build a professional presence online and offline, without the confusion of working with multiple providers.",
+      heroCtaPrimary: "Book a Free Consultation",
+      heroCtaSecondary: "Compare Packages",
+      tiersHeading: "Choose your starting point",
+      bestForLabel: "Best for",
+      timelineLabel: "Timeline",
+      chooseItemsLabel: "Choose 3 items",
       popularLabel: "Most popular",
       tiers: [
         {
-          name: "Logo",
-          price: "$200",
-          description: "A polished mark to launch your brand with confidence.",
+          name: "Brand Starter",
+          price: "Starting at $450",
+          description: "For new businesses that need a professional first impression.",
+          bestFor:
+            "Startups, solo businesses, service providers, beauty studios, cafés, home services, consultants.",
           includes: [
-            "4 logo concepts",
-            "3 revisions",
-            "Professional logo artwork files",
-            "Full colour, grayscale, and black & white versions",
+            "Logo design",
+            "2–3 logo concepts",
+            "2 revision rounds",
+            "Colour palette",
+            "Font recommendations",
+            "Final logo files for web and print",
+            "Social media profile image",
+            "Basic brand direction sheet",
           ],
+          timeline: "1–2 weeks",
+          cta: "Start My Brand",
         },
         {
-          name: "Branding",
-          price: "$500",
+          name: "Business Identity",
+          price: "Starting at $950",
+          description: "For businesses that need a complete and consistent visual identity.",
+          bestFor:
+            "Businesses preparing to launch, refresh, print, promote, or open a physical location.",
+          includes: [
+            "Everything in Brand Starter",
+            "Business card design",
+            "Letterhead or invoice template",
+            "Email signature",
+            "Social media cover/banner",
+            "3 branded social post templates",
+            "Mini brand guidelines PDF",
+            "Print-ready and digital-ready files",
+          ],
+          timeline: "2–3 weeks",
+          cta: "Build My Identity",
+        },
+        {
+          name: "Website Launch",
+          price: "Starting at $2,500",
           description:
-            "A cohesive identity system across logo, print and stationery.",
+            "For businesses that need a modern website that explains what they do and helps customers take action.",
+          bestFor:
+            "Local service businesses, trades, wellness, beauty, real estate, restaurants, consultants, small retailers.",
+          includes: [
+            "1–5 page responsive website",
+            "Homepage, About, Services, Contact, and one extra page",
+            "Mobile-friendly design",
+            "Basic website copy support",
+            "Contact form setup",
+            "Basic SEO setup",
+            "Google Analytics / tracking setup",
+            "Basic speed optimization",
+            "Launch support",
+            "1 training session or handoff guide",
+          ],
+          timeline: "3–5 weeks",
           popular: true,
-          includes: [
-            "Logo",
-            "Business card, letterhead, and envelope",
-            "2 initial stationery concepts",
-            "3 stationery revisions",
-            "Professional print-ready artwork files",
-          ],
+          cta: "Launch My Website",
         },
         {
-          name: "Corporate identity",
-          price: "From $1500",
+          name: "Online Growth",
+          price: "Starting at $650/month",
           description:
-            "A complete identity, social presence and website — start to finish.",
+            "For businesses that already have a website but need better visibility, content, and consistency.",
+          bestFor:
+            "Businesses that need regular design, Google Business support, social media graphics, website updates, and local visibility.",
           includes: [
-            "Logo",
-            "Branding",
-            "Social media design",
-            "Website design",
+            "Website updates",
+            "Google Business Profile support",
+            "4 social media graphics",
+            "1 promotional banner or ad graphic",
+            "Basic SEO improvements",
+            "Monthly content suggestions",
+            "Light performance review",
+            "Priority design support",
           ],
+          cta: "Grow My Business",
+        },
+        {
+          name: "Print & Promo Kit",
+          price: "Starting at $550",
+          description:
+            "For businesses that need professional printed materials for sales, events, packaging, or local marketing.",
+          bestFor:
+            "Cafés, restaurants, retail shops, beauty studios, real estate agents, home services, product brands.",
+          chooseItems: [
+            "Business card",
+            "Flyer",
+            "Menu",
+            "Brochure",
+            "Gift certificate",
+            "Product insert",
+            "Poster",
+            "Label or sticker",
+            "Rack card",
+            "Event invitation",
+          ],
+          includes: [
+            "Custom layout design",
+            "Print-ready files",
+            "Digital version for sharing online",
+            "2 revision rounds",
+          ],
+          cta: "Create My Print Materials",
+        },
+        {
+          name: "Complete Business Launch",
+          price: "Starting at $4,500",
+          description:
+            "For businesses that want everything done together — brand, website, Google setup, and launch materials.",
+          bestFor:
+            "New businesses, rebrands, local service companies, studios, clinics, cafés, boutiques, and growing small businesses.",
+          includes: [
+            "Brand identity",
+            "Logo system",
+            "Mini brand guidelines",
+            "1–5 page website",
+            "Website copy support",
+            "Basic SEO setup",
+            "Google Business Profile setup or optimization",
+            "5 social media templates",
+            "Business card design",
+            "Flyer or brochure design",
+            "Launch checklist",
+            "30 days post-launch support",
+          ],
+          timeline: "5–8 weeks",
+          cta: "Launch My Business",
+        },
+      ],
+      guidanceEyebrow: "Need help choosing?",
+      guidanceTitle: "Not sure what you need?",
+      guidanceText:
+        "Most small businesses know they need to look professional — but aren't sure where to start. Use this quick guide to find the right package.",
+      guidanceItems: [
+        {
+          scenario: "Starting from zero and only need a logo",
+          packageName: "Brand Starter",
+        },
+        {
+          scenario: "Launching with a consistent identity across print and digital",
+          packageName: "Business Identity",
+        },
+        {
+          scenario: "Need a customer-facing website that drives action",
+          packageName: "Website Launch",
+        },
+        {
+          scenario: "Already have a site but need ongoing updates and visibility",
+          packageName: "Online Growth",
+        },
+        {
+          scenario: "Need menus, flyers, or other print materials",
+          packageName: "Print & Promo Kit",
+        },
+        {
+          scenario: "Want brand, website, and launch materials done together",
+          packageName: "Complete Business Launch",
         },
       ],
       includedHeading: "Every package",
       includedTitle: "What's always included",
       includedText:
-        "Every Webgrafy package is delivered with the same standard of care, the same hands-on direction, and the same commitment to a final result you'll be proud to share.",
+        "Every Webgrafy package includes the same practical standards — clear direction, files you can actually use, and a smooth handoff when the work is done.",
       guarantees: [
         {
-          title: "Hands-on creative direction",
-          text: "You work directly with the designers leading your project — no account managers, no hand-offs.",
+          title: "Clear creative direction",
+          text: "We help you make decisions, not just send you design files.",
         },
         {
-          title: "Print and digital-ready files",
-          text: "All deliverables are exported in the formats you need for web, print and partners.",
+          title: "Design for real business use",
+          text: "Your files are prepared for web, print, social media, and everyday marketing.",
         },
         {
-          title: "Full ownership of the work",
-          text: "Once delivered, every asset is yours to use, evolve and license without restriction.",
+          title: "Mobile-first thinking",
+          text: "Your website and digital visuals are designed to look professional on phones, tablets, and desktops.",
         },
         {
-          title: "A clear, structured timeline",
-          text: "Each project follows a defined schedule with checkpoints so you always know what's next.",
+          title: "Ownership of final files",
+          text: "Once the project is complete and paid, the final approved files are yours.",
+        },
+        {
+          title: "Bilingual-friendly approach",
+          text: "We can prepare materials for English, French, or both depending on your business needs.",
+        },
+        {
+          title: "Practical handoff",
+          text: "You receive files, instructions, and guidance so you know how to use everything properly.",
         },
       ],
       addOnsHeading: "Add-ons",
-      addOnsTitle: "Tailor your package to your needs",
+      addOnsTitle: "Need more? Add only what makes sense.",
       addOnsText:
-        "Need something more specific? Layer in extra deliverables to extend any package and shape it around your business.",
+        "Extend any package with extra deliverables — add pages, revisions, print pieces, or ongoing support as your business grows.",
       addOns: [
         {
+          title: "Extra website page",
+          price: "from $300",
+          description: "A custom-designed page added to your website scope, on-brand and responsive.",
+        },
+        {
           title: "Extra revision round",
-          price: "+$120",
-          description:
-            "An additional cycle of refinements on logo or stationery deliverables.",
+          price: "from $120",
+          description: "An additional cycle of refinements on logo, print, or web deliverables.",
         },
         {
-          title: "Social media templates",
-          price: "+$280",
-          description:
-            "A set of editable templates for posts, stories and reels in your brand system.",
+          title: "Brand guidelines PDF",
+          price: "from $450",
+          description: "A polished PDF guide covering logo usage, typography, colour, and tone.",
         },
         {
-          title: "Brand guidelines document",
-          price: "+$450",
-          description:
-            "A polished PDF guide covering logo usage, typography, colour and tone.",
+          title: "Social media template pack",
+          price: "from $280",
+          description: "Editable templates for posts, stories, and reels in your brand system.",
         },
         {
-          title: "Additional website page",
-          price: "+$300",
-          description:
-            "A custom-designed page added to your website scope, on-brand and responsive.",
+          title: "Google Business Profile setup",
+          price: "from $250",
+          description: "Profile setup or optimization so your business looks complete when people search locally.",
+        },
+        {
+          title: "Menu or brochure design",
+          price: "from $250",
+          description: "A custom-designed menu or brochure with print-ready and digital files.",
+        },
+        {
+          title: "Product label or packaging design",
+          price: "from $350",
+          description: "Label or packaging layout designed for your product and ready for print.",
+        },
+        {
+          title: "Website maintenance",
+          price: "from $150/month",
+          description: "Regular updates, fixes, and light content changes to keep your site current.",
+        },
+        {
+          title: "Monthly creative support",
+          price: "from $350/month",
+          description: "Ongoing design help for social graphics, ads, print, and marketing visuals.",
+        },
+        {
+          title: "Website copywriting",
+          price: "from $400",
+          description: "Professional copy for key website pages written to explain your business clearly.",
+        },
+      ],
+      processEyebrow: "Our process",
+      processTitle: "A simple process from idea to launch",
+      processSteps: [
+        {
+          number: "01",
+          title: "Understand",
+          text: "We listen first. We learn about your business, your goals, your audience, and the challenges you want to solve.",
+        },
+        {
+          number: "02",
+          title: "Plan",
+          text: "We create a clear direction, so you know what we are building, why it matters, and what the next steps look like.",
+        },
+        {
+          number: "03",
+          title: "Create",
+          text: "We design websites, branding, graphics, and marketing materials that look professional and help your business communicate clearly.",
+        },
+        {
+          number: "04",
+          title: "Launch",
+          text: "We finalize, test, and prepare everything so your project is ready to be shared with your customers.",
         },
       ],
       faqHeading: "FAQ",
       faqTitle: "Common questions about our packages",
       faqs: [
         {
-          question: "How long does each package take?",
+          question: "Which package should I choose if I'm just starting?",
           answer:
-            "Logo packages are delivered in around 2 weeks, Branding in 3 to 4 weeks, and Corporate identity in 6 to 8 weeks depending on scope.",
+            "If you are starting from zero, choose Brand Starter if you only need a logo and basic identity. Choose Complete Business Launch if you need your logo, website, Google profile, and marketing materials created together.",
         },
         {
-          question: "What happens after I choose a package?",
+          question: "Do you only design websites?",
           answer:
-            "We start with a short discovery call to align on goals, then send a written proposal, a project schedule and an initial invoice (50%) before kickoff.",
+            "No. Webgrafy combines website design, branding, social media visuals, print materials, Google Business setup, and ongoing creative support.",
         },
         {
-          question: "Can I customise a package?",
+          question: "Can I start small and add more later?",
           answer:
-            "Yes — packages are a starting point. We regularly tailor scope and deliverables to fit your business, and add-ons can be combined with any tier.",
+            "Yes. Many clients start with a logo or website and add print materials, social templates, Google setup, or monthly support later.",
         },
         {
-          question: "Do I own the final files?",
+          question: "Do you work with small local businesses?",
           answer:
-            "Absolutely. Once the project is paid in full, you own every final asset and source file we deliver.",
+            "Yes. Webgrafy is built for small and medium businesses that need professional design without a large agency process.",
         },
         {
-          question: "How do payments work?",
+          question: "Can you redesign my existing website or brand?",
           answer:
-            "We invoice 50% to begin and 50% at delivery. For larger scopes we can break payments into project milestones.",
+            "Yes. We can refresh your logo, improve your website, update your visuals, and make your business look more consistent.",
+        },
+        {
+          question: "Are printing costs included?",
+          answer:
+            "Design packages include print-ready files. Printing can be quoted separately depending on quantity, size, paper, and finish.",
+        },
+        {
+          question: "Do you offer monthly support?",
+          answer:
+            "Yes. The Online Growth package is designed for businesses that need regular updates, graphics, Google Business support, and ongoing creative help.",
         },
       ],
-      customHeading: "Custom scope",
-      customTitle: "Need something larger or more bespoke?",
-      customText:
-        "If your project doesn't fit a standard package — multi-brand systems, ongoing design partnerships, complex websites — we'd love to design a custom proposal with you.",
-      customCta: "Request a custom quote",
+      ctaEyebrow: "Get started",
+      ctaTitle: "Tell us what you need — we'll recommend the right package.",
+      ctaText:
+        "Need a logo, website, print materials, or all of it? Share your goals and we'll help you choose the best starting point.",
+      ctaPrimary: "Get My Package Recommendation",
+      ctaSecondary: "Book a Free Consultation",
+      contactOverride: {
+        title: "Ready to make your business look professional online and offline?",
+        text: "Tell us about your business and we'll recommend the package that fits your goals, timeline, and budget.",
+      },
     },
     portfolio: {
       eyebrow: "Portfolio",
@@ -436,7 +637,7 @@ const en: SiteDictionary = {
       "A premium visual language with a thoughtful process behind it",
     approachText:
       "We combine refined creative direction with practical business thinking so every project feels intentional, contemporary, and aligned with the image our clients want to build.",
-    processEyebrow: "Process",
+    processEyebrow: "Our process",
     processTitle: "Clear, collaborative, and curated from start to finish",
     processText:
       "Every project follows a structured path so the result feels polished, cohesive, and aligned with your brand goals.",
@@ -727,23 +928,23 @@ const en: SiteDictionary = {
   processSteps: [
     {
       number: "01",
-      title: "Discover",
-      text: "We learn about your goals, audience and challenges.",
+      title: "Understand",
+      text: "We listen first. We learn about your business, your goals, your audience, and the challenges you want to solve.",
     },
     {
       number: "02",
-      title: "Strategize",
-      text: "We define the right direction and create a clear plan.",
+      title: "Plan",
+      text: "We create a clear direction, so you know what we are building, why it matters, and what the next steps look like.",
     },
     {
       number: "03",
-      title: "Design",
-      text: "We craft visuals and experiences that communicate and convert.",
+      title: "Create",
+      text: "We design websites, branding, graphics, and marketing materials that look professional and help your business communicate clearly.",
     },
     {
       number: "04",
-      title: "Deliver",
-      text: "We build, test and launch with care and precision.",
+      title: "Launch",
+      text: "We finalize, test, and prepare everything so your project is ready to be shared with your customers.",
     },
   ],
 };
@@ -864,7 +1065,7 @@ const fr: SiteDictionary = {
             "Une communication accessible et chaleureuse qui renforce la confiance des membres et donateurs.",
         },
       ],
-      processEyebrow: "Comment nous travaillons",
+      processEyebrow: "Notre processus",
       processTitle: "Un parcours clair de la première discussion au lancement",
       whyEyebrow: "Pourquoi Webgrafy",
       whyTitle: "Des partenaires de design, pas de simples fournisseurs",
@@ -920,144 +1121,356 @@ const fr: SiteDictionary = {
         {
           question: "Combien coûte un projet ?",
           answer:
-            "Les logos débutent à 200 $, l’image de marque complète à partir de 500 $, et les sites web vont généralement de 2 500 $ à 12 000 $ selon la portée. Nous envoyons une estimation détaillée après notre appel de découverte.",
+            "Le forfait Brand Starter débute à 450 $, Business Identity à partir de 950 $, et les sites web commencent généralement à 2 500 $ selon la portée. Nous envoyons une estimation détaillée après notre appel de découverte.",
         },
       ],
     },
     packages: {
       eyebrow: "Forfaits",
       title:
-        "Des ensembles pensés pour le logo, l’image de marque et l’identité complète",
-      text: "Choisissez un point de départ clair pour l’identité de votre entreprise. Chaque forfait est structuré pour livrer des fichiers professionnels et des révisions, avec des livrables clairement définis.",
-      tiersHeading: "Créez vos forfaits de démarrage pour entreprise",
-      getStarted: "Commencer",
+        "Des forfaits conçus pour les PME qui veulent paraître professionnelles rapidement",
+      text: "Choisissez le bon point de départ pour votre entreprise — que vous ayez besoin d’un logo, d’une identité de marque complète, d’un site web, de supports imprimés ou d’un accompagnement créatif continu. Webgrafy aide les petites et moyennes entreprises à bâtir une présence professionnelle en ligne et hors ligne, sans la confusion de travailler avec plusieurs fournisseurs.",
+      heroCtaPrimary: "Réserver une consultation gratuite",
+      heroCtaSecondary: "Comparer les forfaits",
+      tiersHeading: "Choisissez votre point de départ",
+      bestForLabel: "Idéal pour",
+      timelineLabel: "Délai",
+      chooseItemsLabel: "Choisissez 3 éléments",
       popularLabel: "Le plus populaire",
       tiers: [
         {
-          name: "Logo",
-          price: "200 $",
+          name: "Brand Starter",
+          price: "À partir de 450 $",
           description:
-            "Une marque soignée pour lancer votre entreprise avec confiance.",
+            "Pour les nouvelles entreprises qui ont besoin d’une première impression professionnelle.",
+          bestFor:
+            "Startups, entreprises solo, prestataires de services, studios de beauté, cafés, services à domicile, consultants.",
           includes: [
-            "4 concepts de logo",
-            "3 révisions",
-            "Fichiers de logo professionnels",
-            "Versions couleur complète, niveaux de gris et noir et blanc",
+            "Conception de logo",
+            "2 à 3 concepts de logo",
+            "2 tours de révisions",
+            "Palette de couleurs",
+            "Recommandations typographiques",
+            "Fichiers finaux pour le web et l’impression",
+            "Image de profil pour les médias sociaux",
+            "Fiche de direction de marque de base",
           ],
+          timeline: "1 à 2 semaines",
+          cta: "Lancer ma marque",
         },
         {
-          name: "Image de marque",
-          price: "500 $",
+          name: "Business Identity",
+          price: "À partir de 950 $",
           description:
-            "Un système d’identité cohérent — logo, papeterie et impression.",
+            "Pour les entreprises qui ont besoin d’une identité visuelle complète et cohérente.",
+          bestFor:
+            "Entreprises qui se préparent à lancer, à rafraîchir, à imprimer, à promouvoir ou à ouvrir un emplacement physique.",
+          includes: [
+            "Tout ce qui est inclus dans Brand Starter",
+            "Conception de carte d’affaires",
+            "Modèle de lettre ou de facture",
+            "Signature courriel",
+            "Couverture ou bannière pour médias sociaux",
+            "3 modèles de publications sociales",
+            "Mini guide de marque PDF",
+            "Fichiers prêts pour l’impression et le digital",
+          ],
+          timeline: "2 à 3 semaines",
+          cta: "Bâtir mon identité",
+        },
+        {
+          name: "Website Launch",
+          price: "À partir de 2 500 $",
+          description:
+            "Pour les entreprises qui ont besoin d’un site web moderne qui explique ce qu’elles font et incite les clients à agir.",
+          bestFor:
+            "Entreprises de services locaux, métiers, bien-être, beauté, immobilier, restaurants, consultants, petits commerces.",
+          includes: [
+            "Site web responsive de 1 à 5 pages",
+            "Accueil, À propos, Services, Contact et une page supplémentaire",
+            "Design adapté aux mobiles",
+            "Soutien rédactionnel de base pour le site",
+            "Configuration du formulaire de contact",
+            "Configuration SEO de base",
+            "Configuration Google Analytics / suivi",
+            "Optimisation de vitesse de base",
+            "Soutien au lancement",
+            "1 session de formation ou guide de passation",
+          ],
+          timeline: "3 à 5 semaines",
           popular: true,
-          includes: [
-            "Logo",
-            "Carte d’affaires, en-tête de lettre et enveloppe",
-            "2 concepts initiaux de papeterie",
-            "3 révisions de papeterie",
-            "Fichiers prêts à imprimer",
-          ],
+          cta: "Lancer mon site web",
         },
         {
-          name: "Identité corporative",
-          price: "À partir de 1500 $",
+          name: "Online Growth",
+          price: "À partir de 650 $/mois",
           description:
-            "Une identité complète, présence sociale et site web — de A à Z.",
+            "Pour les entreprises qui ont déjà un site web mais ont besoin de plus de visibilité, de contenu et de cohérence.",
+          bestFor:
+            "Entreprises qui ont besoin de design régulier, de soutien Google Business, de visuels pour les médias sociaux, de mises à jour web et de visibilité locale.",
           includes: [
-            "Logo",
-            "Image de marque",
-            "Design pour médias sociaux",
-            "Design de site web",
+            "Mises à jour du site web",
+            "Soutien Google Business Profile",
+            "4 visuels pour médias sociaux",
+            "1 bannière promotionnelle ou visuel publicitaire",
+            "Améliorations SEO de base",
+            "Suggestions de contenu mensuelles",
+            "Revue légère des performances",
+            "Soutien design prioritaire",
           ],
+          cta: "Faire croître mon entreprise",
+        },
+        {
+          name: "Print & Promo Kit",
+          price: "À partir de 550 $",
+          description:
+            "Pour les entreprises qui ont besoin de supports imprimés professionnels pour les ventes, événements, emballages ou marketing local.",
+          bestFor:
+            "Cafés, restaurants, commerces, studios de beauté, agents immobiliers, services à domicile, marques de produits.",
+          chooseItems: [
+            "Carte d’affaires",
+            "Dépliant",
+            "Menu",
+            "Brochure",
+            "Certificat-cadeau",
+            "Encart produit",
+            "Affiche",
+            "Étiquette ou autocollant",
+            "Carte présentoir",
+            "Invitation événement",
+          ],
+          includes: [
+            "Mise en page sur mesure",
+            "Fichiers prêts à imprimer",
+            "Version numérique pour partage en ligne",
+            "2 tours de révisions",
+          ],
+          cta: "Créer mes supports imprimés",
+        },
+        {
+          name: "Complete Business Launch",
+          price: "À partir de 4 500 $",
+          description:
+            "Pour les entreprises qui veulent tout faire ensemble — marque, site web, configuration Google et supports de lancement.",
+          bestFor:
+            "Nouvelles entreprises, refontes, entreprises de services locaux, studios, cliniques, cafés, boutiques et PME en croissance.",
+          includes: [
+            "Identité de marque",
+            "Système de logo",
+            "Mini guide de marque",
+            "Site web de 1 à 5 pages",
+            "Soutien rédactionnel pour le site",
+            "Configuration SEO de base",
+            "Configuration ou optimisation Google Business Profile",
+            "5 modèles pour médias sociaux",
+            "Conception de carte d’affaires",
+            "Conception de dépliant ou brochure",
+            "Liste de vérification de lancement",
+            "30 jours de soutien post-lancement",
+          ],
+          timeline: "5 à 8 semaines",
+          cta: "Lancer mon entreprise",
+        },
+      ],
+      guidanceEyebrow: "Besoin d’aide pour choisir ?",
+      guidanceTitle: "Vous ne savez pas par où commencer ?",
+      guidanceText:
+        "La plupart des PME savent qu’elles doivent paraître professionnelles — mais ne savent pas toujours par où commencer. Utilisez ce guide rapide pour trouver le bon forfait.",
+      guidanceItems: [
+        {
+          scenario: "Vous partez de zéro et n’avez besoin que d’un logo",
+          packageName: "Brand Starter",
+        },
+        {
+          scenario: "Vous lancez avec une identité cohérente sur print et digital",
+          packageName: "Business Identity",
+        },
+        {
+          scenario: "Vous avez besoin d’un site web qui incite à l’action",
+          packageName: "Website Launch",
+        },
+        {
+          scenario: "Vous avez déjà un site mais avez besoin de soutien continu",
+          packageName: "Online Growth",
+        },
+        {
+          scenario: "Vous avez besoin de menus, dépliants ou autres supports imprimés",
+          packageName: "Print & Promo Kit",
+        },
+        {
+          scenario: "Vous voulez marque, site web et supports de lancement ensemble",
+          packageName: "Complete Business Launch",
         },
       ],
       includedHeading: "Tous les forfaits",
       includedTitle: "Ce qui est toujours inclus",
       includedText:
-        "Chaque forfait Webgrafy bénéficie du même soin, de la même direction créative impliquée et du même engagement envers un résultat dont vous serez fier.",
+        "Chaque forfait Webgrafy inclut les mêmes standards pratiques — direction claire, fichiers utilisables et passation fluide une fois le travail terminé.",
       guarantees: [
         {
-          title: "Direction créative impliquée",
-          text: "Vous échangez directement avec les designers qui pilotent votre projet — sans intermédiaire.",
+          title: "Direction créative claire",
+          text: "Nous vous aidons à prendre des décisions, pas seulement à recevoir des fichiers.",
         },
         {
-          title: "Fichiers prêts pour le print et le digital",
-          text: "Tous les livrables sont exportés dans les formats nécessaires pour le web, l’impression et vos partenaires.",
+          title: "Design pour un usage réel",
+          text: "Vos fichiers sont préparés pour le web, l’impression, les médias sociaux et le marketing quotidien.",
         },
         {
-          title: "Pleine propriété des livrables",
-          text: "Une fois livrés, tous les fichiers vous appartiennent et peuvent être utilisés sans restriction.",
+          title: "Approche mobile d’abord",
+          text: "Votre site et vos visuels numériques sont conçus pour paraître professionnels sur téléphones, tablettes et ordinateurs.",
         },
         {
-          title: "Un calendrier clair et structuré",
-          text: "Chaque projet suit un calendrier défini avec des points de validation à chaque étape.",
+          title: "Propriété des fichiers finaux",
+          text: "Une fois le projet terminé et payé, les fichiers finaux approuvés vous appartiennent.",
+        },
+        {
+          title: "Approche bilingue",
+          text: "Nous pouvons préparer les supports en français, en anglais ou les deux selon vos besoins.",
+        },
+        {
+          title: "Passation pratique",
+          text: "Vous recevez les fichiers, les instructions et les conseils pour bien utiliser chaque livrable.",
         },
       ],
       addOnsHeading: "Options",
-      addOnsTitle: "Adaptez votre forfait à vos besoins",
+      addOnsTitle: "Besoin de plus ? Ajoutez seulement ce qui a du sens.",
       addOnsText:
-        "Besoin de quelque chose de plus précis ? Ajoutez des livrables complémentaires pour étendre n’importe quel forfait selon votre activité.",
+        "Étendez n’importe quel forfait avec des livrables supplémentaires — pages, révisions, supports imprimés ou soutien continu au fil de votre croissance.",
       addOns: [
         {
+          title: "Page de site additionnelle",
+          price: "à partir de 300 $",
+          description:
+            "Une page personnalisée ajoutée à votre projet web, fidèle à votre marque et responsive.",
+        },
+        {
           title: "Tour de révisions supplémentaire",
-          price: "+120 $",
+          price: "à partir de 120 $",
           description:
-            "Un cycle additionnel d’ajustements sur les livrables logo ou papeterie.",
+            "Un cycle additionnel d’ajustements sur les livrables logo, print ou web.",
         },
         {
-          title: "Modèles pour réseaux sociaux",
-          price: "+280 $",
-          description:
-            "Un ensemble de modèles éditables pour publications, stories et reels, dans votre identité.",
-        },
-        {
-          title: "Guide de marque",
-          price: "+450 $",
+          title: "Guide de marque PDF",
+          price: "à partir de 450 $",
           description:
             "Un PDF complet couvrant l’usage du logo, la typographie, les couleurs et le ton.",
         },
         {
-          title: "Page de site additionnelle",
-          price: "+300 $",
+          title: "Pack de modèles pour médias sociaux",
+          price: "à partir de 280 $",
           description:
-            "Une page personnalisée ajoutée à votre projet web, fidèle à votre marque et responsive.",
+            "Modèles éditables pour publications, stories et reels dans votre identité.",
+        },
+        {
+          title: "Configuration Google Business Profile",
+          price: "à partir de 250 $",
+          description:
+            "Configuration ou optimisation pour que votre entreprise paraisse complète dans les recherches locales.",
+        },
+        {
+          title: "Conception de menu ou brochure",
+          price: "à partir de 250 $",
+          description:
+            "Menu ou brochure sur mesure avec fichiers prêts pour l’impression et le digital.",
+        },
+        {
+          title: "Conception d’étiquette ou emballage",
+          price: "à partir de 350 $",
+          description:
+            "Mise en page d’étiquette ou d’emballage conçue pour votre produit et prête à imprimer.",
+        },
+        {
+          title: "Maintenance de site web",
+          price: "à partir de 150 $/mois",
+          description:
+            "Mises à jour régulières, corrections et petits changements de contenu pour garder votre site à jour.",
+        },
+        {
+          title: "Soutien créatif mensuel",
+          price: "à partir de 350 $/mois",
+          description:
+            "Aide design continue pour visuels sociaux, publicités, print et marketing.",
+        },
+        {
+          title: "Rédaction web",
+          price: "à partir de 400 $",
+          description:
+            "Textes professionnels pour les pages clés de votre site, rédigés pour expliquer clairement votre activité.",
+        },
+      ],
+      processEyebrow: "Notre processus",
+      processTitle: "Un processus simple, de l’idée au lancement",
+      processSteps: [
+        {
+          number: "01",
+          title: "Comprendre",
+          text: "Nous écoutons d'abord. Nous apprenons à connaître votre entreprise, vos objectifs, votre audience et les défis que vous souhaitez résoudre.",
+        },
+        {
+          number: "02",
+          title: "Planifier",
+          text: "Nous créons une direction claire, pour que vous sachiez ce que nous construisons, pourquoi c'est important et à quoi ressemblent les prochaines étapes.",
+        },
+        {
+          number: "03",
+          title: "Créer",
+          text: "Nous concevons des sites web, du branding, des graphiques et des supports marketing qui paraissent professionnels et aident votre entreprise à communiquer clairement.",
+        },
+        {
+          number: "04",
+          title: "Lancer",
+          text: "Nous finalisons, testons et préparons tout pour que votre projet soit prêt à être partagé avec vos clients.",
         },
       ],
       faqHeading: "FAQ",
       faqTitle: "Questions fréquentes sur nos forfaits",
       faqs: [
         {
-          question: "Combien de temps prend chaque forfait ?",
+          question: "Quel forfait choisir si je débute ?",
           answer:
-            "Le forfait Logo est livré en environ 2 semaines, Image de marque en 3 à 4 semaines, et Identité corporative en 6 à 8 semaines selon le périmètre.",
+            "Si vous partez de zéro, choisissez Brand Starter si vous n’avez besoin que d’un logo et d’une identité de base. Choisissez Complete Business Launch si vous avez besoin de votre logo, site web, profil Google et supports marketing créés ensemble.",
         },
         {
-          question: "Que se passe-t-il après avoir choisi un forfait ?",
+          question: "Concevez-vous seulement des sites web ?",
           answer:
-            "Nous commençons par un appel de découverte, puis nous envoyons une proposition écrite, un calendrier et une première facture (50 %) avant le démarrage.",
+            "Non. Webgrafy combine design web, branding, visuels pour médias sociaux, supports imprimés, configuration Google Business et soutien créatif continu.",
         },
         {
-          question: "Puis-je personnaliser un forfait ?",
+          question: "Puis-je commencer petit et ajouter plus tard ?",
           answer:
-            "Oui — les forfaits sont un point de départ. Nous adaptons régulièrement le périmètre et les options peuvent être ajoutées à tout niveau.",
+            "Oui. Beaucoup de clients commencent par un logo ou un site web et ajoutent ensuite des supports imprimés, des modèles sociaux, la configuration Google ou un soutien mensuel.",
         },
         {
-          question: "Suis-je propriétaire des fichiers finaux ?",
+          question: "Travaillez-vous avec des PME locales ?",
           answer:
-            "Absolument. Une fois le projet réglé en totalité, vous êtes propriétaire de tous les livrables et fichiers sources.",
+            "Oui. Webgrafy est conçu pour les petites et moyennes entreprises qui ont besoin d’un design professionnel sans le processus d’une grande agence.",
         },
         {
-          question: "Comment fonctionnent les paiements ?",
+          question: "Pouvez-vous refaire mon site web ou ma marque existante ?",
           answer:
-            "Nous facturons 50 % au démarrage et 50 % à la livraison. Pour les projets plus larges, nous pouvons échelonner par jalons.",
+            "Oui. Nous pouvons rafraîchir votre logo, améliorer votre site, mettre à jour vos visuels et rendre votre entreprise plus cohérente.",
+        },
+        {
+          question: "Les coûts d’impression sont-ils inclus ?",
+          answer:
+            "Les forfaits design incluent des fichiers prêts à imprimer. L’impression peut être chiffrée séparément selon la quantité, le format, le papier et la finition.",
+        },
+        {
+          question: "Offrez-vous un soutien mensuel ?",
+          answer:
+            "Oui. Le forfait Online Growth est conçu pour les entreprises qui ont besoin de mises à jour régulières, de visuels, de soutien Google Business et d’aide créative continue.",
         },
       ],
-      customHeading: "Sur mesure",
-      customTitle: "Besoin de quelque chose de plus large ou sur mesure ?",
-      customText:
-        "Si votre projet ne correspond pas à un forfait standard — systèmes multi-marques, partenariats design continus, sites complexes — nous serions ravis de bâtir une proposition sur mesure avec vous.",
-      customCta: "Demander un devis sur mesure",
+      ctaEyebrow: "Commencer",
+      ctaTitle: "Dites-nous ce dont vous avez besoin — nous recommanderons le bon forfait.",
+      ctaText:
+        "Besoin d’un logo, d’un site web, de supports imprimés ou de tout à la fois ? Partagez vos objectifs et nous vous aiderons à choisir le meilleur point de départ.",
+      ctaPrimary: "Obtenir ma recommandation de forfait",
+      ctaSecondary: "Réserver une consultation gratuite",
+      contactOverride: {
+        title: "Prêt à donner à votre entreprise une image professionnelle en ligne et hors ligne ?",
+        text: "Parlez-nous de votre entreprise et nous recommanderons le forfait adapté à vos objectifs, délais et budget.",
+      },
     },
     portfolio: {
       eyebrow: "Portfolio",
@@ -1188,7 +1601,7 @@ const fr: SiteDictionary = {
       "Un langage visuel premium soutenu par un processus réfléchi",
     approachText:
       "Nous combinons une direction créative raffinée à une réflexion business concrète pour que chaque projet paraisse intentionnel, contemporain et aligné avec l’image que nos clients souhaitent construire.",
-    processEyebrow: "Processus",
+    processEyebrow: "Notre processus",
     processTitle: "Clair, collaboratif et soigné du début à la fin",
     processText:
       "Chaque projet suit une structure précise afin que le résultat soit soigné, cohérent et aligné avec vos objectifs de marque.",
@@ -1479,23 +1892,23 @@ const fr: SiteDictionary = {
   processSteps: [
     {
       number: "01",
-      title: "Découverte",
-      text: "Nous apprenons à connaître vos objectifs, votre audience et vos enjeux.",
+      title: "Comprendre",
+      text: "Nous écoutons d'abord. Nous apprenons à connaître votre entreprise, vos objectifs, votre audience et les défis que vous souhaitez résoudre.",
     },
     {
       number: "02",
-      title: "Stratégie",
-      text: "Nous définissons la bonne direction et construisons un plan clair.",
+      title: "Planifier",
+      text: "Nous créons une direction claire, pour que vous sachiez ce que nous construisons, pourquoi c'est important et à quoi ressemblent les prochaines étapes.",
     },
     {
       number: "03",
-      title: "Design",
-      text: "Nous créons des visuels et expériences qui communiquent et convertissent.",
+      title: "Créer",
+      text: "Nous concevons des sites web, du branding, des graphiques et des supports marketing qui paraissent professionnels et aident votre entreprise à communiquer clairement.",
     },
     {
       number: "04",
-      title: "Livraison",
-      text: "Nous développons, testons et lançons avec soin et précision.",
+      title: "Lancer",
+      text: "Nous finalisons, testons et préparons tout pour que votre projet soit prêt à être partagé avec vos clients.",
     },
   ],
 };

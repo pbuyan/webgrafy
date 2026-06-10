@@ -15,7 +15,19 @@ const initialState = {
   message: "",
 };
 
-export function ContactBlock({ locale, dict, id }: { locale: Locale; dict: SiteDictionary; id?: string }) {
+export function ContactBlock({
+  locale,
+  dict,
+  id,
+  title,
+  text,
+}: {
+  locale: Locale;
+  dict: SiteDictionary;
+  id?: string;
+  title?: string;
+  text?: string;
+}) {
   const [form, setForm] = useState(initialState);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -57,9 +69,9 @@ export function ContactBlock({ locale, dict, id }: { locale: Locale; dict: SiteD
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-white/40">{dict.contactBlock.eyebrow}</p>
             <h2 className="mt-4 max-w-xl text-4xl font-semibold leading-[0.96] tracking-[-0.05em] sm:text-5xl">
-              {dict.contactBlock.title}
+              {title ?? dict.contactBlock.title}
             </h2>
-            <p className="mt-6 max-w-lg text-lg leading-8 text-white/70">{dict.contactBlock.text}</p>
+            <p className="mt-6 max-w-lg text-lg leading-8 text-white/70">{text ?? dict.contactBlock.text}</p>
             <div className="space-y-5 text-sm text-white/72">
               <p className="mt-3 text-brand">{dict.common.replyWindow}</p>
             </div>

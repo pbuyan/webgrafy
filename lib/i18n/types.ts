@@ -40,12 +40,21 @@ export type ProcessItem = {
   text: string;
 };
 
+export type PackageGuidanceItem = {
+  scenario: string;
+  packageName: string;
+};
+
 export type PackageTierItem = {
   name: string;
   price: string;
+  description: string;
+  bestFor: string;
   includes: string[];
+  cta: string;
+  timeline?: string;
+  chooseItems?: string[];
   popular?: boolean;
-  description?: string;
 };
 
 export type PackageGuaranteeItem = {
@@ -162,10 +171,18 @@ export type SiteDictionary = {
       eyebrow: string;
       title: string;
       text: string;
+      heroCtaPrimary: string;
+      heroCtaSecondary: string;
       tiersHeading: string;
-      getStarted: string;
+      bestForLabel: string;
+      timelineLabel: string;
+      chooseItemsLabel: string;
       popularLabel: string;
       tiers: PackageTierItem[];
+      guidanceEyebrow: string;
+      guidanceTitle: string;
+      guidanceText: string;
+      guidanceItems: PackageGuidanceItem[];
       includedHeading: string;
       includedTitle: string;
       includedText: string;
@@ -174,13 +191,21 @@ export type SiteDictionary = {
       addOnsTitle: string;
       addOnsText: string;
       addOns: PackageAddOnItem[];
+      processEyebrow: string;
+      processTitle: string;
+      processSteps: ProcessItem[];
       faqHeading: string;
       faqTitle: string;
       faqs: FaqItem[];
-      customHeading: string;
-      customTitle: string;
-      customText: string;
-      customCta: string;
+      ctaEyebrow: string;
+      ctaTitle: string;
+      ctaText: string;
+      ctaPrimary: string;
+      ctaSecondary: string;
+      contactOverride: {
+        title: string;
+        text: string;
+      };
     };
     portfolio: {
       eyebrow: string;
