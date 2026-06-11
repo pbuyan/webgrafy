@@ -37,7 +37,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
   const resourceItems: FooterItem[] = [
     { label: dict.footer.resourcesList[0], href: `/${locale}/portfolio` },
     { label: dict.footer.resourcesList[1], href: `/${locale}/about` },
-    { label: dict.footer.resourcesList[2], href: `/${locale}/packages#faq` },
+    { label: dict.footer.resourcesList[2], href: `/${locale}/faq` },
   ];
   const legalItems: FooterItem[] = [
     { label: dict.footer.legal.privacy, href: `/${locale}/privacy` },

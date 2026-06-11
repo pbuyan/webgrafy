@@ -139,41 +139,6 @@ const en: SiteDictionary = {
           text: "We hand off organized files, templates, and guidelines so your team can keep producing on-brand without us.",
         },
       ],
-      faqEyebrow: "FAQ",
-      faqTitle: "Common questions about our services",
-      faqs: [
-        {
-          question:
-            "Do I have to commit to a full project, or can I start small?",
-          answer:
-            "You can start with a single deliverable — a logo, a one-page site, a flyer — and add scope later. Many clients begin with one piece and expand once they see how we work.",
-        },
-        {
-          question: "Can you work with my existing brand?",
-          answer:
-            "Yes. We regularly extend or refresh existing brands, design new collateral within established guidelines, or build a website on top of an identity you already love.",
-        },
-        {
-          question: "Do you offer ongoing design support?",
-          answer:
-            "We do. After a launch, many clients keep us on a monthly retainer for new campaigns, social content, additional pages, and print runs as they grow.",
-        },
-        {
-          question: "Are your websites bilingual?",
-          answer:
-            "Yes — we design and build in English, French, or both, with proper locale routing, SEO, and editable content for each language.",
-        },
-        {
-          question: "Will my website be easy to update myself?",
-          answer:
-            "We build on platforms you can manage day-to-day — Webflow, WordPress, or a headless CMS — and we always include a short training session so your team is comfortable from launch day.",
-        },
-        {
-          question: "How much does a project cost?",
-          answer:
-            "Brand Starter begins at $450, Business Identity from $950, and websites typically start at $2,500 depending on scope. We send a detailed estimate after our discovery call.",
-        },
-      ],
     },
     packages: {
       eyebrow: "Packages",
@@ -459,45 +424,6 @@ const en: SiteDictionary = {
           text: "We finalize, test, and prepare everything so your project is ready to be shared with your customers.",
         },
       ],
-      faqHeading: "FAQ",
-      faqTitle: "Common questions about our packages",
-      faqs: [
-        {
-          question: "Which package should I choose if I'm just starting?",
-          answer:
-            "If you are starting from zero, choose Brand Starter if you only need a logo and basic identity. Choose Complete Business Launch if you need your logo, website, Google profile, and marketing materials created together.",
-        },
-        {
-          question: "Do you only design websites?",
-          answer:
-            "No. Webgrafy combines website design, branding, social media visuals, print materials, Google Business setup, and ongoing creative support.",
-        },
-        {
-          question: "Can I start small and add more later?",
-          answer:
-            "Yes. Many clients start with a logo or website and add print materials, social templates, Google setup, or monthly support later.",
-        },
-        {
-          question: "Do you work with small local businesses?",
-          answer:
-            "Yes. Webgrafy is built for small and medium businesses that need professional design without a large agency process.",
-        },
-        {
-          question: "Can you redesign my existing website or brand?",
-          answer:
-            "Yes. We can refresh your logo, improve your website, update your visuals, and make your business look more consistent.",
-        },
-        {
-          question: "Are printing costs included?",
-          answer:
-            "Design packages include print-ready files. Printing can be quoted separately depending on quantity, size, paper, and finish.",
-        },
-        {
-          question: "Do you offer monthly support?",
-          answer:
-            "Yes. The Online Growth package is designed for businesses that need regular updates, graphics, Google Business support, and ongoing creative help.",
-        },
-      ],
       ctaEyebrow: "Get started",
       ctaTitle: "Tell us what you need — we'll recommend the right package.",
       ctaText:
@@ -567,6 +493,139 @@ const en: SiteDictionary = {
       eyebrow: "Contact",
       title: "Tell us about your brand, website, or creative project",
       text: "Whether you need a logo, a full identity, graphic design support, or a new website, we'd love to hear what you're building.",
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Common Questions Before Working With Webgrafy",
+      text: "Answers to common questions about our services, packages, pricing, and how to get started.",
+      faqs: [
+        {
+          question:
+            "I'm not sure what my business needs first. Can Webgrafy help me decide?",
+          answer:
+            "Yes. Many business owners know they need better branding, a website, social media visuals, or printed materials, but they are not always sure where to start. Webgrafy helps you review your current situation and choose the smartest next step based on your goals, budget, and business stage.",
+        },
+        {
+          question:
+            "Do you work with new businesses or only existing businesses?",
+          answer:
+            "Yes. Webgrafy works with businesses at different stages. We help starters who are still planning their business, as well as existing small and medium businesses that want to improve their image, website, marketing materials, or online presence.\n\nWhether you are starting from zero or refreshing an established business, we can help you build a professional and consistent brand presence.",
+        },
+        {
+          question: "What services does Webgrafy offer?",
+          answer:
+            "Webgrafy offers digital, print, branding, and website services for small and medium businesses. This can include website design, website redesign, branding, logo design, Google Business Profile setup, social media designs, business cards, flyers, brochures, menus, packaging, labels, banners, and custom design projects.",
+        },
+        {
+          question: "Can I start with one small project?",
+          answer:
+            "Yes. You do not need to start with a large project. You can begin with one specific service, such as a logo refresh, business card, flyer, one-page website, Google Business Profile setup, social media templates, or a small website update.\n\nAs your business grows, more services can be added step by step.",
+        },
+        {
+          question: "Are the packages on the website fixed prices?",
+          answer:
+            "The packages shown on the website are estimated starting points. The final cost may vary from project to project depending on your needs, number of pages, design complexity, content, features, revisions, and additional services required.\n\nBefore starting, Webgrafy provides a clear quote so you know what is included.",
+        },
+        {
+          question: "Are your prices in Canadian dollars?",
+          answer:
+            "Yes. All prices listed on the Webgrafy website are in Canadian dollars unless stated otherwise.",
+        },
+        {
+          question:
+            "Can you improve my existing website instead of building a new one?",
+          answer:
+            "Yes. If your current website has a good foundation, Webgrafy can redesign, reorganize, rewrite, or improve it. We can help with layout, mobile responsiveness, clearer messaging, better visuals, SEO basics, and stronger calls to action.",
+        },
+        {
+          question:
+            "My website looks outdated. Can you make it look more professional?",
+          answer:
+            "Yes. Webgrafy can refresh your website so it looks more modern, clear, and trustworthy. This can include updated visuals, improved page structure, better service descriptions, stronger branding, and a more professional mobile experience.",
+        },
+        {
+          question: "Will my website work properly on mobile phones?",
+          answer:
+            "Yes. Every website is designed with mobile users in mind. Many customers visit business websites from their phones, so your website needs to be easy to read, easy to navigate, and easy to contact you from any device.",
+        },
+        {
+          question: "Can Webgrafy help my business appear better on Google?",
+          answer:
+            "Yes. Webgrafy can help with SEO basics, local keywords, page titles, meta descriptions, image optimization, website structure, and Google Business Profile setup or improvement.\n\nThis helps customers better understand who you are, what you offer, where you are located, and how to contact you.",
+        },
+        {
+          question: "Do you set up or improve Google Business Profile?",
+          answer:
+            "Yes. Webgrafy can help set up or optimize your Google Business Profile with your business information, services, description, categories, photos, FAQs, and local SEO details.\n\nThis is especially useful for local businesses such as salons, restaurants, clinics, contractors, retail stores, studios, and service providers.",
+        },
+        {
+          question: "Can my website be bilingual or multilingual?",
+          answer:
+            "Yes. Webgrafy can create websites in English and French, which is especially helpful for businesses in Québec. Other languages can also be added depending on your business needs, target customers, and content availability.\n\nWhether you need a bilingual or multilingual website, we can help organize the structure clearly so visitors can easily switch between languages.",
+        },
+        {
+          question: "Can Webgrafy write the text for my website?",
+          answer:
+            "Yes. Webgrafy can help write or improve your website copy so visitors quickly understand who you are, what you offer, who you help, and what they should do next.\n\nClear wording is especially important for homepages, service pages, product descriptions, about sections, and calls to action.",
+        },
+        {
+          question: "What if I do not have professional photos yet?",
+          answer:
+            "That is not a problem. Webgrafy can still help by using brand graphics, layouts, icons, stock-style visuals, product mockups, or creative direction.\n\nWe can also guide you on what photos would be useful later to make your website, portfolio, or marketing materials stronger.",
+        },
+        {
+          question: "Can you design both digital and printed materials?",
+          answer:
+            "Yes. Webgrafy offers both digital and print design services. This helps your business look consistent across your website, social media, business cards, flyers, brochures, menus, packaging, labels, banners, and other marketing materials.",
+        },
+        {
+          question: "Can you create social media designs for my business?",
+          answer:
+            "Yes. Webgrafy can create branded social media designs for Instagram, Facebook, LinkedIn, and other platforms. This can include post designs, story graphics, promotional visuals, campaign layouts, and editable templates.",
+        },
+        {
+          question: "Can you create Canva templates?",
+          answer:
+            "Yes. Canva templates are a great option for businesses that want to create their own posts, announcements, flyers, or promotions while staying visually consistent.\n\nWebgrafy can design easy-to-edit templates that match your brand style.",
+        },
+        {
+          question: "Do you offer monthly packages for small businesses?",
+          answer:
+            "Yes. Webgrafy offers monthly support packages for small businesses that need regular design, website, or marketing help without hiring a full-time designer.\n\nA monthly package can include website updates, social media post designs, promotional graphics, flyers, posters, email marketing visuals, Google Business Profile updates, seasonal campaign designs, menu or price list updates, basic SEO support, and ongoing brand consistency support.\n\nMonthly packages can be adjusted depending on how much support your business needs.",
+        },
+        {
+          question: "Will I be able to update my website myself?",
+          answer:
+            "Yes, when possible. Webgrafy can build websites in a way that allows you to update basic content yourself, such as text, images, services, blog posts, or business information.\n\nWe can also provide a simple walkthrough so you feel comfortable making small updates.",
+        },
+        {
+          question: "How long does a project usually take?",
+          answer:
+            "The timeline depends on the project size and how quickly content, feedback, and approvals are provided. A small design task can be completed faster, while a full website or brand identity project requires more planning, design, revisions, and testing.\n\nBefore starting, Webgrafy gives you a realistic timeline based on your project.",
+        },
+        {
+          question: "What do you need from me to start?",
+          answer:
+            "Usually, we need your business name, services, target audience, brand preferences, existing logo or files if you have them, website examples you like, photos if available, and your main goal.\n\nIf you do not have everything ready, Webgrafy can help you organize the missing pieces.",
+        },
+        {
+          question:
+            "Can Webgrafy fix a project started by another designer or agency?",
+          answer:
+            "Yes, in many cases. Webgrafy can review the current website, files, or design direction and recommend the best next step.\n\nSometimes we can improve what already exists. Other times, rebuilding certain parts may be more effective.",
+        },
+        {
+          question:
+            "What if I need something custom that is not listed in the packages?",
+          answer:
+            "You can still contact Webgrafy. Not every project fits into a standard package. If you need something specific, we can review your request and create a custom quote based on your goals and requirements.",
+        },
+        {
+          question: "How do I get started?",
+          answer:
+            "Send Webgrafy a short message about your business and what you need help with. We will review your request, ask the right questions, and recommend the best starting point based on your goals, budget, and business stage.",
+        },
+      ],
     },
     privacy: {
       eyebrow: "Legal",
@@ -1089,41 +1148,6 @@ const fr: SiteDictionary = {
           text: "Nous livrons des fichiers organisés, des modèles et des guides afin que votre équipe puisse continuer à produire sans nous.",
         },
       ],
-      faqEyebrow: "FAQ",
-      faqTitle: "Questions fréquentes sur nos services",
-      faqs: [
-        {
-          question:
-            "Faut-il s’engager sur un projet complet ou peut-on commencer petit ?",
-          answer:
-            "Vous pouvez démarrer avec un seul livrable — un logo, une page de site, un dépliant — et étendre la portée plus tard. Beaucoup de clients commencent par un élément et élargissent une fois qu’ils ont vu notre façon de travailler.",
-        },
-        {
-          question: "Pouvez-vous travailler avec ma marque actuelle ?",
-          answer:
-            "Oui. Nous prolongeons ou rafraîchissons régulièrement des marques existantes, créons de nouveaux supports dans une charte établie ou bâtissons un site à partir d’une identité que vous appréciez déjà.",
-        },
-        {
-          question: "Offrez-vous un soutien design en continu ?",
-          answer:
-            "Oui. Après un lancement, beaucoup de clients nous gardent en forfait mensuel pour les nouvelles campagnes, le contenu social, des pages additionnelles et leurs impressions au fil de leur croissance.",
-        },
-        {
-          question: "Vos sites sont-ils bilingues ?",
-          answer:
-            "Oui — nous concevons en français, en anglais ou les deux, avec un routage par langue, un SEO adapté et un contenu éditable dans chaque langue.",
-        },
-        {
-          question: "Pourrai-je mettre à jour mon site facilement ?",
-          answer:
-            "Nous construisons sur des plateformes que vous pouvez gérer au quotidien — Webflow, WordPress ou un CMS headless — et nous incluons toujours une courte formation pour que votre équipe soit autonome dès le lancement.",
-        },
-        {
-          question: "Combien coûte un projet ?",
-          answer:
-            "Le forfait Brand Starter débute à 450 $, Business Identity à partir de 950 $, et les sites web commencent généralement à 2 500 $ selon la portée. Nous envoyons une estimation détaillée après notre appel de découverte.",
-        },
-      ],
     },
     packages: {
       eyebrow: "Forfaits",
@@ -1422,45 +1446,6 @@ const fr: SiteDictionary = {
           text: "Nous finalisons, testons et préparons tout pour que votre projet soit prêt à être partagé avec vos clients.",
         },
       ],
-      faqHeading: "FAQ",
-      faqTitle: "Questions fréquentes sur nos forfaits",
-      faqs: [
-        {
-          question: "Quel forfait choisir si je débute ?",
-          answer:
-            "Si vous partez de zéro, choisissez Brand Starter si vous n’avez besoin que d’un logo et d’une identité de base. Choisissez Complete Business Launch si vous avez besoin de votre logo, site web, profil Google et supports marketing créés ensemble.",
-        },
-        {
-          question: "Concevez-vous seulement des sites web ?",
-          answer:
-            "Non. Webgrafy combine design web, branding, visuels pour médias sociaux, supports imprimés, configuration Google Business et soutien créatif continu.",
-        },
-        {
-          question: "Puis-je commencer petit et ajouter plus tard ?",
-          answer:
-            "Oui. Beaucoup de clients commencent par un logo ou un site web et ajoutent ensuite des supports imprimés, des modèles sociaux, la configuration Google ou un soutien mensuel.",
-        },
-        {
-          question: "Travaillez-vous avec des PME locales ?",
-          answer:
-            "Oui. Webgrafy est conçu pour les petites et moyennes entreprises qui ont besoin d’un design professionnel sans le processus d’une grande agence.",
-        },
-        {
-          question: "Pouvez-vous refaire mon site web ou ma marque existante ?",
-          answer:
-            "Oui. Nous pouvons rafraîchir votre logo, améliorer votre site, mettre à jour vos visuels et rendre votre entreprise plus cohérente.",
-        },
-        {
-          question: "Les coûts d’impression sont-ils inclus ?",
-          answer:
-            "Les forfaits design incluent des fichiers prêts à imprimer. L’impression peut être chiffrée séparément selon la quantité, le format, le papier et la finition.",
-        },
-        {
-          question: "Offrez-vous un soutien mensuel ?",
-          answer:
-            "Oui. Le forfait Online Growth est conçu pour les entreprises qui ont besoin de mises à jour régulières, de visuels, de soutien Google Business et d’aide créative continue.",
-        },
-      ],
       ctaEyebrow: "Commencer",
       ctaTitle: "Dites-nous ce dont vous avez besoin — nous recommanderons le bon forfait.",
       ctaText:
@@ -1531,6 +1516,139 @@ const fr: SiteDictionary = {
       eyebrow: "Contact",
       title: "Parlez-nous de votre marque, site web ou projet créatif",
       text: "Que vous ayez besoin d’un logo, d’une identité complète, d’un soutien en design graphique ou d’un nouveau site web, nous serions ravis de découvrir votre projet.",
+    },
+    faq: {
+      eyebrow: "FAQ",
+      title: "Questions fréquentes avant de travailler avec Webgrafy",
+      text: "Réponses aux questions courantes sur nos services, forfaits, tarifs et la façon de démarrer.",
+      faqs: [
+        {
+          question:
+            "Je ne sais pas par quoi commencer pour mon entreprise. Webgrafy peut-il m’aider à décider ?",
+          answer:
+            "Oui. Beaucoup de propriétaires d’entreprise savent qu’ils ont besoin d’un meilleur branding, d’un site web, de visuels pour les médias sociaux ou de supports imprimés, mais ne savent pas toujours par où commencer. Webgrafy vous aide à faire le point sur votre situation actuelle et à choisir la prochaine étape la plus pertinente selon vos objectifs, votre budget et le stade de votre entreprise.",
+        },
+        {
+          question:
+            "Travaillez-vous avec de nouvelles entreprises ou seulement des entreprises existantes ?",
+          answer:
+            "Oui. Webgrafy accompagne des entreprises à différents stades. Nous aidons les entrepreneurs qui planifient encore leur projet, ainsi que les PME existantes qui veulent améliorer leur image, leur site web, leurs supports marketing ou leur présence en ligne.\n\nQue vous partiez de zéro ou que vous rafraîchissiez une entreprise établie, nous pouvons vous aider à bâtir une présence de marque professionnelle et cohérente.",
+        },
+        {
+          question: "Quels services Webgrafy offre-t-il ?",
+          answer:
+            "Webgrafy offre des services numériques, imprimés, de branding et de sites web pour les petites et moyennes entreprises. Cela peut inclure la conception ou la refonte de site web, le branding, la conception de logo, la configuration du profil Google Business, des visuels pour les médias sociaux, des cartes d’affaires, des dépliants, des brochures, des menus, de l’emballage, des étiquettes, des bannières et des projets de design sur mesure.",
+        },
+        {
+          question: "Puis-je commencer par un petit projet ?",
+          answer:
+            "Oui. Vous n’avez pas besoin de démarrer avec un grand projet. Vous pouvez commencer par un service précis, comme un rafraîchissement de logo, une carte d’affaires, un dépliant, un site d’une page, la configuration de votre profil Google Business, des modèles pour les médias sociaux ou une petite mise à jour de site web.\n\nAu fil de la croissance de votre entreprise, d’autres services peuvent être ajoutés étape par étape.",
+        },
+        {
+          question: "Les forfaits sur le site sont-ils des prix fixes ?",
+          answer:
+            "Les forfaits affichés sur le site sont des points de départ estimatifs. Le coût final peut varier d’un projet à l’autre selon vos besoins, le nombre de pages, la complexité du design, le contenu, les fonctionnalités, les révisions et les services additionnels requis.\n\nAvant de commencer, Webgrafy fournit un devis clair pour que vous sachiez exactement ce qui est inclus.",
+        },
+        {
+          question: "Vos prix sont-ils en dollars canadiens ?",
+          answer:
+            "Oui. Tous les prix affichés sur le site Webgrafy sont en dollars canadiens, sauf indication contraire.",
+        },
+        {
+          question:
+            "Pouvez-vous améliorer mon site web existant au lieu d’en créer un nouveau ?",
+          answer:
+            "Oui. Si votre site actuel a une bonne base, Webgrafy peut le refondre, le réorganiser, réécrire le contenu ou l’améliorer. Nous pouvons travailler sur la mise en page, la compatibilité mobile, des messages plus clairs, de meilleurs visuels, les bases du SEO et des appels à l’action plus efficaces.",
+        },
+        {
+          question:
+            "Mon site web paraît dépassé. Pouvez-vous le rendre plus professionnel ?",
+          answer:
+            "Oui. Webgrafy peut rafraîchir votre site pour qu’il paraisse plus moderne, clair et digne de confiance. Cela peut inclure des visuels mis à jour, une meilleure structure de pages, de meilleures descriptions de services, un branding plus fort et une expérience mobile plus professionnelle.",
+        },
+        {
+          question: "Mon site web fonctionnera-t-il bien sur mobile ?",
+          answer:
+            "Oui. Chaque site est conçu en pensant aux utilisateurs mobiles. Beaucoup de clients visitent les sites d’entreprise depuis leur téléphone, donc votre site doit être facile à lire, à naviguer et pour vous contacter, peu importe l’appareil.",
+        },
+        {
+          question: "Webgrafy peut-il aider mon entreprise à mieux apparaître sur Google ?",
+          answer:
+            "Oui. Webgrafy peut vous aider avec les bases du SEO, les mots-clés locaux, les titres de pages, les meta descriptions, l’optimisation des images, la structure du site et la configuration ou l’amélioration de votre profil Google Business.\n\nCela aide les clients à mieux comprendre qui vous êtes, ce que vous offrez, où vous êtes situé et comment vous joindre.",
+        },
+        {
+          question: "Configurez-vous ou améliorez-vous le profil Google Business ?",
+          answer:
+            "Oui. Webgrafy peut configurer ou optimiser votre profil Google Business avec vos informations d’entreprise, vos services, votre description, vos catégories, vos photos, vos FAQ et les détails SEO locaux.\n\nC’est particulièrement utile pour les entreprises locales comme les salons, restaurants, cliniques, entrepreneurs, commerces de détail, studios et prestataires de services.",
+        },
+        {
+          question: "Mon site web peut-il être bilingue ou multilingue ?",
+          answer:
+            "Oui. Webgrafy peut créer des sites en anglais et en français, ce qui est particulièrement utile pour les entreprises au Québec. D’autres langues peuvent aussi être ajoutées selon vos besoins, votre clientèle cible et la disponibilité du contenu.\n\nQue vous ayez besoin d’un site bilingue ou multilingue, nous pouvons organiser la structure clairement pour que les visiteurs puissent facilement changer de langue.",
+        },
+        {
+          question: "Webgrafy peut-il rédiger le texte de mon site web ?",
+          answer:
+            "Oui. Webgrafy peut rédiger ou améliorer le contenu de votre site pour que les visiteurs comprennent rapidement qui vous êtes, ce que vous offrez, qui vous aidez et quelle action entreprendre ensuite.\n\nUne formulation claire est particulièrement importante pour les pages d’accueil, les pages de services, les descriptions de produits, les sections à propos et les appels à l’action.",
+        },
+        {
+          question: "Et si je n’ai pas encore de photos professionnelles ?",
+          answer:
+            "Ce n’est pas un problème. Webgrafy peut quand même vous aider en utilisant des graphiques de marque, des mises en page, des icônes, des visuels de type banque d’images, des mockups de produits ou une direction créative.\n\nNous pouvons aussi vous guider sur les photos qui seraient utiles plus tard pour renforcer votre site, votre portfolio ou vos supports marketing.",
+        },
+        {
+          question: "Concevez-vous à la fois des supports numériques et imprimés ?",
+          answer:
+            "Oui. Webgrafy offre des services de design numérique et imprimé. Cela aide votre entreprise à paraître cohérente sur votre site web, vos médias sociaux, vos cartes d’affaires, dépliants, brochures, menus, emballages, étiquettes, bannières et autres supports marketing.",
+        },
+        {
+          question: "Pouvez-vous créer des visuels pour les médias sociaux ?",
+          answer:
+            "Oui. Webgrafy peut créer des visuels de marque pour Instagram, Facebook, LinkedIn et d’autres plateformes. Cela peut inclure des designs de publications, des graphiques pour stories, des visuels promotionnels, des mises en page de campagnes et des modèles modifiables.",
+        },
+        {
+          question: "Pouvez-vous créer des modèles Canva ?",
+          answer:
+            "Oui. Les modèles Canva sont une excellente option pour les entreprises qui veulent créer leurs propres publications, annonces, dépliants ou promotions tout en restant visuellement cohérentes.\n\nWebgrafy peut concevoir des modèles faciles à modifier qui correspondent à votre style de marque.",
+        },
+        {
+          question: "Offrez-vous des forfaits mensuels pour les petites entreprises ?",
+          answer:
+            "Oui. Webgrafy offre des forfaits de soutien mensuel pour les petites entreprises qui ont besoin d’aide régulière en design, site web ou marketing sans embaucher un designer à temps plein.\n\nUn forfait mensuel peut inclure des mises à jour de site web, des designs de publications pour les médias sociaux, des visuels promotionnels, des dépliants, des affiches, des visuels pour infolettres, des mises à jour du profil Google Business, des designs de campagnes saisonnières, des mises à jour de menus ou listes de prix, un soutien SEO de base et un accompagnement continu pour la cohérence de marque.\n\nLes forfaits mensuels peuvent être ajustés selon le niveau de soutien dont votre entreprise a besoin.",
+        },
+        {
+          question: "Pourrai-je mettre à jour mon site web moi-même ?",
+          answer:
+            "Oui, lorsque c’est possible. Webgrafy peut construire des sites qui vous permettent de mettre à jour vous-même le contenu de base, comme le texte, les images, les services, les articles de blogue ou les informations d’entreprise.\n\nNous pouvons aussi vous offrir une courte démonstration pour que vous vous sentiez à l’aise de faire de petites mises à jour.",
+        },
+        {
+          question: "Combien de temps dure habituellement un projet ?",
+          answer:
+            "Le délai dépend de la taille du projet et de la rapidité avec laquelle le contenu, les commentaires et les approbations sont fournis. Une petite tâche de design peut être complétée plus rapidement, tandis qu’un site web complet ou un projet d’identité de marque demande plus de planification, de design, de révisions et de tests.\n\nAvant de commencer, Webgrafy vous donne un échéancier réaliste basé sur votre projet.",
+        },
+        {
+          question: "De quoi avez-vous besoin pour commencer ?",
+          answer:
+            "En général, nous avons besoin du nom de votre entreprise, de vos services, de votre clientèle cible, de vos préférences de marque, de votre logo ou fichiers existants si vous en avez, d’exemples de sites que vous aimez, de photos si disponibles, et de votre objectif principal.\n\nSi vous n’avez pas tout de suite tous les éléments, Webgrafy peut vous aider à organiser ce qui manque.",
+        },
+        {
+          question:
+            "Webgrafy peut-il reprendre un projet commencé par un autre designer ou une autre agence ?",
+          answer:
+            "Oui, dans bien des cas. Webgrafy peut examiner le site actuel, les fichiers ou la direction de design et recommander la meilleure prochaine étape.\n\nParfois, nous pouvons améliorer ce qui existe déjà. D’autres fois, reconstruire certaines parties peut être plus efficace.",
+        },
+        {
+          question:
+            "Et si j’ai besoin de quelque chose de personnalisé qui n’est pas dans les forfaits ?",
+          answer:
+            "Vous pouvez quand même contacter Webgrafy. Tous les projets ne rentrent pas dans un forfait standard. Si vous avez un besoin précis, nous pouvons examiner votre demande et créer un devis personnalisé selon vos objectifs et exigences.",
+        },
+        {
+          question: "Comment démarrer ?",
+          answer:
+            "Envoyez à Webgrafy un court message sur votre entreprise et ce pour quoi vous avez besoin d’aide. Nous examinerons votre demande, poserons les bonnes questions et recommanderons le meilleur point de départ selon vos objectifs, votre budget et le stade de votre entreprise.",
+        },
+      ],
     },
     privacy: {
       eyebrow: "Légal",

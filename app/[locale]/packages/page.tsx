@@ -208,35 +208,6 @@ export default async function PackagesPage({
         steps={p.processSteps}
       />
 
-      <section id="faq" className="border-b border-stroke bg-white py-20">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-            <div>
-              <SectionLabel>{p.faqHeading}</SectionLabel>
-              <h2 className="mt-4 text-4xl font-semibold leading-[0.96] tracking-[-0.04em] text-ink-strong sm:text-5xl [font-family:var(--font-display)]">
-                {p.faqTitle}
-              </h2>
-            </div>
-            <div className="divide-y divide-stroke border-y border-stroke">
-              {p.faqs.map((faq) => (
-                <details key={faq.question} className="group py-6">
-                  <summary className="flex cursor-pointer list-none items-start justify-between gap-6 text-lg font-medium text-ink-strong">
-                    <span>{faq.question}</span>
-                    <span
-                      aria-hidden
-                      className="mt-1 text-2xl leading-none text-ink-soft transition-transform group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <p className="mt-4 max-w-2xl text-base leading-7 text-ink-base">{faq.answer}</p>
-                </details>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
       <section className="border-b border-stroke bg-surface-warm py-20">
         <Container>
           <div className="flex flex-col items-start gap-8 lg:flex-row lg:items-end lg:justify-between">

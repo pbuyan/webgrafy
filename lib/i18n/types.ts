@@ -163,9 +163,6 @@ export type SiteDictionary = {
       whyTitle: string;
       whyText: string;
       pillars: PillarItem[];
-      faqEyebrow: string;
-      faqTitle: string;
-      faqs: FaqItem[];
     };
     packages: {
       eyebrow: string;
@@ -194,9 +191,6 @@ export type SiteDictionary = {
       processEyebrow: string;
       processTitle: string;
       processSteps: ProcessItem[];
-      faqHeading: string;
-      faqTitle: string;
-      faqs: FaqItem[];
       ctaEyebrow: string;
       ctaTitle: string;
       ctaText: string;
@@ -218,6 +212,12 @@ export type SiteDictionary = {
     };
     about: { eyebrow: string; title: string; text: string };
     contact: { eyebrow: string; title: string; text: string };
+    faq: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      faqs: FaqItem[];
+    };
     privacy: {
       eyebrow: string;
       title: string;
