@@ -71,7 +71,7 @@ const en: SiteDictionary = {
     testimonialsNext: "Next testimonials",
     testimonialsDotLabel: "Go to slide {n}",
     processEyebrow: "Our process",
-    processTitle: "A collaborative process, built around you.",
+    processTitle: "Collaborative process, built around you.",
   },
   pages: {
     services: {
@@ -838,12 +838,13 @@ const en: SiteDictionary = {
       image: "/images/project-maison.jpg",
     },
     {
-      name: "Lunar Wellness",
-      category: "Web Design, Webflow",
+      name: "Dr. Chad Wu",
+      category: "Logo Design, Branding",
       summary:
-        "A calming, conversion-focused website that supports growth and builds trust.",
-      result: "52% increase in bookings",
-      image: "/images/project-lunar.jpg",
+        "A logo and branding system that supports growth and builds trust.",
+      result: "New website and branding system",
+      image: "/images/logo/dr-chad-wu.jpg",
+      url: "https://drwuplasticsurgery.com/",
     },
     {
       name: "Papillon de l'Espoir",
@@ -1861,12 +1862,13 @@ const fr: SiteDictionary = {
       image: "/images/project-maison.jpg",
     },
     {
-      name: "Lunar Wellness",
-      category: "Web design, Webflow",
+      name: "Chad Wu",
+      category: "Logo Design, Branding",
       summary:
-        "Un site apaisant et pensé pour la conversion, qui soutient la croissance et inspire confiance.",
-      result: "52 % d’augmentation des réservations",
-      image: "/images/project-lunar.jpg",
+        "Un logo et un système de marque qui soutient la croissance et inspire confiance.",
+      result: "Nouveau site web et système de marque",
+      image: "/images/logo/dr-chad-wu.jpg",
+      url: "https://drwuplasticsurgery.com/",
     },
     {
       name: "Papillon de l’Espoir",

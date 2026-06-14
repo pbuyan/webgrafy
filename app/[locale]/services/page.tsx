@@ -69,7 +69,7 @@ export default async function ServicesPage({
         steps={dict.processSteps}
       />
 
-      <section className="border-b border-stroke bg-white py-20">
+      {/* <section className="border-b border-stroke bg-white py-20">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
             <div>
@@ -102,7 +102,7 @@ export default async function ServicesPage({
             </div>
           </div>
         </Container>
-      </section>
+      </section> */}
 
       <ContactBlock id="contact" locale={locale} dict={dict} />
     </>

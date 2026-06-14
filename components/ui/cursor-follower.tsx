@@ -68,7 +68,7 @@ export function CursorFollower() {
     <div className="pointer-events-none fixed inset-0 z-50 hidden lg:block" aria-hidden>
       <div
         ref={circleRef}
-        className={`absolute left-0 top-0 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/50 bg-white/8 shadow-[0_0_35px_rgba(255,255,255,0.25)] backdrop-blur-[2px] transition-opacity duration-300 ${enabled ? "opacity-100" : "opacity-0"}`}
+        className={`absolute left-0 top-0 h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/50 bg-white/8 shadow-[0_0_35px_rgba(255,255,255,0.25)] backdrop-blur-[2px] transition-opacity duration-300 ${enabled ? "opacity-30" : "opacity-0"}`}
       />
       <div
         ref={flyRef}

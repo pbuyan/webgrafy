@@ -50,11 +50,10 @@ export default async function PackagesPage({
               return (
                 <article
                   key={tier.name}
-                  className={`relative flex flex-col border bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.06)] ${
-                    isPopular
+                  className={`relative flex flex-col border bg-white p-8 shadow-[0_14px_40px_rgba(0,0,0,0.06)] ${isPopular
                       ? "border-ink-strong ring-1 ring-ink-strong"
                       : "border-stroke"
-                  }`}
+                    }`}
                 >
                   {isPopular && (
                     <span className="absolute -top-3 left-8 inline-flex items-center gap-1.5 bg-ink-strong px-3 py-1 text-[11px] font-medium uppercase tracking-[0.18em] text-white">
@@ -183,15 +182,14 @@ export default async function PackagesPage({
                   className="rounded-3xl border border-stroke bg-surface-warm p-6"
                 >
                   <div
-                    className={`mb-5 h-10 w-10 rounded-full ${
-                      index % 4 === 0
+                    className={`mb-5 h-10 w-10 rounded-full ${index % 4 === 0
                         ? "bg-ink"
                         : index % 4 === 1
                           ? "bg-warm-mid"
                           : index % 4 === 2
                             ? "border border-stroke bg-white"
                             : "bg-warm-light"
-                    }`}
+                      }`}
                   />
                   <h3 className="text-lg font-semibold leading-7 text-ink-rich">{item.title}</h3>
                   <p className="mt-2 text-sm leading-7 text-ink-soft">{item.text}</p>
@@ -202,11 +200,11 @@ export default async function PackagesPage({
         </Container>
       </section>
 
-      <ProcessTimeline
+      {/* <ProcessTimeline
         eyebrow={p.processEyebrow}
         title={p.processTitle}
         steps={p.processSteps}
-      />
+      /> */}
 
       <section className="border-b border-stroke bg-surface-warm py-20">
         <Container>

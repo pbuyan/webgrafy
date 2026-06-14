@@ -137,14 +137,6 @@ export default async function HomePage({
         </Container>
       </section>
 
-      <div data-header-theme="light">
-        <ProcessTimeline
-          eyebrow={dict.home.processEyebrow}
-          title={dict.home.processTitle}
-          steps={dict.processSteps}
-        />
-      </div>
-
       <div data-header-theme="dark">
         <ContactBlock locale={locale} dict={dict} />
       </div>
