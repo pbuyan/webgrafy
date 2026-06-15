@@ -109,6 +109,7 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
     { label: dict.nav.services, href: `/${locale}/services` },
     { label: dict.nav.packages, href: `/${locale}/packages` },
     { label: dict.nav.portfolio, href: `/${locale}/portfolio` },
+    { label: dict.nav.blog, href: `/${locale}/blog` },
     { label: dict.nav.about, href: `/${locale}/about` },
   ];
 

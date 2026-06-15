@@ -93,6 +93,7 @@ export type SiteDictionary = {
     services: string;
     packages: string;
     portfolio: string;
+    blog: string;
     about: string;
     contact: string;
     bookCall: string;
@@ -118,6 +119,8 @@ export type SiteDictionary = {
     serviceLabel: string;
     yearLabel: string;
     viewAllProjects: string;
+    readMore: string;
+    backToBlog: string;
     exploreService: string;
     sendInquiry: string;
     replyWindow: string;
@@ -211,6 +214,16 @@ export type SiteDictionary = {
       serviceVisuals: { name: string; caption: string; src: string }[];
     };
     about: { eyebrow: string; title: string; text: string };
+    blog: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      empty: string;
+      ctaEyebrow: string;
+      ctaTitle: string;
+      ctaText: string;
+      ctaButton: string;
+    };
     contact: { eyebrow: string; title: string; text: string };
     faq: {
       eyebrow: string;

@@ -27,6 +27,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
     { label: dict.nav.services, href: `/${locale}/services` },
     { label: dict.nav.packages, href: `/${locale}/packages` },
     { label: dict.nav.portfolio, href: `/${locale}/portfolio` },
+    { label: dict.nav.blog, href: `/${locale}/blog` },
     { label: dict.nav.about, href: `/${locale}/about` },
   ];
 
@@ -35,8 +36,8 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
     href: `/${locale}/services`,
   }));
   const resourceItems: FooterItem[] = [
-    { label: dict.footer.resourcesList[0], href: `/${locale}/portfolio` },
-    { label: dict.footer.resourcesList[1], href: `/${locale}/about` },
+    { label: dict.footer.resourcesList[0], href: `/${locale}/blog` },
+    { label: dict.footer.resourcesList[1], href: `/${locale}/portfolio` },
     { label: dict.footer.resourcesList[2], href: `/${locale}/faq` },
   ];
   const legalItems: FooterItem[] = [
