@@ -22,7 +22,7 @@ export default async function AboutPage({
         text={dict.pages.about.text}
       />
 
-      <section className="border-b border-stroke py-20">
+      {/* <section className="border-b border-stroke py-20">
         <Container>
           <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr]">
             <div className="rounded-[1.8rem] border border-stroke bg-white p-10 shadow-[0_16px_40px_rgba(0,0,0,0.04)]">
@@ -43,13 +43,7 @@ export default async function AboutPage({
             </div>
           </div>
         </Container>
-      </section>
-
-      <ProcessTimeline
-        eyebrow={dict.about.processEyebrow}
-        title={dict.about.processTitle}
-        steps={dict.processSteps}
-      />
+      </section> */}
 
       <ContactBlock id="contact" locale={locale} dict={dict} />
     </>
