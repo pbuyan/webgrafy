@@ -25,7 +25,7 @@ export function ProjectCard({
     <>
       <div className={`p-4 ${bg}`}>
         <div className="overflow-hidden rounded-[1.2rem] border border-stroke bg-white/60">
-          <Image src={project.image} alt={project.name} width={1600} height={900} className="project-card-image aspect-video w-full object-fill" />
+          <Image src={project.image} alt={project.name} width={1600} height={900} className="project-card-image aspect-video w-full object-contain" />
         </div>
       </div>
       <div className="p-6">

@@ -843,12 +843,13 @@ const en: SiteDictionary = {
       image: "/images/project-nordik.jpg",
     },
     {
-      name: "Maison Solé",
-      category: "Branding, Packaging",
+      name: "Dr. Alain Gagnon",
+      category: "Logo Design, Branding",
       summary:
-        "Brand identity and packaging that elevated the brand and strengthened shelf presence.",
-      result: "45% increase in retail sales",
-      image: "/images/project-maison.jpg",
+        "A logo and branding system that supports the growth of a plastic surgery practice.",
+      result: "New website and branding system",
+      image: "/images/logo/dr-alain-gagnon.png",
+      url: "https://dralaingagnon.com/en/",
     },
     {
       name: "Dr. Chad Wu",
@@ -1880,12 +1881,13 @@ const fr: SiteDictionary = {
       image: "/images/project-nordik.jpg",
     },
     {
-      name: "Maison Solé",
-      category: "Branding, Packaging",
+      name: "Dr. Alain Gagnon",
+      category: "Logo Design, Branding",
       summary:
-        "Une identité et un packaging qui ont élevé la marque et renforcé sa présence en rayon.",
-      result: "45 % d’augmentation des ventes en retail",
-      image: "/images/project-maison.jpg",
+        "Un logo et un système de marque qui soutient la croissance et inspire confiance.",
+      result: "Nouveau site web et système de marque",
+      image: "/images/logo/dr-alain-gagnon.png",
+      url: "https://dralaingagnon.com/fr/",
     },
     {
       name: "Chad Wu",
