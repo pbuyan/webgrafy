@@ -92,20 +92,16 @@ textarea::placeholder {
   position: relative;
   width: 100%;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black 8%,
-    black 92%,
-    transparent 100%
-  );
+  -webkit-mask-image: linear-gradient(to right,
+      transparent 0,
+      black 8%,
+      black 92%,
+      transparent 100%);
+  mask-image: linear-gradient(to right,
+      transparent 0,
+      black 8%,
+      black 92%,
+      transparent 100%);
 }
 
 .marquee-track {
@@ -144,6 +140,7 @@ textarea::placeholder {
   from {
     transform: translate3d(0, 0, 0);
   }
+
   to {
     transform: translate3d(-50%, 0, 0);
   }
@@ -153,5 +150,21 @@ textarea::placeholder {
   .marquee-track {
     animation: none;
     transform: none;
+  }
+}
+
+.project-card-image {
+  filter: saturate(0.82) sepia(0.18) brightness(1.04) contrast(0.97);
+  transition: filter 0.5s ease-out;
+}
+
+.group:hover .project-card-image,
+.group:focus-within .project-card-image {
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card-image {
+    transition: none;
   }
 }

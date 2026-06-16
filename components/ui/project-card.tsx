@@ -25,7 +25,7 @@ export function ProjectCard({
     <>
       <div className={`p-4 ${bg}`}>
         <div className="overflow-hidden rounded-[1.2rem] border border-stroke bg-white/60">
-          <Image src={project.image} alt={project.name} width={1600} height={900} className="aspect-video w-full object-fill" />
+          <Image src={project.image} alt={project.name} width={1600} height={900} className="project-card-image aspect-video w-full object-fill" />
         </div>
       </div>
       <div className="p-6">
@@ -40,11 +40,17 @@ export function ProjectCard({
     </>
   );
 
-  const cardClass = "overflow-hidden rounded-[1.6rem] border border-stroke bg-white shadow-[0_16px_40px_rgba(0,0,0,0.05)]";
+  const cardClass =
+    "group overflow-hidden rounded-[1.6rem] border border-stroke bg-white shadow-[0_16px_40px_rgba(0,0,0,0.05)]";
 
   if (project.url) {
     return (
-      <Link href={project.url} target="_blank" rel="noopener noreferrer" className={`${cardClass} block transition-shadow hover:shadow-[0_24px_56px_rgba(0,0,0,0.10)]`}>
+      <Link
+        href={project.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`${cardClass} block transition-shadow hover:shadow-[0_24px_56px_rgba(0,0,0,0.10)]`}
+      >
         <article>{inner}</article>
       </Link>
     );
