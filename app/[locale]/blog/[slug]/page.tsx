@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { BlogImageFrame } from "@/components/blog/blog-image-frame";
 import { Container } from "@/components/ui/container";
 import { compileBlogPost } from "@/lib/blog/compile-post";
 import { getAllPostParams, getPostSource } from "@/lib/blog/posts";
@@ -85,14 +85,7 @@ export default async function BlogPostPage({
           </div>
           {frontmatter.image ? (
             <div className="mt-10 overflow-hidden rounded-[1.6rem] border border-stroke">
-              <Image
-                src={frontmatter.image}
-                alt={frontmatter.title}
-                width={1200}
-                height={640}
-                className="h-[320px] w-full object-cover sm:h-[420px]"
-                priority
-              />
+              <BlogImageFrame src={frontmatter.image} alt={frontmatter.title} priority />
             </div>
           ) : null}
         </Container>

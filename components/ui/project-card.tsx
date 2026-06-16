@@ -25,7 +25,7 @@ export function ProjectCard({
     <>
       <div className={`p-4 ${bg}`}>
         <div className="overflow-hidden rounded-[1.2rem] border border-stroke bg-white/60">
-          <Image src={project.image} alt={project.name} width={700} height={420} className="h-[240px] w-full object-cover" />
+          <Image src={project.image} alt={project.name} width={1600} height={900} className="aspect-video w-full object-fill" />
         </div>
       </div>
       <div className="p-6">

@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { BlogImageFrame } from "@/components/blog/blog-image-frame";
 import type { BlogPostMeta } from "@/lib/blog/types";
 import type { Locale } from "@/lib/i18n/config";
 
@@ -31,13 +31,7 @@ export function BlogPostCard({
         {post.image ? (
           <div className={`p-4 ${bg}`}>
             <div className="overflow-hidden rounded-[1.2rem] border border-stroke bg-white/60">
-              <Image
-                src={post.image}
-                alt={post.title}
-                width={700}
-                height={420}
-                className="h-[240px] w-full object-cover"
-              />
+              <BlogImageFrame src={post.image} alt={post.title} />
             </div>
           </div>
         ) : null}
