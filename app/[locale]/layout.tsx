@@ -5,7 +5,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { CookieConsent } from "@/components/ui/cookie-consent";
 import { CursorFollower } from "@/components/ui/cursor-follower";
-import { defaultLocale, isValidLocale, locales, type Locale } from "@/lib/i18n/config";
+import { JsonLd } from "@/components/structured-data";
+import { defaultLocale, isValidLocale, locales, siteUrl, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
 export async function generateStaticParams() {
@@ -22,12 +23,16 @@ export async function generateMetadata({
   const dict = await getDictionary(validLocale);
 
   return {
-    metadataBase: new URL("https://www.webgrafy.com"),
+    metadataBase: new URL(siteUrl),
     title: {
       default: dict.meta.siteName,
       template: `%s | ${dict.meta.siteName}`,
     },
     description: dict.meta.siteDescription,
+    icons: {
+      icon: "/favicon.ico",
+      apple: "/logo-black.png",
+    },
     openGraph: {
       title: dict.meta.siteName,
       description: dict.meta.siteDescription,
@@ -57,8 +62,26 @@ export default async function LocaleLayout({
 
   const dict = await getDictionary(locale as Locale);
 
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: dict.meta.siteName,
+    url: `${siteUrl}/${locale}`,
+    logo: `${siteUrl}/logo-black.png`,
+    description: dict.meta.siteDescription,
+    email: dict.contactBlock.email,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Montreal",
+      addressRegion: "QC",
+      addressCountry: "CA",
+    },
+    areaServed: "CA",
+  };
+
   return (
     <>
+      <JsonLd data={organizationSchema} />
       <CursorFollower />
       <HtmlLang locale={locale as Locale} />
       <SiteHeader locale={locale as Locale} dict={dict} />

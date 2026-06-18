@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -13,6 +14,17 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/lib/i18n/config";
 import { buttonVariants } from "@/components/ui/button";
 import { ProjectCategoriesCard } from '@/components/ui/project-categories-card';
+import { buildMetadata } from "@/lib/i18n/metadata";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+  return buildMetadata({ locale, path: "", description: dict.meta.siteDescription });
+}
 
 export default async function HomePage({
   params,

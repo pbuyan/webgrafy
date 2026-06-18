@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
-import { rateLimit } from "@/lib/rate-limit";
+import { isRateLimited } from "@/lib/rate-limit";
 
-const toEmail = process.env.CONTACT_EMAIL ?? "hello@webgrafy.co";
+const toEmail = process.env.CONTACT_EMAIL ?? "hello@webgrafy.com";
 
 // Lazily instantiated so the module loads without RESEND_API_KEY at build time.
 let resend: Resend | null = null;
@@ -15,13 +15,23 @@ function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+/** Escape user input before interpolating into the notification email HTML. */
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 export async function POST(request: Request) {
   const ip =
     request.headers.get("x-forwarded-for")?.split(",")[0].trim() ??
     request.headers.get("x-real-ip") ??
     "unknown";
 
-  if (rateLimit(ip)) {
+  if (await isRateLimited(ip)) {
     return NextResponse.json(
       { error: "Too many requests. Please try again later." },
       { status: 429 }
@@ -30,6 +40,16 @@ export async function POST(request: Request) {
 
   try {
     const body = await request.json();
+
+    // Honeypot: real users never see/fill this field. Bots that do are
+    // accepted with a success response (so they don't retry) but no email is sent.
+    const honeypot = typeof body.website === "string" ? body.website.trim() : "";
+    if (honeypot) {
+      return NextResponse.json(
+        { success: true, message: "Your inquiry has been received." },
+        { status: 200 }
+      );
+    }
 
     const name = typeof body.name === "string" ? body.name.trim() : "";
     const businessName = typeof body.businessName === "string" ? body.businessName.trim() : "";
@@ -62,12 +82,12 @@ export async function POST(request: Request) {
       replyTo: email,
       subject: `New inquiry from ${name}${businessName ? ` (${businessName})` : ""}`,
       html: `
-        <p><strong>Name:</strong> ${name}</p>
-        ${businessName ? `<p><strong>Company:</strong> ${businessName}</p>` : ""}
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+        ${businessName ? `<p><strong>Company:</strong> ${escapeHtml(businessName)}</p>` : ""}
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Service:</strong> ${escapeHtml(service)}</p>
         <p><strong>Message:</strong></p>
-        <p style="white-space:pre-wrap">${message}</p>
+        <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
       `,
     });
 

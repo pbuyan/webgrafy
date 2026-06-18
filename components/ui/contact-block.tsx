@@ -13,6 +13,7 @@ const initialState = {
   email: "",
   service: "",
   message: "",
+  website: "", // honeypot — must stay empty for real users
 };
 
 export function ContactBlock({
@@ -80,6 +81,18 @@ export function ContactBlock({
           <div className="grid gap-8">
             <div className="rounded-[1.6rem] border border-white/10 bg-black/30 p-6">
               <form className="grid gap-4" onSubmit={handleSubmit}>
+                <div aria-hidden className="absolute left-[-9999px] top-[-9999px] h-0 w-0 overflow-hidden">
+                  <label htmlFor="website">Leave this field empty</label>
+                  <input
+                    id="website"
+                    name="website"
+                    type="text"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.website}
+                    onChange={(e) => setForm((prev) => ({ ...prev, website: e.target.value }))}
+                  />
+                </div>
                 <div className="grid gap-4 md:grid-cols-2">
                   <input
                     name="name"

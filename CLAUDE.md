@@ -24,7 +24,7 @@ This is a Next.js 16 App Router site for a bilingual (EN/FR) design agency. The 
 
 ### Locale routing
 
-All user-facing pages live under `app/[locale]/`. The middleware in **`proxy.ts`** (named `proxy.ts`, not `middleware.ts` — rename it if you need Next.js to pick it up as middleware) redirects bare paths (e.g. `/services`) to `/{defaultLocale}/services`. The `[locale]/layout.tsx` calls `isValidLocale()` and calls `notFound()` for unknown locales.
+All user-facing pages live under `app/[locale]/`. Request interception lives in **`proxy.ts`** — in Next.js 16 the `proxy.ts` convention (exporting a `proxy` function) replaced `middleware.ts`/`middleware`, so this file is picked up automatically; do **not** rename it back to `middleware.ts`. It redirects bare paths (e.g. `/services`) to `/{defaultLocale}/services`. The `[locale]/layout.tsx` calls `isValidLocale()` and calls `notFound()` for unknown locales.
 
 Supported locales are defined once in `lib/i18n/config.ts`:
 ```ts
@@ -84,12 +84,20 @@ Use `cn()` from `lib/utils.ts` (wraps `clsx` + `tailwind-merge`) for conditional
 
 ### API routes
 
-`app/api/contact/route.ts` — POST endpoint for the contact form. Validates fields server-side, applies in-memory rate limiting (5 requests/min per IP) via `lib/rate-limit.ts`. **Email delivery is not yet wired up** — there is a TODO comment where an email service (e.g. Resend) should be called. The rate limiter is single-process only; replace with a Redis-backed solution (e.g. `@upstash/ratelimit`) before deploying to serverless/edge.
+`app/api/contact/route.ts` — POST endpoint for the contact form. Validates fields server-side, escapes user input into the notification email, drops submissions that fill the `website` honeypot, and rate limits (5 requests/min per IP) via `lib/rate-limit.ts`. **Email delivery is wired up via Resend** (`RESEND_API_KEY` + `CONTACT_EMAIL`); the sending domain in the `from` address must be verified in Resend before going live. The rate limiter (`isRateLimited`) uses **Upstash Redis** when `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` are set (shared across serverless instances) and falls back to an in-memory `Map` otherwise; if Upstash is unreachable it fails open to the in-memory limiter so an outage never blocks legitimate submissions.
 
 ### Environment variables
 
-Copy `env.example` to `.env.local`. The only variable is:
+Copy `env.example` to `.env.local`. Variables:
 ```
-NEXT_PUBLIC_BASE_URL=https://www.webgrafy.com
+NEXT_PUBLIC_BASE_URL=https://www.webgrafy.com   # absolute URLs: metadata, sitemap, robots, hreflang
+RESEND_API_KEY=re_...                            # contact form email delivery
+CONTACT_EMAIL=hello@webgrafy.com                 # recipient of contact form submissions
+UPSTASH_REDIS_REST_URL=...                       # optional: shared contact-form rate limiting
+UPSTASH_REDIS_REST_TOKEN=...                     # optional: shared contact-form rate limiting
 ```
-Used in `app/sitemap.ts` and `app/robots.ts`.
+`NEXT_PUBLIC_BASE_URL` is the single source of truth for the site origin via `siteUrl` in `lib/i18n/config.ts` (used by `lib/i18n/metadata.ts`, `app/sitemap.ts`, `app/robots.ts`, and the locale layout's `metadataBase`). The Upstash variables are optional — see the API routes section for the rate-limiter fallback behaviour.
+
+### SEO & structured data
+
+Per-page metadata (title, description, canonical, `hreflang`) is built with `buildMetadata()` / `localeAlternates()` in `lib/i18n/metadata.ts`. Schema.org JSON-LD is emitted via the `JsonLd` component (`components/structured-data.tsx`): an `Organization` graph in the locale layout and a `FAQPage` graph on the FAQ page. `sameAs` (social profiles) and `telephone` are intentionally omitted until real values replace the current placeholders.

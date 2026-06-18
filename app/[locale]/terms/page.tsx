@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { buildMetadata } from "@/lib/i18n/metadata";
 import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
@@ -11,7 +12,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const dict = await getDictionary(locale);
-  return { title: dict.pages.terms.title };
+  return buildMetadata({
+    locale,
+    path: "/terms",
+    title: dict.pages.terms.title,
+  });
 }
 
 export default async function TermsPage({

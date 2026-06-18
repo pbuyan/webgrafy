@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { ContactBlock } from "@/components/ui/contact-block";
@@ -7,7 +8,23 @@ import { SectionLabel } from "@/components/ui/section-label";
 import { ServiceCard } from "@/components/ui/service-card";
 import { Button } from "@/components/ui/button";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import { buildMetadata } from "@/lib/i18n/metadata";
 import type { Locale } from "@/lib/i18n/config";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: Locale }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const dict = await getDictionary(locale);
+  return buildMetadata({
+    locale,
+    path: "/services",
+    title: dict.pages.services.title,
+    description: dict.pages.services.text,
+  });
+}
 
 export default async function ServicesPage({
   params,

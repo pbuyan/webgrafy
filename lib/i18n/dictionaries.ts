@@ -659,15 +659,15 @@ const en: SiteDictionary = {
         },
         {
           heading: "Cookies",
-          body: "This website does not use tracking cookies or third-party analytics. No personally identifiable information is collected through cookies.",
+          body: "This website does not use tracking cookies or third-party analytics. We store a single preference in your browser's local storage to remember your cookie-banner choice; no personally identifiable information is collected.",
         },
         {
           heading: "Your Rights",
-          body: "Under applicable Canadian privacy law (PIPEDA), you have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at hello@webgrafy.co.",
+          body: "Under applicable Canadian privacy law (PIPEDA), you have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at hello@webgrafy.com.",
         },
         {
           heading: "Contact",
-          body: "If you have questions about this policy, please reach out to us at hello@webgrafy.co or by mail at Webgrafy, Montréal, QC, Canada.",
+          body: "If you have questions about this policy, please reach out to us at hello@webgrafy.com or by mail at Webgrafy, Montréal, QC, Canada.",
         },
       ],
     },
@@ -726,7 +726,7 @@ const en: SiteDictionary = {
     title: "Ready to elevate your brand presence?",
     text: "Tell us about your project and let's create something exceptional together.",
     phone: "+1 (514) 555-0198",
-    email: "hello@webgrafy.co",
+    email: "hello@webgrafy.com",
     location: "Montreal, QC, Canada",
     form: {
       name: "Full name",
@@ -1697,15 +1697,15 @@ const fr: SiteDictionary = {
         },
         {
           heading: "Témoins (cookies)",
-          body: "Ce site web n’utilise pas de témoins de suivi ni d’outils d’analyse tiers. Aucune information personnelle identifiable n’est collectée via des témoins.",
+          body: "Ce site web n’utilise pas de témoins de suivi ni d’outils d’analyse tiers. Nous enregistrons une seule préférence dans le stockage local de votre navigateur afin de mémoriser votre choix concernant la bannière de témoins; aucune information personnelle identifiable n’est collectée.",
         },
         {
           heading: "Vos droits",
-          body: "En vertu de la loi canadienne applicable en matière de protection de la vie privée (LPRPDE), vous avez le droit d’accéder à vos informations personnelles, de les corriger ou d’en demander la suppression. Pour exercer ces droits, veuillez nous contacter à hello@webgrafy.co.",
+          body: "En vertu de la loi canadienne applicable en matière de protection de la vie privée (LPRPDE), vous avez le droit d’accéder à vos informations personnelles, de les corriger ou d’en demander la suppression. Pour exercer ces droits, veuillez nous contacter à hello@webgrafy.com.",
         },
         {
           heading: "Contact",
-          body: "Pour toute question relative à cette politique, contactez-nous à hello@webgrafy.co ou par courrier à Webgrafy, Montréal, QC, Canada.",
+          body: "Pour toute question relative à cette politique, contactez-nous à hello@webgrafy.com ou par courrier à Webgrafy, Montréal, QC, Canada.",
         },
       ],
     },
@@ -1764,7 +1764,7 @@ const fr: SiteDictionary = {
     title: "Prêt à élever la présence de votre marque ?",
     text: "Parlez-nous de votre projet et créons ensemble quelque chose d’exceptionnel.",
     phone: "+1 (514) 555-0198",
-    email: "hello@webgrafy.co",
+    email: "hello@webgrafy.com",
     location: "Montréal, QC, Canada",
     form: {
       name: "Nom complet",
