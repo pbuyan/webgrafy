@@ -42,8 +42,7 @@ const en: SiteDictionary = {
     sendInquiry: "Send Message",
     replyWindow: "We typically reply within 24 hours.",
     instagram: "Instagram",
-    behance: "Behance",
-    linkedin: "LinkedIn",
+    facebook: "Facebook",
   },
   home: {
     badge: "Branding & Web Design Agency",
@@ -1064,8 +1063,7 @@ const fr: SiteDictionary = {
     sendInquiry: "Envoyer",
     replyWindow: "Nous répondons généralement sous 24 heures.",
     instagram: "Instagram",
-    behance: "Behance",
-    linkedin: "LinkedIn",
+    facebook: "Facebook",
   },
   home: {
     badge: "Agence de branding & web design",

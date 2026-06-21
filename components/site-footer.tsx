@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Linkedin, Pen } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/i18n/config";
 import type { SiteDictionary } from "@/lib/i18n/types";
@@ -90,14 +90,11 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
                 <p>{dict.contactBlock.location}</p>
               </div>
               <div className="mt-5 flex items-center gap-4 text-white/80">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label={dict.common.instagram} className="hover:text-white transition-colors">
+                <a href="https://www.instagram.com/webgrafy/" target="_blank" rel="noopener noreferrer" aria-label={dict.common.instagram} className="hover:text-white transition-colors">
                   <Instagram className="h-5 w-5" />
                 </a>
-                <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label={dict.common.behance} className="hover:text-white transition-colors">
-                  <Pen className="h-5 w-5" />
-                </a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label={dict.common.linkedin} className="hover:text-white transition-colors">
-                  <Linkedin className="h-5 w-5" />
+                <a href="https://www.facebook.com/profile.php?id=61591352091454" target="_blank" rel="noopener noreferrer" aria-label={dict.common.facebook} className="hover:text-white transition-colors">
+                  <Facebook className="h-5 w-5" />
                 </a>
               </div>
             </div>

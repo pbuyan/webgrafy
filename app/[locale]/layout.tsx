@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { HtmlLang } from "@/components/html-lang";
 import { SiteFooter } from "@/components/site-footer";
@@ -30,9 +30,14 @@ export async function generateMetadata({
     },
     description: dict.meta.siteDescription,
     icons: {
-      icon: "/favicon.ico",
-      apple: "/logo-black.png",
+      icon: [
+        { url: "/favicon.ico", sizes: "any" },
+        { url: "/favicon/icon-32.png", type: "image/png", sizes: "32x32" },
+        { url: "/favicon/icon-16.png", type: "image/png", sizes: "16x16" },
+      ],
+      apple: { url: "/favicon/apple-touch-icon.png", sizes: "180x180" },
     },
+    manifest: "/manifest.webmanifest",
     openGraph: {
       title: dict.meta.siteName,
       description: dict.meta.siteDescription,
@@ -48,6 +53,10 @@ export async function generateMetadata({
     },
   };
 }
+
+export const viewport: Viewport = {
+  themeColor: "#ffffff",
+};
 
 export default async function LocaleLayout({
   children,
@@ -77,6 +86,10 @@ export default async function LocaleLayout({
       addressCountry: "CA",
     },
     areaServed: "CA",
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=61591352091454",
+      "https://www.instagram.com/webgrafy/",
+    ],
   };
 
   return (

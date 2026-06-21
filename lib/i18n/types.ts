@@ -125,8 +125,7 @@ export type SiteDictionary = {
     sendInquiry: string;
     replyWindow: string;
     instagram: string;
-    behance: string;
-    linkedin: string;
+    facebook: string;
   };
   home: {
     badge: string;
