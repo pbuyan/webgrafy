@@ -123,7 +123,7 @@ describe("POST /api/contact", () => {
     expect(mockSend).toHaveBeenCalledOnce();
     expect(mockSend).toHaveBeenCalledWith(
       expect.objectContaining({
-        from: "Webgrafy Contact <noreply@webgrafy.com>",
+        from: "Webgrafy Contact <noreply@contact.webgrafy.com>",
         to: ["info@webgrafy.com"],
         replyTo: "jane@example.com",
         html: expect.stringContaining("Locale:</strong> en"),

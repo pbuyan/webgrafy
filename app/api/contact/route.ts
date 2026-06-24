@@ -3,6 +3,8 @@ import { Resend } from "resend";
 import { isRateLimited } from "@/lib/rate-limit";
 
 const toEmail = process.env.CONTACT_EMAIL ?? "info@webgrafy.com";
+const fromEmail =
+  process.env.RESEND_FROM_EMAIL ?? "Webgrafy Contact <noreply@contact.webgrafy.com>";
 
 // Lazily instantiated so the module loads without RESEND_API_KEY at build time.
 let resend: Resend | null = null;
@@ -87,7 +89,7 @@ export async function POST(request: Request) {
     const locale = typeof body.locale === "string" ? body.locale.trim() : "";
 
     const { error } = await getResend().emails.send({
-      from: "Webgrafy Contact <noreply@webgrafy.com>",
+      from: fromEmail,
       to: [toEmail],
       replyTo: email,
       subject: `New inquiry from ${name}${businessName ? ` (${businessName})` : ""}`,
