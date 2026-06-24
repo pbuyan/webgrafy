@@ -100,4 +100,4 @@ UPSTASH_REDIS_REST_TOKEN=...                     # optional: shared contact-form
 
 ### SEO & structured data
 
-Per-page metadata (title, description, canonical, `hreflang`) is built with `buildMetadata()` / `localeAlternates()` in `lib/i18n/metadata.ts`. Schema.org JSON-LD is emitted via the `JsonLd` component (`components/structured-data.tsx`): an `Organization` graph in the locale layout and a `FAQPage` graph on the FAQ page. `sameAs` (social profiles) and `telephone` are intentionally omitted until real values replace the current placeholders.
+Per-page metadata (title, description, canonical, `hreflang`) is built with `buildMetadata()` / `localeAlternates()` in `lib/i18n/metadata.ts`. Schema.org JSON-LD is emitted via the `JsonLd` component (`components/structured-data.tsx`): an `Organization` graph in the locale layout and a `FAQPage` graph on the FAQ page.

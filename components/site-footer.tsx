@@ -86,7 +86,6 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
               <div className="text-xs uppercase tracking-[0.18em] text-white/45">{dict.footer.contact}</div>
               <div className="mt-4 grid gap-2 text-sm text-white/78">
                 <p>{dict.contactBlock.email}</p>
-                <p>{dict.contactBlock.phone}</p>
                 <p>{dict.contactBlock.location}</p>
               </div>
               <div className="mt-5 flex items-center gap-4 text-white/80">

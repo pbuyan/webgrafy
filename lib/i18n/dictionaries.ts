@@ -724,7 +724,6 @@ const en: SiteDictionary = {
     eyebrow: "Let's work together",
     title: "Ready to elevate your brand presence?",
     text: "Tell us about your project and let's create something exceptional together.",
-    phone: "+1 (514) 555-0198",
     email: "info@webgrafy.com",
     location: "Montreal, QC, Canada",
     form: {
@@ -1761,7 +1760,6 @@ const fr: SiteDictionary = {
     eyebrow: "Travaillons ensemble",
     title: "Prêt à élever la présence de votre marque ?",
     text: "Parlez-nous de votre projet et créons ensemble quelque chose d’exceptionnel.",
-    phone: "+1 (514) 555-0198",
     email: "info@webgrafy.com",
     location: "Montréal, QC, Canada",
     form: {

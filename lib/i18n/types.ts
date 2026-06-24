@@ -257,7 +257,6 @@ export type SiteDictionary = {
     eyebrow: string;
     title: string;
     text: string;
-    phone: string;
     email: string;
     location: string;
     form: {
