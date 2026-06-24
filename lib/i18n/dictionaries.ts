@@ -743,6 +743,19 @@ const en: SiteDictionary = {
     accept: "Accept",
     decline: "Decline",
   },
+  notFound: {
+    eyebrow: "404",
+    title: "This page could not be found",
+    text: "The page you are looking for may have moved, been renamed, or no longer exists.",
+    cta: "Back to home",
+  },
+  errorPage: {
+    eyebrow: "Error",
+    title: "Something went wrong",
+    text: "An unexpected error occurred. Please try again or return to the homepage.",
+    retry: "Try again",
+    cta: "Back to home",
+  },
   marqueeItems: [
     { id: "logos", before: "Logos ", em: "& marks" },
     { id: "brand-systems", before: "Brand systems" },
@@ -1779,6 +1792,19 @@ const fr: SiteDictionary = {
     accept: "Accepter",
     decline: "Refuser",
   },
+  notFound: {
+    eyebrow: "404",
+    title: "Cette page est introuvable",
+    text: "La page que vous recherchez a peut-être été déplacée, renommée ou n'existe plus.",
+    cta: "Retour à l'accueil",
+  },
+  errorPage: {
+    eyebrow: "Erreur",
+    title: "Une erreur est survenue",
+    text: "Une erreur inattendue s'est produite. Veuillez réessayer ou revenir à la page d'accueil.",
+    retry: "Réessayer",
+    cta: "Retour à l'accueil",
+  },
   marqueeItems: [
     { id: "logos", before: "Logos ", em: "& marques" },
     { id: "brand-systems", before: "Systèmes de marque" },
@@ -2060,5 +2086,14 @@ const fr: SiteDictionary = {
 const dictionaries: Record<Locale, SiteDictionary> = { en, fr };
 
 export async function getDictionary(locale: Locale): Promise<SiteDictionary> {
+  return dictionaries[locale];
+}
+
+/**
+ * Synchronous dictionary accessor for client components that cannot await
+ * (e.g. the `error.tsx` boundary, which must be a Client Component and reads
+ * its locale from `useParams`). Server Components should prefer `getDictionary`.
+ */
+export function getDictionarySync(locale: Locale): SiteDictionary {
   return dictionaries[locale];
 }

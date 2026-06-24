@@ -275,6 +275,19 @@ export type SiteDictionary = {
     accept: string;
     decline: string;
   };
+  notFound: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    cta: string;
+  };
+  errorPage: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    retry: string;
+    cta: string;
+  };
   marqueeItems: MarqueeLabel[];
   services: ServiceItem[];
   projectsCategories: ProjectCategoryItem[];

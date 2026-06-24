@@ -96,6 +96,7 @@ export function ContactBlock({
                   <input
                     name="name"
                     required
+                    aria-label={dict.contactBlock.form.name}
                     className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none placeholder:text-white/45"
                     placeholder={dict.contactBlock.form.name}
                     value={form.name}
@@ -104,6 +105,7 @@ export function ContactBlock({
                   <input
                     name="email"
                     required
+                    aria-label={dict.contactBlock.form.email}
                     className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none placeholder:text-white/45"
                     placeholder={dict.contactBlock.form.email}
                     type="email"
@@ -114,6 +116,7 @@ export function ContactBlock({
                 <div className="grid gap-4 md:grid-cols-2">
                   <input
                     name="businessName"
+                    aria-label={dict.contactBlock.form.businessName}
                     className="rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 text-white outline-none placeholder:text-white/45"
                     placeholder={dict.contactBlock.form.businessName}
                     value={form.businessName}
@@ -122,6 +125,7 @@ export function ContactBlock({
                   <select
                     name="service"
                     required
+                    aria-label={dict.contactBlock.form.service}
                     className={`rounded-none border-0 border-b border-white/20 bg-transparent px-0 py-3 outline-none ${form.service ? "text-white" : "text-white/45"}`}
                     value={form.service}
                     onChange={(e) => setForm((prev) => ({ ...prev, service: e.target.value }))}
@@ -139,13 +143,16 @@ export function ContactBlock({
                 <textarea
                   name="message"
                   required
+                  aria-label={dict.contactBlock.form.message}
                   className="min-h-[120px] rounded-none border border-white/20 bg-transparent px-4 py-3 text-white outline-none placeholder:text-white/45"
                   placeholder={dict.contactBlock.form.message}
                   value={form.message}
                   onChange={(e) => setForm((prev) => ({ ...prev, message: e.target.value }))}
                 />
-                {error ? <p className="text-sm text-red-400">{error}</p> : null}
-                {success ? <p className="text-sm text-green-400">{success}</p> : null}
+                <div aria-live="polite" role="status">
+                  {error ? <p className="text-sm text-red-400">{error}</p> : null}
+                  {success ? <p className="text-sm text-green-400">{success}</p> : null}
+                </div>
                 <Button variant="primary" className="w-fit" disabled={loading}>
                   {loading ? dict.contactBlock.form.sending : dict.common.sendInquiry}
                 </Button>
