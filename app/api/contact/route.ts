@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { isRateLimited } from "@/lib/rate-limit";
 
-const toEmail = process.env.CONTACT_EMAIL ?? "hello@webgrafy.com";
+const toEmail = process.env.CONTACT_EMAIL ?? "info@webgrafy.com";
 
 // Lazily instantiated so the module loads without RESEND_API_KEY at build time.
 let resend: Resend | null = null;

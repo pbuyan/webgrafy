@@ -92,7 +92,7 @@ Copy `env.example` to `.env.local`. Variables:
 ```
 NEXT_PUBLIC_BASE_URL=https://www.webgrafy.com   # absolute URLs: metadata, sitemap, robots, hreflang
 RESEND_API_KEY=re_...                            # contact form email delivery
-CONTACT_EMAIL=hello@webgrafy.com                 # recipient of contact form submissions
+CONTACT_EMAIL=info@webgrafy.com                  # recipient of contact form submissions
 UPSTASH_REDIS_REST_URL=...                       # optional: shared contact-form rate limiting
 UPSTASH_REDIS_REST_TOKEN=...                     # optional: shared contact-form rate limiting
 ```

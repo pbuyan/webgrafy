@@ -662,11 +662,11 @@ const en: SiteDictionary = {
         },
         {
           heading: "Your Rights",
-          body: "Under applicable Canadian privacy law (PIPEDA), you have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at hello@webgrafy.com.",
+          body: "Under applicable Canadian privacy law (PIPEDA), you have the right to access, correct, or request deletion of your personal information. To exercise these rights, please contact us at info@webgrafy.com.",
         },
         {
           heading: "Contact",
-          body: "If you have questions about this policy, please reach out to us at hello@webgrafy.com or by mail at Webgrafy, Montréal, QC, Canada.",
+          body: "If you have questions about this policy, please reach out to us at info@webgrafy.com or by mail at Webgrafy, Montréal, QC, Canada.",
         },
       ],
     },
@@ -725,7 +725,7 @@ const en: SiteDictionary = {
     title: "Ready to elevate your brand presence?",
     text: "Tell us about your project and let's create something exceptional together.",
     phone: "+1 (514) 555-0198",
-    email: "hello@webgrafy.com",
+    email: "info@webgrafy.com",
     location: "Montreal, QC, Canada",
     form: {
       name: "Full name",
@@ -1699,11 +1699,11 @@ const fr: SiteDictionary = {
         },
         {
           heading: "Vos droits",
-          body: "En vertu de la loi canadienne applicable en matière de protection de la vie privée (LPRPDE), vous avez le droit d’accéder à vos informations personnelles, de les corriger ou d’en demander la suppression. Pour exercer ces droits, veuillez nous contacter à hello@webgrafy.com.",
+          body: "En vertu de la loi canadienne applicable en matière de protection de la vie privée (LPRPDE), vous avez le droit d’accéder à vos informations personnelles, de les corriger ou d’en demander la suppression. Pour exercer ces droits, veuillez nous contacter à info@webgrafy.com.",
         },
         {
           heading: "Contact",
-          body: "Pour toute question relative à cette politique, contactez-nous à hello@webgrafy.com ou par courrier à Webgrafy, Montréal, QC, Canada.",
+          body: "Pour toute question relative à cette politique, contactez-nous à info@webgrafy.com ou par courrier à Webgrafy, Montréal, QC, Canada.",
         },
       ],
     },
@@ -1762,7 +1762,7 @@ const fr: SiteDictionary = {
     title: "Prêt à élever la présence de votre marque ?",
     text: "Parlez-nous de votre projet et créons ensemble quelque chose d’exceptionnel.",
     phone: "+1 (514) 555-0198",
-    email: "hello@webgrafy.com",
+    email: "info@webgrafy.com",
     location: "Montréal, QC, Canada",
     form: {
       name: "Nom complet",
