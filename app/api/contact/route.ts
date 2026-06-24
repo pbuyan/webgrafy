@@ -76,12 +76,23 @@ export async function POST(request: Request) {
       );
     }
 
-    await getResend().emails.send({
+    if (!process.env.RESEND_API_KEY) {
+      console.error("Contact form: RESEND_API_KEY is not configured.");
+      return NextResponse.json(
+        { error: "Something went wrong while sending your inquiry." },
+        { status: 503 }
+      );
+    }
+
+    const locale = typeof body.locale === "string" ? body.locale.trim() : "";
+
+    const { error } = await getResend().emails.send({
       from: "Webgrafy Contact <noreply@webgrafy.com>",
       to: [toEmail],
       replyTo: email,
       subject: `New inquiry from ${name}${businessName ? ` (${businessName})` : ""}`,
       html: `
+        ${locale ? `<p><strong>Locale:</strong> ${escapeHtml(locale)}</p>` : ""}
         <p><strong>Name:</strong> ${escapeHtml(name)}</p>
         ${businessName ? `<p><strong>Company:</strong> ${escapeHtml(businessName)}</p>` : ""}
         <p><strong>Email:</strong> ${escapeHtml(email)}</p>
@@ -90,6 +101,14 @@ export async function POST(request: Request) {
         <p style="white-space:pre-wrap">${escapeHtml(message)}</p>
       `,
     });
+
+    if (error) {
+      console.error("Resend send failed:", error);
+      return NextResponse.json(
+        { error: "Something went wrong while sending your inquiry." },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json(
       { success: true, message: "Your inquiry has been received." },
