@@ -1,5 +1,6 @@
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { defaultLocale } from "@/lib/i18n/config";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 const display = Cormorant_Garamond({
@@ -26,6 +27,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-surface text-ink antialiased font-sans">
         {children}
+        <Analytics />
       </body>
     </html>
   );
