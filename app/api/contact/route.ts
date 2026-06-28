@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { isRateLimited } from "@/lib/rate-limit";
+import { reportError } from "@/lib/report-error";
 
 const toEmail = process.env.CONTACT_EMAIL ?? "info@webgrafy.com";
 const fromEmail =
@@ -79,7 +80,9 @@ export async function POST(request: Request) {
     }
 
     if (!process.env.RESEND_API_KEY) {
-      console.error("Contact form: RESEND_API_KEY is not configured.");
+      await reportError(new Error("RESEND_API_KEY is not configured"), {
+        source: "contact-api",
+      });
       return NextResponse.json(
         { error: "Something went wrong while sending your inquiry." },
         { status: 503 }
@@ -105,7 +108,7 @@ export async function POST(request: Request) {
     });
 
     if (error) {
-      console.error("Resend send failed:", error);
+      await reportError(error, { source: "contact-api", extra: { stage: "resend-send" } });
       return NextResponse.json(
         { error: "Something went wrong while sending your inquiry." },
         { status: 500 }
@@ -116,7 +119,8 @@ export async function POST(request: Request) {
       { success: true, message: "Your inquiry has been received." },
       { status: 200 }
     );
-  } catch {
+  } catch (caught) {
+    await reportError(caught, { source: "contact-api", extra: { stage: "handler" } });
     return NextResponse.json(
       { error: "Something went wrong while sending your inquiry." },
       { status: 500 }

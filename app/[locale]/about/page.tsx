@@ -17,6 +17,7 @@ export async function generateMetadata({
   const dict = await getDictionary(locale);
   return buildMetadata({
     locale,
+    siteName: dict.meta.siteName,
     path: "/about",
     title: dict.pages.about.title,
     description: dict.pages.about.text,

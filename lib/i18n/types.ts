@@ -267,6 +267,13 @@ export type SiteDictionary = {
       message: string;
       success: string;
       sending: string;
+      errors: {
+        name: string;
+        email: string;
+        service: string;
+        message: string;
+        generic: string;
+      };
     };
   };
   cookieConsent: {

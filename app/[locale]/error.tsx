@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { defaultLocale, isValidLocale } from "@/lib/i18n/config";
 import { getDictionarySync } from "@/lib/i18n/dictionaries";
+import { reportClientError } from "@/lib/report-error-client";
 
 export default function Error({
   error,
@@ -16,7 +17,7 @@ export default function Error({
   reset: () => void;
 }) {
   useEffect(() => {
-    console.error(error);
+    reportClientError(error, "client-boundary");
   }, [error]);
 
   const params = useParams();

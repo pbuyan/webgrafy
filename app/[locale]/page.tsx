@@ -23,7 +23,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const dict = await getDictionary(locale);
-  return buildMetadata({ locale, path: "", description: dict.meta.siteDescription });
+  return buildMetadata({
+    locale,
+    siteName: dict.meta.siteName,
+    path: "",
+    description: dict.meta.siteDescription,
+  });
 }
 
 export default async function HomePage({

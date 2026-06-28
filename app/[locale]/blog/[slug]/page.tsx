@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/container";
 import { compileBlogPost } from "@/lib/blog/compile-post";
 import { getAllPostParams, getPostSource } from "@/lib/blog/posts";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { localeAlternates } from "@/lib/i18n/metadata";
+import { buildMetadata } from "@/lib/i18n/metadata";
 import type { Locale } from "@/lib/i18n/config";
 
 export const dynamicParams = false;
@@ -32,14 +32,19 @@ export async function generateMetadata({
   const post = getPostSource(locale, slug);
   if (!post) return {};
 
-  return {
+  const dict = await getDictionary(locale);
+
+  return buildMetadata({
+    locale,
+    siteName: dict.meta.siteName,
+    path: `/blog/${slug}`,
     title: post.frontmatter.title,
     description: post.frontmatter.excerpt,
-    alternates: localeAlternates(locale, `/blog/${slug}`),
-    openGraph: post.frontmatter.image
-      ? { images: [{ url: post.frontmatter.image }] }
-      : undefined,
-  };
+    image: post.frontmatter.image,
+    type: "article",
+    publishedTime: post.frontmatter.publishedAt,
+    authors: post.frontmatter.author ? [post.frontmatter.author] : undefined,
+  });
 }
 
 export default async function BlogPostPage({

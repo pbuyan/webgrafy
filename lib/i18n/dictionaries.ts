@@ -734,6 +734,13 @@ const en: SiteDictionary = {
       message: "Tell us about your project",
       success: "Your inquiry has been received.",
       sending: "Sending...",
+      errors: {
+        name: "Please enter your name.",
+        email: "Please enter a valid email address.",
+        service: "Please select a service.",
+        message: "Please provide a short description of your project.",
+        generic: "Something went wrong while sending your inquiry.",
+      },
     },
   },
   cookieConsent: {
@@ -1783,6 +1790,13 @@ const fr: SiteDictionary = {
       message: "Parlez-nous de votre projet",
       success: "Votre demande a bien été reçue.",
       sending: "Envoi...",
+      errors: {
+        name: "Veuillez entrer votre nom.",
+        email: "Veuillez entrer une adresse courriel valide.",
+        service: "Veuillez sélectionner un service.",
+        message: "Veuillez décrire brièvement votre projet.",
+        generic: "Une erreur s'est produite lors de l'envoi de votre demande.",
+      },
     },
   },
   cookieConsent: {

@@ -45,8 +45,16 @@ Optional (recommended on Vercel/serverless):
 |----------|---------|
 | `UPSTASH_REDIS_REST_URL` | Shared rate limiting across instances |
 | `UPSTASH_REDIS_REST_TOKEN` | Upstash auth token |
+| `ERROR_WEBHOOK_URL` | Forwards server + client errors to a webhook (Slack/Discord/custom) |
 
 Set the same variables in your hosting provider (e.g. Vercel → Project → Settings → Environment Variables).
+
+## Error monitoring
+
+Errors are always logged as structured JSON to stderr (captured by Vercel runtime logs / log drains). Set `ERROR_WEBHOOK_URL` to also forward a compact summary to an incoming webhook for alerting.
+
+- **Server errors** (e.g. contact API, Resend failures) are reported via `lib/report-error.ts`.
+- **Client errors** are caught by `app/[locale]/error.tsx` and `app/global-error.tsx`, which POST to `app/api/log-error/route.ts` (rate-limited) — keeping the webhook URL server-side only.
 
 ### 3. Verify locally
 
