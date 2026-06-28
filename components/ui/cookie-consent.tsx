@@ -1,47 +1,11 @@
 "use client";
 
-import { useSyncExternalStore } from "react";
 import Link from "next/link";
 import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { setConsent, useConsent, type ConsentChoice } from "@/lib/consent";
 import type { Locale } from "@/lib/i18n/config";
 import type { SiteDictionary } from "@/lib/i18n/types";
-
-const STORAGE_KEY = "cookie-consent";
-
-type ConsentChoice = "accepted" | "declined";
-type ConsentState = ConsentChoice | "none";
-
-const listeners = new Set<() => void>();
-
-function subscribe(listener: () => void) {
-  listeners.add(listener);
-  const onStorage = (event: StorageEvent) => {
-    if (event.key === STORAGE_KEY) emitChange();
-  };
-  window.addEventListener("storage", onStorage);
-  return () => {
-    listeners.delete(listener);
-    window.removeEventListener("storage", onStorage);
-  };
-}
-
-function emitChange() {
-  for (const listener of listeners) {
-    listener();
-  }
-}
-
-function getConsentState(): ConsentState {
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored === "accepted" || stored === "declined") return stored;
-  return "none";
-}
-
-/** Hide the banner during SSR; client snapshot reads localStorage. */
-function getServerConsentState(): ConsentState {
-  return "accepted";
-}
 
 export function CookieConsent({
   locale,
@@ -50,17 +14,14 @@ export function CookieConsent({
   locale: Locale;
   dict: SiteDictionary;
 }) {
-  const consent = useSyncExternalStore(
-    subscribe,
-    getConsentState,
-    getServerConsentState,
-  );
+  // "accepted" server default keeps the banner hidden during SSR so it never
+  // flashes for visitors who have already chosen.
+  const consent = useConsent("accepted");
   const c = dict.cookieConsent;
   const visible = consent === "none";
 
   function dismiss(choice: ConsentChoice) {
-    localStorage.setItem(STORAGE_KEY, choice);
-    emitChange();
+    setConsent(choice);
   }
 
   if (!visible) return null;

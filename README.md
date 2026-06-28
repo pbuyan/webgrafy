@@ -24,10 +24,10 @@ Submissions post to `/api/contact` and are delivered via [Resend](https://resend
 ### 1. Resend account and domain
 
 1. Create an account at [resend.com](https://resend.com).
-2. Add and verify **webgrafy.com** under Domains (add the SPF, DKIM, and optional DMARC DNS records Resend provides).
+2. Add and verify **contact.webgrafy.com** under Domains (add the SPF, DKIM, and optional DMARC DNS records Resend provides).
 3. Create an API key at [resend.com/api-keys](https://resend.com/api-keys).
 
-The API sends from `noreply@webgrafy.com`; the domain must show as verified before production sends succeed.
+The API sends from `noreply@contact.webgrafy.com` by default (override with `RESEND_FROM_EMAIL`); the domain in the `from` address must show as verified before production sends succeed.
 
 ### 2. Environment variables
 
@@ -36,6 +36,7 @@ Copy `env.example` to `.env.local` for local development. Required:
 | Variable | Purpose |
 |----------|---------|
 | `RESEND_API_KEY` | Resend API key for sending notification emails |
+| `RESEND_FROM_EMAIL` | Sender address (defaults to `Webgrafy Contact <noreply@contact.webgrafy.com>`); its domain must be verified in Resend |
 | `CONTACT_EMAIL` | Recipient inbox (defaults to `info@webgrafy.com` if unset) |
 
 Optional (recommended on Vercel/serverless):
