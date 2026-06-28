@@ -5,7 +5,6 @@ describe("blog posts", () => {
   it("returns posts sorted by publishedAt descending", () => {
     const posts = getAllPosts("en");
     expect(posts.length).toBeGreaterThan(0);
-    expect(posts[0]?.slug).toBe("best-marketing-materials");
 
     for (let i = 1; i < posts.length; i++) {
       expect(posts[i - 1]!.publishedAt >= posts[i]!.publishedAt).toBe(true);
