@@ -42,7 +42,7 @@ export default async function PackagesPage({
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
               <SectionLabel>{p.eyebrow}</SectionLabel>
-              <h1 className="mt-4 text-5xl font-semibold leading-[0.94] tracking-[-0.05em] sm:text-6xl lg:text-[78px]">
+              <h1 className="mt-4 text-5xl font-semibold leading-[0.94] tracking-[-0.05em] break-words hyphens-auto sm:text-6xl lg:text-[78px]">
                 {p.title}
               </h1>
             </div>
