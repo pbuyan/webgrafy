@@ -50,6 +50,10 @@
 
 html {
   scroll-behavior: smooth;
+  /* Defense-in-depth against unintended horizontal scroll on mobile.
+     `clip` (not `hidden`) avoids creating a scroll container, so sticky/
+     fixed positioning and smooth anchor scrolling keep working. */
+  /* overflow-x: clip; */
 }
 
 body {

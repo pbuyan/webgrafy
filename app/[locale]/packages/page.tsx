@@ -48,12 +48,16 @@ export default async function PackagesPage({
             </div>
             <p className="max-w-2xl text-lg leading-8 text-ink-base">{p.text}</p>
           </div>
-          <div className="mt-10 flex flex-wrap gap-4">
-            <Link href={`/${locale}/about#contact`}>
-              <Button variant="dark">{p.heroCtaPrimary}</Button>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+            <Link href={`/${locale}/about#contact`} className="w-full sm:w-auto">
+              <Button variant="dark" className="w-full whitespace-normal sm:w-auto">
+                {p.heroCtaPrimary}
+              </Button>
             </Link>
-            <Link href="#packages">
-              <Button variant="outline">{p.heroCtaSecondary}</Button>
+            <Link href="#packages" className="w-full sm:w-auto">
+              <Button variant="outline" className="w-full whitespace-normal sm:w-auto">
+                {p.heroCtaSecondary}
+              </Button>
             </Link>
           </div>
         </Container>
@@ -123,7 +127,7 @@ export default async function PackagesPage({
                     href={`/${locale}/about#contact`}
                     className={buttonVariants({
                       variant: isPopular ? "dark" : "outline",
-                      className: "mt-8 w-full justify-center",
+                      className: "mt-8 w-full justify-center whitespace-normal text-center",
                     })}
                   >
                     {tier.cta}
@@ -234,12 +238,16 @@ export default async function PackagesPage({
               </h2>
               <p className="mt-6 text-lg leading-8 text-ink-base">{p.ctaText}</p>
             </div>
-            <div className="flex flex-wrap gap-4">
-              <Link href="#contact">
-                <Button variant="dark">{p.ctaPrimary}</Button>
+            <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row sm:flex-wrap">
+              <Link href="#contact" className="w-full sm:w-auto">
+                <Button variant="dark" className="w-full whitespace-normal sm:w-auto">
+                  {p.ctaPrimary}
+                </Button>
               </Link>
-              <Link href={`/${locale}/about#contact`}>
-                <Button variant="outline">{p.ctaSecondary}</Button>
+              <Link href={`/${locale}/about#contact`} className="w-full sm:w-auto">
+                <Button variant="outline" className="w-full whitespace-normal sm:w-auto">
+                  {p.ctaSecondary}
+                </Button>
               </Link>
             </div>
           </div>
