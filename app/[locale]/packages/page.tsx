@@ -7,7 +7,7 @@ import { ProcessTimeline } from "@/components/ui/process-timeline";
 import { SectionLabel } from "@/components/ui/section-label";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { buildMetadata } from "@/lib/i18n/metadata";
+import { buildMetadata, resolveMetaDescription } from "@/lib/i18n/metadata";
 import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
@@ -22,7 +22,10 @@ export async function generateMetadata({
     siteName: dict.meta.siteName,
     path: "/packages",
     title: dict.pages.packages.title,
-    description: dict.pages.packages.text,
+    description: resolveMetaDescription(
+      dict.pages.packages.metaDescription,
+      dict.pages.packages.text,
+    ),
   });
 }
 

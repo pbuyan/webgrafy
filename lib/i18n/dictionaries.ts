@@ -80,6 +80,8 @@ const en: SiteDictionary = {
       eyebrow: "Services",
       title: "Everything your business needs to look professional and grow",
       text: "At Webgrafy, we help small and medium businesses look professional, attract more customers, and grow both online and offline. From websites and branding to social media graphics, printed marketing materials, packaging, and local SEO, we create everything your business needs to build a strong and consistent presence.",
+      metaDescription:
+        "Branding, websites, print, and local SEO for small and medium businesses in Montréal. Bilingual EN/FR design that helps you look professional and grow.",
       cta: "Ask About a Project",
       industriesEyebrow: "Who we work with",
       industriesTitle: "Trusted by ambitious small and medium businesses",
@@ -146,6 +148,8 @@ const en: SiteDictionary = {
       eyebrow: "Packages",
       title: "Packages Built for Small Businesses That Need to Look Professional Fast",
       text: "Choose the right starting point for your business — whether you need a logo, a full brand identity, a website, print materials, or ongoing creative support. Webgrafy helps small and medium businesses build a professional presence online and offline, without the confusion of working with multiple providers.",
+      metaDescription:
+        "Logo, brand identity, website, and print packages for small businesses. Clear pricing tiers and bilingual design support from Webgrafy in Montréal.",
       heroCtaPrimary: "Book a Free Consultation",
       heroCtaSecondary: "Compare Packages",
       tiersHeading: "Choose your starting point",
@@ -441,6 +445,8 @@ const en: SiteDictionary = {
       eyebrow: "Portfolio",
       title: "Selected projects shaped with a premium editorial point of view",
       text: "A curated collection of branding, graphic design, and website projects created to help businesses feel more refined, more consistent, and more memorable.",
+      metaDescription:
+        "Explore branding, graphic design, and website projects from Webgrafy — refined work for businesses that want a consistent, memorable presence.",
       servicesEyebrow: "What we craft",
       servicesTitle:
         "Creative work designed to help small businesses look professional, consistent, and ready to grow.",
@@ -490,11 +496,15 @@ const en: SiteDictionary = {
       title:
         "A creative studio focused on refined branding and modern digital presence",
       text: "Webgrafy is a Montréal-based design practice working at the intersection of identity, print and the web. We were founded in 2018 to do one thing well — help small and mid-sized businesses look like the companies they intend to become — and we've kept the team small so we can keep doing it.",
+      metaDescription:
+        "Montréal design studio since 2018. Webgrafy helps small and mid-sized businesses build refined branding, print, and web experiences — bilingual EN/FR.",
     },
     blog: {
       eyebrow: "Blog",
       title: "Insights on branding, design, and building a stronger digital presence",
       text: "Practical perspectives from the Webgrafy studio — on identity, websites, and the details that help businesses look and communicate with confidence.",
+      metaDescription:
+        "Branding, web design, and identity insights from the Webgrafy studio — practical advice for businesses building a stronger digital presence.",
       empty: "New articles are on the way. Check back soon.",
       ctaEyebrow: "Ready to talk?",
       ctaTitle: "Let's shape a brand and website that feel unmistakably yours",
@@ -505,11 +515,15 @@ const en: SiteDictionary = {
       eyebrow: "Contact",
       title: "Tell us about your brand, website, or creative project",
       text: "Whether you need a logo, a full identity, graphic design support, or a new website, we'd love to hear what you're building.",
+      metaDescription:
+        "Contact Webgrafy in Montréal for branding, graphic design, or website projects. Tell us about your business and we'll recommend the right next step.",
     },
     faq: {
       eyebrow: "FAQ",
       title: "Common Questions Before Working With Webgrafy",
       text: "Answers to common questions about our services, packages, pricing, and how to get started.",
+      metaDescription:
+        "FAQ about Webgrafy services, packages, pricing, timelines, and how to start a branding or website project with our Montréal studio.",
       faqs: [
         {
           question:
@@ -642,6 +656,8 @@ const en: SiteDictionary = {
     privacy: {
       eyebrow: "Legal",
       title: "Privacy Policy",
+      metaDescription:
+        "How Webgrafy collects, uses, and protects personal information submitted through our website and contact forms.",
       lastUpdated: "Last updated: January 1, 2026",
       sections: [
         {
@@ -673,6 +689,8 @@ const en: SiteDictionary = {
     terms: {
       eyebrow: "Legal",
       title: "Terms & Conditions",
+      metaDescription:
+        "Terms and conditions for using the Webgrafy website and engaging our branding, design, and website services.",
       lastUpdated: "Last updated: January 1, 2026",
       sections: [
         {
@@ -1122,6 +1140,8 @@ const fr: SiteDictionary = {
       title:
         "Tout ce dont votre entreprise a besoin pour paraître professionnelle et croître",
       text: "Chez Webgrafy, nous aidons les petites et moyennes entreprises à paraître professionnelles, à attirer plus de clients et à croître en ligne comme hors ligne. Des sites web et de l’image de marque aux visuels pour les médias sociaux, aux supports imprimés, à l’emballage et au référencement local, nous créons tout ce dont votre entreprise a besoin pour bâtir une présence forte et cohérente.",
+      metaDescription:
+        "Branding, sites web, impression et SEO local pour PME à Montréal. Design bilingue EN/FR pour paraître professionnel et croître.",
       cta: "Parler de votre projet",
       industriesEyebrow: "Avec qui nous travaillons",
       industriesTitle: "Choisi par des PME ambitieuses",
@@ -1189,6 +1209,8 @@ const fr: SiteDictionary = {
       title:
         "Des forfaits conçus pour les PME qui veulent paraître professionnelles rapidement",
       text: "Choisissez le bon point de départ pour votre entreprise — que vous ayez besoin d’un logo, d’une identité de marque complète, d’un site web, de supports imprimés ou d’un accompagnement créatif continu. Webgrafy aide les petites et moyennes entreprises à bâtir une présence professionnelle en ligne et hors ligne, sans la confusion de travailler avec plusieurs fournisseurs.",
+      metaDescription:
+        "Forfaits logo, identité de marque, site web et impression pour PME. Tarifs clairs et design bilingue avec Webgrafy à Montréal.",
       heroCtaPrimary: "Réserver une consultation gratuite",
       heroCtaSecondary: "Comparer les forfaits",
       tiersHeading: "Choisissez votre point de départ",
@@ -1497,6 +1519,8 @@ const fr: SiteDictionary = {
       title:
         "Une sélection de projets façonnés avec une direction éditoriale premium",
       text: "Une collection soignée de projets de branding, design graphique et sites web créés pour aider les entreprises à paraître plus raffinées, cohérentes et mémorables.",
+      metaDescription:
+        "Découvrez des projets de branding, design graphique et sites web de Webgrafy — un travail raffiné pour une présence cohérente et mémorable.",
       servicesEyebrow: "Ce que nous concevons",
       servicesTitle:
         "Un travail créatif conçu pour aider les petites entreprises à paraître professionnelles, cohérentes et prêtes à croître.",
@@ -1546,11 +1570,15 @@ const fr: SiteDictionary = {
       title:
         "Un studio créatif axé sur le branding raffiné et la présence digitale moderne",
       text: "Webgrafy est un studio de design basé à Montréal travaillant à l'intersection de l'identité, du print et du web. Nous avons été fondés en 2018 pour faire une chose bien — aider les petites et moyennes entreprises à paraître comme les entreprises qu'elles souhaitent devenir — et nous avons gardé l'équipe petite pour pouvoir continuer à le faire.",
+      metaDescription:
+        "Studio de design montréalais depuis 2018. Webgrafy aide les PME à bâtir branding, print et web raffinés — bilingue EN/FR.",
     },
     blog: {
       eyebrow: "Blogue",
       title: "Réflexions sur l'image de marque, le design et une présence numérique plus forte",
       text: "Des perspectives pratiques du studio Webgrafy — sur l'identité, les sites web et les détails qui aident les entreprises à paraître et communiquer avec assurance.",
+      metaDescription:
+        "Conseils sur l'image de marque, le design web et l'identité du studio Webgrafy — des idées pratiques pour renforcer votre présence numérique.",
       empty: "De nouveaux articles arrivent bientôt. Revenez nous voir.",
       ctaEyebrow: "Prêt à en parler ?",
       ctaTitle: "Créons une marque et un site qui vous ressemblent vraiment",
@@ -1561,11 +1589,15 @@ const fr: SiteDictionary = {
       eyebrow: "Contact",
       title: "Parlez-nous de votre marque, site web ou projet créatif",
       text: "Que vous ayez besoin d’un logo, d’une identité complète, d’un soutien en design graphique ou d’un nouveau site web, nous serions ravis de découvrir votre projet.",
+      metaDescription:
+        "Contactez Webgrafy à Montréal pour branding, design graphique ou site web. Parlez-nous de votre entreprise et trouvons la prochaine étape.",
     },
     faq: {
       eyebrow: "FAQ",
       title: "Questions fréquentes avant de travailler avec Webgrafy",
       text: "Réponses aux questions courantes sur nos services, forfaits, tarifs et la façon de démarrer.",
+      metaDescription:
+        "FAQ sur les services, forfaits, tarifs et délais de Webgrafy — et comment démarrer un projet de branding ou site web à Montréal.",
       faqs: [
         {
           question:
@@ -1698,6 +1730,8 @@ const fr: SiteDictionary = {
     privacy: {
       eyebrow: "Légal",
       title: "Politique de confidentialité",
+      metaDescription:
+        "Comment Webgrafy collecte, utilise et protège les renseignements personnels soumis via notre site et nos formulaires de contact.",
       lastUpdated: "Dernière mise à jour : 1er janvier 2026",
       sections: [
         {
@@ -1729,6 +1763,8 @@ const fr: SiteDictionary = {
     terms: {
       eyebrow: "Légal",
       title: "Conditions générales",
+      metaDescription:
+        "Conditions d'utilisation du site Webgrafy et de nos services de branding, design graphique et conception de sites web.",
       lastUpdated: "Dernière mise à jour : 1er janvier 2026",
       sections: [
         {

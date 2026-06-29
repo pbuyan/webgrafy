@@ -2,12 +2,18 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogImageFrame } from "@/components/blog/blog-image-frame";
+import { JsonLd } from "@/components/structured-data";
 import { Container } from "@/components/ui/container";
 import { compileBlogPost } from "@/lib/blog/compile-post";
 import { getAllPostParams, getPostSource } from "@/lib/blog/posts";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/i18n/metadata";
 import type { Locale } from "@/lib/i18n/config";
+import {
+  absoluteImageUrl,
+  organizationPublisher,
+  pageUrl,
+} from "@/lib/seo/schema";
 
 export const dynamicParams = false;
 
@@ -61,8 +67,26 @@ export default async function BlogPostPage({
   const { content } = await compileBlogPost(locale, post.content);
   const { frontmatter } = post;
 
+  const blogPostingSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: frontmatter.title,
+    description: frontmatter.excerpt,
+    datePublished: frontmatter.publishedAt,
+    url: pageUrl(locale, `/blog/${slug}`),
+    inLanguage: locale,
+    publisher: organizationPublisher(),
+    ...(frontmatter.author
+      ? { author: { "@type": "Person", name: frontmatter.author } }
+      : {}),
+    ...(frontmatter.image
+      ? { image: absoluteImageUrl(frontmatter.image) }
+      : {}),
+  };
+
   return (
     <>
+      <JsonLd data={blogPostingSchema} />
       <section className="border-b border-stroke">
         <Container className="py-20 lg:py-24">
           <Link

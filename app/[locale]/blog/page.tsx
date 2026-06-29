@@ -3,9 +3,9 @@ import { Container } from "@/components/ui/container";
 import { PageIntro } from "@/components/ui/page-intro";
 import { BlogPostCard } from "@/components/blog/blog-post-card";
 import { getAllPosts } from "@/lib/blog/posts";
+import { siteUrl, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { buildMetadata } from "@/lib/i18n/metadata";
-import type { Locale } from "@/lib/i18n/config";
+import { buildMetadata, resolveMetaDescription } from "@/lib/i18n/metadata";
 
 export async function generateMetadata({
   params,
@@ -19,7 +19,11 @@ export async function generateMetadata({
     siteName: dict.meta.siteName,
     path: "/blog",
     title: dict.pages.blog.title,
-    description: dict.pages.blog.text,
+    description: resolveMetaDescription(
+      dict.pages.blog.metaDescription,
+      dict.pages.blog.text,
+    ),
+    rssFeedUrl: `${siteUrl}/feed.xml`,
   });
 }
 

@@ -4,7 +4,7 @@ import { PageIntro } from "@/components/ui/page-intro";
 import { ProjectCard } from "@/components/ui/project-card";
 import { ServiceVisuals } from "@/components/ui/service-visuals";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { buildMetadata } from "@/lib/i18n/metadata";
+import { buildMetadata, resolveMetaDescription } from "@/lib/i18n/metadata";
 import type { Locale } from "@/lib/i18n/config";
 
 export async function generateMetadata({
@@ -19,7 +19,10 @@ export async function generateMetadata({
     siteName: dict.meta.siteName,
     path: "/portfolio",
     title: dict.pages.portfolio.title,
-    description: dict.pages.portfolio.text,
+    description: resolveMetaDescription(
+      dict.pages.portfolio.metaDescription,
+      dict.pages.portfolio.text,
+    ),
   });
 }
 

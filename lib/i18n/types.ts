@@ -154,6 +154,7 @@ export type SiteDictionary = {
       eyebrow: string;
       title: string;
       text: string;
+      metaDescription: string;
       cta: string;
       industriesEyebrow: string;
       industriesTitle: string;
@@ -170,6 +171,7 @@ export type SiteDictionary = {
       eyebrow: string;
       title: string;
       text: string;
+      metaDescription: string;
       heroCtaPrimary: string;
       heroCtaSecondary: string;
       tiersHeading: string;
@@ -207,38 +209,43 @@ export type SiteDictionary = {
       eyebrow: string;
       title: string;
       text: string;
+      metaDescription: string;
       servicesEyebrow: string;
       servicesTitle: string;
       servicesText: string;
       serviceVisuals: { name: string; caption: string; src: string }[];
     };
-    about: { eyebrow: string; title: string; text: string };
+    about: { eyebrow: string; title: string; text: string; metaDescription: string };
     blog: {
       eyebrow: string;
       title: string;
       text: string;
+      metaDescription: string;
       empty: string;
       ctaEyebrow: string;
       ctaTitle: string;
       ctaText: string;
       ctaButton: string;
     };
-    contact: { eyebrow: string; title: string; text: string };
+    contact: { eyebrow: string; title: string; text: string; metaDescription: string };
     faq: {
       eyebrow: string;
       title: string;
       text: string;
+      metaDescription: string;
       faqs: FaqItem[];
     };
     privacy: {
       eyebrow: string;
       title: string;
+      metaDescription: string;
       lastUpdated: string;
       sections: { heading: string; body: string }[];
     };
     terms: {
       eyebrow: string;
       title: string;
+      metaDescription: string;
       lastUpdated: string;
       sections: { heading: string; body: string }[];
     };

@@ -9,7 +9,7 @@ export default async function manifest(): Promise<MetadataRoute.Manifest> {
     name: dict.meta.siteName,
     short_name: dict.meta.siteName,
     description: dict.meta.siteDescription,
-    start_url: "/",
+    start_url: `/${defaultLocale}`,
     display: "standalone",
     background_color: "#ffffff",
     theme_color: "#ffffff",

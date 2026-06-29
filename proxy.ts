@@ -20,11 +20,15 @@ export function proxy(request: NextRequest) {
   if (!pathnameHasLocale) {
     const url = request.nextUrl.clone();
     url.pathname = `/${defaultLocale}${pathname}`;
-    return NextResponse.redirect(url);
+    return NextResponse.redirect(url, 308);
   }
 
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set("x-pathname", pathname);
+  const localeSegment = pathname.split("/")[1];
+  if (localeSegment) {
+    requestHeaders.set("x-locale", localeSegment);
+  }
 
   return NextResponse.next({
     request: {

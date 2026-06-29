@@ -1,9 +1,8 @@
 import type { MetadataRoute } from "next";
 import { execFileSync } from "node:child_process";
 import { getAllPosts } from "@/lib/blog/posts";
-import { locales } from "@/lib/i18n/config";
-
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "https://www.webgrafy.com";
+import { locales, siteUrl } from "@/lib/i18n/config";
+import { localeAlternatesMap } from "@/lib/i18n/metadata";
 
 // Stable fallback when git history is unavailable (e.g. a shallow CI checkout
 // or an environment without `git`). The sitemap is generated at build time, so
@@ -79,10 +78,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
           ? mostRecent(fileDate, newestPostDate)
           : fileDate;
       return {
-        url: `${baseUrl}/${locale}${page}`,
+        url: `${siteUrl}/${locale}${page}`,
         lastModified,
         changeFrequency: page === "" ? ("weekly" as const) : ("monthly" as const),
         priority: page === "" ? 1 : 0.8,
+        alternates: { languages: localeAlternatesMap(page) },
       };
     }),
   );
@@ -92,10 +92,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       const published = new Date(`${post.publishedAt}T12:00:00`);
       const edited = gitLastModified(`content/blog/${post.slug}/${locale}.mdx`);
       return {
-        url: `${baseUrl}/${locale}/blog/${post.slug}`,
+        url: `${siteUrl}/${locale}/blog/${post.slug}`,
         lastModified: mostRecent(published, edited),
         changeFrequency: "monthly" as const,
         priority: 0.7,
+        alternates: {
+          languages: localeAlternatesMap(`/blog/${post.slug}`),
+        },
       };
     }),
   );

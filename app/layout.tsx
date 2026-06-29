@@ -1,5 +1,6 @@
+import { headers } from "next/headers";
 import { Cormorant_Garamond, Inter } from "next/font/google";
-import { defaultLocale } from "@/lib/i18n/config";
+import { defaultLocale, isValidLocale } from "@/lib/i18n/config";
 import { AnalyticsGate } from "@/components/analytics-gate";
 import "./globals.css";
 
@@ -14,14 +15,19 @@ const sans = Inter({
   variable: "--font-sans",
 });
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const headersList = await headers();
+  const headerLocale = headersList.get("x-locale");
+  const locale =
+    headerLocale && isValidLocale(headerLocale) ? headerLocale : defaultLocale;
+
   return (
     <html
-      lang={defaultLocale}
+      lang={locale}
       className={`${display.variable} ${sans.variable}`}
       suppressHydrationWarning
     >

@@ -5,8 +5,9 @@ import { FaqList } from "@/components/ui/faq-list";
 import { JsonLd } from "@/components/structured-data";
 import { PageIntro } from "@/components/ui/page-intro";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { buildMetadata } from "@/lib/i18n/metadata";
+import { buildMetadata, resolveMetaDescription } from "@/lib/i18n/metadata";
 import type { Locale } from "@/lib/i18n/config";
+import { pageUrl } from "@/lib/seo/schema";
 
 export async function generateMetadata({
   params,
@@ -20,7 +21,10 @@ export async function generateMetadata({
     siteName: dict.meta.siteName,
     path: "/faq",
     title: dict.pages.faq.title,
-    description: dict.pages.faq.text,
+    description: resolveMetaDescription(
+      dict.pages.faq.metaDescription,
+      dict.pages.faq.text,
+    ),
   });
 }
 
@@ -36,6 +40,7 @@ export default async function FaqPage({
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    url: pageUrl(locale, "/faq"),
     mainEntity: f.faqs.map((faq) => ({
       "@type": "Question",
       name: faq.question,

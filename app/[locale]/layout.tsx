@@ -8,6 +8,11 @@ import { CursorFollower } from "@/components/ui/cursor-follower";
 import { JsonLd } from "@/components/structured-data";
 import { defaultLocale, isValidLocale, locales, siteUrl, type Locale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
+import {
+  ORGANIZATION_ID,
+  WEBSITE_ID,
+  organizationPublisher,
+} from "@/lib/seo/schema";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -74,8 +79,9 @@ export default async function LocaleLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": ORGANIZATION_ID,
     name: dict.meta.siteName,
-    url: `${siteUrl}/${locale}`,
+    url: siteUrl,
     logo: `${siteUrl}/logo-black.png`,
     description: dict.meta.siteDescription,
     email: dict.contactBlock.email,
@@ -92,9 +98,21 @@ export default async function LocaleLayout({
     ],
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": WEBSITE_ID,
+    url: siteUrl,
+    name: dict.meta.siteName,
+    description: dict.meta.siteDescription,
+    publisher: organizationPublisher(),
+    inLanguage: [...locales],
+  };
+
   return (
     <>
       <JsonLd data={organizationSchema} />
+      <JsonLd data={websiteSchema} />
       <CursorFollower />
       <HtmlLang locale={locale as Locale} />
       <SiteHeader locale={locale as Locale} dict={dict} />
