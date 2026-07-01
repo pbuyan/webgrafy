@@ -20,17 +20,25 @@ const scriptSrc = ["'self'", "'unsafe-inline'", isDev ? "'unsafe-eval'" : ""]
   .filter(Boolean)
   .join(" ");
 
+// Cal.com booking embed (/book). The embed loads its script from
+// `app.cal.com/embed/embed.js`, renders the booking iframe from Cal's domains,
+// and calls the Cal API for availability/booking — so these origins must be
+// allowlisted in script-src, frame-src, connect-src, and img-src. Only the
+// /book page uses them; every other page still resolves to 'self'.
+const calSrc = "https://app.cal.com https://cal.com";
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   "base-uri 'self'",
   "object-src 'none'",
   "frame-ancestors 'self'",
   "form-action 'self'",
-  "img-src 'self' data:",
+  `img-src 'self' data: ${calSrc}`,
   "font-src 'self'",
   "style-src 'self' 'unsafe-inline'",
-  `script-src ${scriptSrc}`,
-  "connect-src 'self'",
+  `script-src ${scriptSrc} ${calSrc}`,
+  `frame-src 'self' ${calSrc}`,
+  `connect-src 'self' ${calSrc}`,
   "upgrade-insecure-requests",
 ].join("; ");
 
