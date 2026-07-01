@@ -80,16 +80,33 @@ export async function POST(request: Request) {
     const n = dict.newsletter;
     const client = getResend();
 
-    // Best-effort: add to the mailing list audience when configured. A failure
-    // here must not block the welcome email or the success response.
+    // Best-effort: add to the mailing list when configured. Resend replaced
+    // Audiences with Segments, so prefer the new `segments` model and fall back
+    // to the deprecated `audienceId` for older accounts. Note: a Segment ID and
+    // a legacy Audience ID are NOT interchangeable — put a Segment ID in
+    // RESEND_SEGMENT_ID and an Audience ID in RESEND_AUDIENCE_ID. A failure here
+    // must never block the welcome email or the success response.
+    const segmentId = process.env.RESEND_SEGMENT_ID;
     const audienceId = process.env.RESEND_AUDIENCE_ID;
-    if (audienceId) {
+    if (segmentId || audienceId) {
       try {
-        await client.contacts.create({ email, audienceId, unsubscribed: false });
-      } catch (audienceError) {
-        await reportError(audienceError, {
+        if (segmentId) {
+          await client.contacts.create({
+            email,
+            unsubscribed: false,
+            segments: [{ id: segmentId }],
+          });
+        } else {
+          await client.contacts.create({
+            email,
+            unsubscribed: false,
+            audienceId: audienceId as string,
+          });
+        }
+      } catch (listError) {
+        await reportError(listError, {
           source: "subscribe-api",
-          extra: { stage: "audience-create" },
+          extra: { stage: "contact-create" },
         });
       }
     }

@@ -37,6 +37,7 @@ function postSubscribe(body: unknown, ip = "127.0.0.1") {
 describe("POST /api/subscribe", () => {
   const originalApiKey = process.env.RESEND_API_KEY;
   const originalAudience = process.env.RESEND_AUDIENCE_ID;
+  const originalSegment = process.env.RESEND_SEGMENT_ID;
 
   beforeEach(() => {
     mockSend.mockReset();
@@ -44,8 +45,10 @@ describe("POST /api/subscribe", () => {
     mockIsRateLimited.mockReset();
     mockIsRateLimited.mockResolvedValue(false);
     mockSend.mockResolvedValue({ data: { id: "email_123" }, error: null });
+    mockCreate.mockResolvedValue({ data: { id: "contact_1" }, error: null });
     process.env.RESEND_API_KEY = "re_test_key";
     delete process.env.RESEND_AUDIENCE_ID;
+    delete process.env.RESEND_SEGMENT_ID;
   });
 
   afterEach(() => {
@@ -53,6 +56,8 @@ describe("POST /api/subscribe", () => {
     else process.env.RESEND_API_KEY = originalApiKey;
     if (originalAudience === undefined) delete process.env.RESEND_AUDIENCE_ID;
     else process.env.RESEND_AUDIENCE_ID = originalAudience;
+    if (originalSegment === undefined) delete process.env.RESEND_SEGMENT_ID;
+    else process.env.RESEND_SEGMENT_ID = originalSegment;
   });
 
   it("returns 429 when rate limited", async () => {
@@ -109,14 +114,43 @@ describe("POST /api/subscribe", () => {
     );
   });
 
-  it("adds the subscriber to the audience when configured", async () => {
+  it("adds the subscriber to a segment when RESEND_SEGMENT_ID is set", async () => {
+    process.env.RESEND_SEGMENT_ID = "seg_123";
+
+    await postSubscribe(validBody);
+
+    expect(mockCreate).toHaveBeenCalledWith(
+      expect.objectContaining({
+        email: "jane@example.com",
+        segments: [{ id: "seg_123" }],
+      })
+    );
+  });
+
+  it("falls back to the legacy audienceId when only RESEND_AUDIENCE_ID is set", async () => {
     process.env.RESEND_AUDIENCE_ID = "aud_123";
-    mockCreate.mockResolvedValue({ data: { id: "contact_1" }, error: null });
 
     await postSubscribe(validBody);
 
     expect(mockCreate).toHaveBeenCalledWith(
       expect.objectContaining({ email: "jane@example.com", audienceId: "aud_123" })
+    );
+    expect(mockCreate).not.toHaveBeenCalledWith(
+      expect.objectContaining({ segments: expect.anything() })
+    );
+  });
+
+  it("prefers the segment over the legacy audience when both are set", async () => {
+    process.env.RESEND_SEGMENT_ID = "seg_123";
+    process.env.RESEND_AUDIENCE_ID = "aud_123";
+
+    await postSubscribe(validBody);
+
+    expect(mockCreate).toHaveBeenCalledWith(
+      expect.objectContaining({ segments: [{ id: "seg_123" }] })
+    );
+    expect(mockCreate).not.toHaveBeenCalledWith(
+      expect.objectContaining({ audienceId: expect.anything() })
     );
   });
 
