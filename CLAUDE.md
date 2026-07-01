@@ -86,6 +86,8 @@ Use `cn()` from `lib/utils.ts` (wraps `clsx` + `tailwind-merge`) for conditional
 
 `app/api/contact/route.ts` — POST endpoint for the contact form. Validates fields server-side, escapes user input into the notification email, drops submissions that fill the `website` honeypot, and rate limits (5 requests/min per IP) via `lib/rate-limit.ts`. **Email delivery is wired up via Resend** (`RESEND_API_KEY` + `CONTACT_EMAIL`); the sending domain in the `from` address must be verified in Resend before going live. The rate limiter (`isRateLimited`) uses **Upstash Redis** when `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` are set (shared across serverless instances) and falls back to an in-memory `Map` otherwise; if Upstash is unreachable it fails open to the in-memory limiter so an outage never blocks legitimate submissions.
 
+`app/api/subscribe/route.ts` — POST endpoint for the newsletter / lead-magnet signup (`NewsletterSignup` component). Reuses the same honeypot, `isRateLimited`, `reportError`, and lazy Resend patterns as the contact route. On a valid email it sends the subscriber a localized welcome email (built from `dict.newsletter`), notifies `CONTACT_EMAIL`, and — when `RESEND_AUDIENCE_ID` is set — best-effort adds the contact to that Resend Audience (an audience failure never blocks the welcome email).
+
 ### Environment variables
 
 Copy `env.example` to `.env.local`. Variables:
@@ -95,8 +97,10 @@ RESEND_API_KEY=re_...                            # contact form email delivery
 CONTACT_EMAIL=info@webgrafy.com                  # recipient of contact form submissions
 UPSTASH_REDIS_REST_URL=...                       # optional: shared contact-form rate limiting
 UPSTASH_REDIS_REST_TOKEN=...                     # optional: shared contact-form rate limiting
+RESEND_AUDIENCE_ID=...                           # optional: newsletter subscriber list (/api/subscribe)
+NEXT_PUBLIC_CALCOM_LINK=...                       # optional: Cal.com link for the /book page (full URL or handle/slug)
 ```
-`NEXT_PUBLIC_BASE_URL` is the single source of truth for the site origin via `siteUrl` in `lib/i18n/config.ts` (used by `lib/i18n/metadata.ts`, `app/sitemap.ts`, `app/robots.ts`, and the locale layout's `metadataBase`). The Upstash variables are optional — see the API routes section for the rate-limiter fallback behaviour.
+`NEXT_PUBLIC_BASE_URL` is the single source of truth for the site origin via `siteUrl` in `lib/i18n/config.ts` (used by `lib/i18n/metadata.ts`, `app/sitemap.ts`, `app/robots.ts`, and the locale layout's `metadataBase`). The Upstash variables are optional — see the API routes section for the rate-limiter fallback behaviour. `RESEND_AUDIENCE_ID` is optional: when set, `/api/subscribe` adds newsletter subscribers to that Resend Audience. `NEXT_PUBLIC_CALCOM_LINK` powers the `/book` page — when empty the page renders a contact-form fallback instead of the Cal.com embed.
 
 ### SEO & structured data
 

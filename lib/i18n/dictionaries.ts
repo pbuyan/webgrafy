@@ -518,6 +518,16 @@ const en: SiteDictionary = {
       metaDescription:
         "Contact Webgrafy in Montréal for branding, graphic design, or website projects. Tell us about your business and we'll recommend the right next step.",
     },
+    book: {
+      eyebrow: "Book a Call",
+      title: "Book a free discovery call",
+      text: "Pick a time that works for you and let's talk through your brand, website, or design project. No pressure — just a clear next step and honest advice.",
+      metaDescription:
+        "Book a free discovery call with Webgrafy to discuss your branding, website, or design project. Choose a time that suits you and get clear, honest advice.",
+      fallbackText:
+        "Online booking is being set up. In the meantime, send us a quick note and we'll reply within one business day to schedule your call.",
+      fallbackCta: "Contact us instead",
+    },
     faq: {
       eyebrow: "FAQ",
       title: "Common Questions Before Working With Webgrafy",
@@ -760,6 +770,34 @@ const en: SiteDictionary = {
         generic: "Something went wrong while sending your inquiry.",
       },
     },
+  },
+  newsletter: {
+    eyebrow: "Free resource",
+    title: "Get the Small-Business Branding Checklist",
+    text: "Join our list and we'll send you a practical checklist to sharpen your brand, website, and marketing — plus occasional design tips. No spam.",
+    placeholder: "Your email address",
+    button: "Send me the checklist",
+    sending: "Sending...",
+    success: "Check your inbox — your checklist is on the way.",
+    disclaimer: "We'll only email you useful things. Unsubscribe anytime.",
+    errors: {
+      email: "Please enter a valid email address.",
+      generic: "Something went wrong. Please try again.",
+    },
+    welcomeSubject: "Your Small-Business Branding Checklist",
+    welcomeIntro:
+      "Thanks for subscribing to Webgrafy. Here's a quick checklist to help your brand look and feel more professional:",
+    checklistTitle: "Small-Business Branding Checklist",
+    checklistItems: [
+      "Define who you serve and the one feeling your brand should evoke.",
+      "Lock a consistent logo, colour palette, and two fonts — and use them everywhere.",
+      "Make sure your website loads fast, looks great on mobile, and has a clear call to action.",
+      "Claim and complete your Google Business Profile with photos and services.",
+      "Keep social profiles, print materials, and email visually consistent with your brand.",
+      "Add real testimonials and results to build trust with new customers.",
+    ],
+    welcomeOutro:
+      "Want help putting these into practice? Reply to this email or book a free call — we'd love to hear about your business.",
   },
   cookieConsent: {
     message:
@@ -1592,6 +1630,16 @@ const fr: SiteDictionary = {
       metaDescription:
         "Contactez Webgrafy à Montréal pour branding, design graphique ou site web. Parlez-nous de votre entreprise et trouvons la prochaine étape.",
     },
+    book: {
+      eyebrow: "Prendre rendez-vous",
+      title: "Réservez un appel-découverte gratuit",
+      text: "Choisissez un moment qui vous convient et discutons de votre marque, de votre site web ou de votre projet de design. Sans pression — simplement une prochaine étape claire et des conseils honnêtes.",
+      metaDescription:
+        "Réservez un appel-découverte gratuit avec Webgrafy pour discuter de votre projet de branding, de site web ou de design. Choisissez l’heure qui vous convient.",
+      fallbackText:
+        "La réservation en ligne est en cours de configuration. Entre-temps, écrivez-nous un mot et nous vous répondrons en un jour ouvrable pour planifier votre appel.",
+      fallbackCta: "Contactez-nous plutôt",
+    },
     faq: {
       eyebrow: "FAQ",
       title: "Questions fréquentes avant de travailler avec Webgrafy",
@@ -1834,6 +1882,34 @@ const fr: SiteDictionary = {
         generic: "Une erreur s'est produite lors de l'envoi de votre demande.",
       },
     },
+  },
+  newsletter: {
+    eyebrow: "Ressource gratuite",
+    title: "Obtenez la liste de vérification de branding pour PME",
+    text: "Inscrivez-vous et nous vous enverrons une liste de vérification pratique pour améliorer votre marque, votre site web et votre marketing — ainsi que des conseils de design à l’occasion. Aucun pourriel.",
+    placeholder: "Votre adresse courriel",
+    button: "Envoyez-moi la liste",
+    sending: "Envoi...",
+    success: "Vérifiez votre boîte de réception — votre liste arrive.",
+    disclaimer: "Nous vous enverrons uniquement du contenu utile. Désabonnement en tout temps.",
+    errors: {
+      email: "Veuillez entrer une adresse courriel valide.",
+      generic: "Une erreur s'est produite. Veuillez réessayer.",
+    },
+    welcomeSubject: "Votre liste de vérification de branding pour PME",
+    welcomeIntro:
+      "Merci de votre inscription à Webgrafy. Voici une courte liste de vérification pour aider votre marque à paraître plus professionnelle :",
+    checklistTitle: "Liste de vérification de branding pour PME",
+    checklistItems: [
+      "Définissez à qui vous vous adressez et l’émotion que votre marque doit évoquer.",
+      "Fixez un logo, une palette de couleurs et deux polices cohérents — et utilisez-les partout.",
+      "Assurez-vous que votre site est rapide, superbe sur mobile et doté d’un appel à l’action clair.",
+      "Réclamez et complétez votre fiche Google Business avec photos et services.",
+      "Gardez vos réseaux sociaux, imprimés et courriels visuellement cohérents avec votre marque.",
+      "Ajoutez de vrais témoignages et résultats pour bâtir la confiance des nouveaux clients.",
+    ],
+    welcomeOutro:
+      "Besoin d’aide pour les mettre en pratique ? Répondez à ce courriel ou réservez un appel gratuit — nous serions ravis de découvrir votre entreprise.",
   },
   cookieConsent: {
     message:

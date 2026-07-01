@@ -173,6 +173,12 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
               <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone={langTone} />
             </div>
             <Link
+              href={`/${locale}/book`}
+              className={cn("hidden md:block", buttonVariants({ variant: "dark", size: "sm" }))}
+            >
+              {dict.nav.bookCall}
+            </Link>
+            <Link
               href={`/${locale}/about#contact`}
               className={cn("hidden md:block", buttonVariants({ variant: "outline", size: "sm" }))}
             >
@@ -214,6 +220,13 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
             })}
           </nav>
           <div className="px-6 flex flex-col gap-4">
+            <Link
+              href={`/${locale}/book`}
+              onClick={() => setMenuOpen(false)}
+              className={buttonVariants({ variant: "primary", className: "w-full rounded-none" })}
+            >
+              {dict.nav.bookCall}
+            </Link>
             <Link
               href={`/${locale}/about#contact`}
               onClick={() => setMenuOpen(false)}

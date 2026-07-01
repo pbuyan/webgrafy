@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Facebook, Instagram } from "lucide-react";
 import { Container } from "@/components/ui/container";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import type { Locale } from "@/lib/i18n/config";
 import type { SiteDictionary } from "@/lib/i18n/types";
 
@@ -29,6 +30,7 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
     { label: dict.nav.portfolio, href: `/${locale}/portfolio` },
     { label: dict.nav.blog, href: `/${locale}/blog` },
     { label: dict.nav.about, href: `/${locale}/about` },
+    { label: dict.nav.bookCall, href: `/${locale}/book` },
   ];
 
   const serviceItems = dict.services.map((service) => ({
@@ -48,7 +50,13 @@ export function SiteFooter({ locale, dict }: { locale: Locale; dict: SiteDiction
   return (
     <footer className="bg-pitch text-white">
       <Container className="border-t border-white/10 py-10">
-        <div className="flex lg:flex-row flex-col gap-10 justify-between">
+        <NewsletterSignup
+          locale={locale}
+          dict={dict}
+          tone="dark"
+          className="max-w-xl border-b border-white/10 pb-10"
+        />
+        <div className="flex lg:flex-row flex-col gap-10 justify-between pt-10">
           <div>
             <div className="text-3xl font-semibold tracking-[-0.04em] text-surface">{dict.meta.siteName}</div>
             <p className="mt-4 max-w-sm text-sm leading-7 text-white/70">{dict.footer.blurb}</p>

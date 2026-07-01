@@ -228,6 +228,14 @@ export type SiteDictionary = {
       ctaButton: string;
     };
     contact: { eyebrow: string; title: string; text: string; metaDescription: string };
+    book: {
+      eyebrow: string;
+      title: string;
+      text: string;
+      metaDescription: string;
+      fallbackText: string;
+      fallbackCta: string;
+    };
     faq: {
       eyebrow: string;
       title: string;
@@ -282,6 +290,25 @@ export type SiteDictionary = {
         generic: string;
       };
     };
+  };
+  newsletter: {
+    eyebrow: string;
+    title: string;
+    text: string;
+    placeholder: string;
+    button: string;
+    sending: string;
+    success: string;
+    disclaimer: string;
+    errors: {
+      email: string;
+      generic: string;
+    };
+    welcomeSubject: string;
+    welcomeIntro: string;
+    checklistTitle: string;
+    checklistItems: string[];
+    welcomeOutro: string;
   };
   cookieConsent: {
     message: string;
