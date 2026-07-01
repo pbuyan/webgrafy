@@ -43,7 +43,7 @@ export default async function BookPage({
       <section className="py-16 lg:py-20">
         <Container>
           {calLink ? (
-            <CalEmbed link={calLink} title={b.title} />
+            <CalEmbed link={calLink} />
           ) : (
             <div className="mx-auto max-w-xl rounded-[1.6rem] border border-stroke bg-surface-warm p-10 text-center">
               <p className="text-lg leading-8 text-ink-base">{b.fallbackText}</p>
