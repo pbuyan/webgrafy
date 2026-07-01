@@ -14,6 +14,7 @@
 
 export type ErrorSource =
   | "contact-api"
+  | "subscribe-api"
   | "log-error-api"
   | "client-boundary"
   | "global-error";

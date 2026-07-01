@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { BlogImageFrame } from "@/components/blog/blog-image-frame";
 import { JsonLd } from "@/components/structured-data";
+import { NewsletterSignup } from "@/components/newsletter-signup";
 import { Container } from "@/components/ui/container";
 import { compileBlogPost } from "@/lib/blog/compile-post";
 import { getAllPostParams, getPostSource } from "@/lib/blog/posts";
@@ -125,6 +126,9 @@ export default async function BlogPostPage({
       <section className="py-20">
         <Container>
           <article className="mx-auto max-w-3xl">{content}</article>
+          <div className="mx-auto mt-16 max-w-3xl border-t border-stroke pt-10">
+            <NewsletterSignup locale={locale} dict={dict} tone="light" />
+          </div>
         </Container>
       </section>
     </>
