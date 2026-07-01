@@ -1,26 +1,42 @@
 "use client";
 
+import { useEffect } from "react";
+import Cal, { getCalApi } from "@calcom/embed-react";
+import { parseCalLink } from "@/lib/cal";
+
 /**
- * Lightweight Cal.com booking embed.
+ * Cal.com inline booking embed.
  *
- * Renders the booking page in a responsive iframe so no third-party script is
- * required. `link` accepts either a full URL (https://cal.com/…) or a bare
- * Cal.com handle/event slug (e.g. "webgrafy/discovery"), which is resolved
- * against cal.com. The value comes from `NEXT_PUBLIC_CALCOM_LINK`.
+ * Uses Cal.com's official embed (embed.js handshake) rather than a bare
+ * <iframe> — Cal.com's booking pages send `X-Frame-Options` /
+ * `frame-ancestors` headers that block plain iframe embedding on third-party
+ * domains, so the supported embed flow is required.
+ *
+ * `link` accepts either a full URL (https://cal.com/webgrafy/discovery) or a
+ * bare handle/slug (webgrafy/discovery); the value comes from
+ * `NEXT_PUBLIC_CALCOM_LINK`. A full URL also lets self-hosted Cal instances set
+ * the correct origin.
  */
-export function CalEmbed({ link, title }: { link: string; title: string }) {
-  const src = /^https?:\/\//i.test(link)
-    ? link
-    : `https://cal.com/${link.replace(/^\/+/, "")}`;
-  const url = new URL(src);
-  url.searchParams.set("embed", "true");
+const NAMESPACE = "book";
+
+export function CalEmbed({ link }: { link: string }) {
+  const { calLink, calOrigin } = parseCalLink(link);
+
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi({ namespace: NAMESPACE });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
 
   return (
-    <iframe
-      src={url.toString()}
-      title={title}
-      loading="lazy"
-      className="h-[70vh] min-h-[640px] w-full rounded-[1.6rem] border border-stroke bg-white"
+    <Cal
+      namespace={NAMESPACE}
+      calLink={calLink}
+      {...(calOrigin ? { calOrigin } : {})}
+      config={{ layout: "month_view" }}
+      className="w-full overflow-hidden rounded-[1.6rem] border border-stroke bg-white"
+      style={{ width: "100%", minHeight: "700px" }}
     />
   );
 }
