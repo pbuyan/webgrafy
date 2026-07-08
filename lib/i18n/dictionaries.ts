@@ -668,11 +668,11 @@ const en: SiteDictionary = {
       title: "Privacy Policy",
       metaDescription:
         "How Webgrafy collects, uses, and protects personal information submitted through our website and contact forms.",
-      lastUpdated: "Last updated: January 1, 2026",
+      lastUpdated: "Last updated: July 8, 2026",
       sections: [
         {
           heading: "Information We Collect",
-          body: "We collect information you provide directly to us through our contact form, including your name, company name, email address, and project details. We do not collect any information automatically beyond standard server logs.",
+          body: "We collect information you provide directly to us through our contact form, including your name, company name, email address, and project details. If you accept cookies, we also collect anonymized usage data through analytics tools (see the Cookies section below). Standard server logs are collected automatically.",
         },
         {
           heading: "How We Use Your Information",
@@ -684,7 +684,7 @@ const en: SiteDictionary = {
         },
         {
           heading: "Cookies",
-          body: "This website does not use tracking cookies or third-party analytics. We store a single preference in your browser's local storage to remember your cookie-banner choice; no personally identifiable information is collected.",
+          body: "With your consent, this site uses Metricool analytics (tracker.metricool.com) to collect anonymized usage data such as pages visited and referral sources. We also use Vercel Analytics and Speed Insights for similar traffic and performance insights. These tools only load if you accept cookies via our banner. We store your cookie-banner preference in your browser's local storage. Declining cookies prevents analytics from running.",
         },
         {
           heading: "Your Rights",
@@ -801,7 +801,7 @@ const en: SiteDictionary = {
   },
   cookieConsent: {
     message:
-      "We use essential cookies to make this site work. No tracking or advertising cookies are used.",
+      "We use essential cookies to make this site work. If you accept, we also use analytics (including Metricool) to understand how visitors use our site.",
     privacyLinkText: "Privacy Policy",
     accept: "Accept",
     decline: "Decline",
@@ -1780,11 +1780,11 @@ const fr: SiteDictionary = {
       title: "Politique de confidentialité",
       metaDescription:
         "Comment Webgrafy collecte, utilise et protège les renseignements personnels soumis via notre site et nos formulaires de contact.",
-      lastUpdated: "Dernière mise à jour : 1er janvier 2026",
+      lastUpdated: "Dernière mise à jour : 8 juillet 2026",
       sections: [
         {
           heading: "Informations que nous collectons",
-          body: "Nous collectons les informations que vous nous fournissez directement via notre formulaire de contact, notamment votre nom, le nom de votre entreprise, votre adresse courriel et les détails de votre projet. Nous ne collectons aucune information automatiquement au-delà des journaux serveur standard.",
+          body: "Nous collectons les informations que vous nous fournissez directement via notre formulaire de contact, notamment votre nom, le nom de votre entreprise, votre adresse courriel et les détails de votre projet. Si vous acceptez les témoins, nous recueillons également des données d'utilisation anonymisées via des outils d'analyse (voir la section Témoins ci-dessous). Des journaux serveur standard sont collectés automatiquement.",
         },
         {
           heading: "Utilisation de vos informations",
@@ -1796,7 +1796,7 @@ const fr: SiteDictionary = {
         },
         {
           heading: "Témoins (cookies)",
-          body: "Ce site web n’utilise pas de témoins de suivi ni d’outils d’analyse tiers. Nous enregistrons une seule préférence dans le stockage local de votre navigateur afin de mémoriser votre choix concernant la bannière de témoins; aucune information personnelle identifiable n’est collectée.",
+          body: "Avec votre consentement, ce site utilise l'analytique Metricool (tracker.metricool.com) pour recueillir des données d'utilisation anonymisées, comme les pages consultées et les sources de référence. Nous utilisons également Vercel Analytics et Speed Insights pour des indicateurs similaires de trafic et de performance. Ces outils ne se chargent que si vous acceptez les témoins via notre bannière. Nous enregistrons votre choix concernant la bannière de témoins dans le stockage local de votre navigateur. En refusant les témoins, vous empêchez le chargement de ces analyses.",
         },
         {
           heading: "Vos droits",
@@ -1913,7 +1913,7 @@ const fr: SiteDictionary = {
   },
   cookieConsent: {
     message:
-      "Nous utilisons des cookies essentiels au bon fonctionnement de ce site. Aucun cookie de suivi ou publicitaire n'est utilisé.",
+      "Nous utilisons des témoins essentiels au bon fonctionnement de ce site. Si vous acceptez, nous utilisons également des outils d'analyse (dont Metricool) pour comprendre comment les visiteurs utilisent le site.",
     privacyLinkText: "Politique de confidentialité",
     accept: "Accepter",
     decline: "Refuser",

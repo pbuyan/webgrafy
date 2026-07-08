@@ -26,6 +26,7 @@ const scriptSrc = ["'self'", "'unsafe-inline'", isDev ? "'unsafe-eval'" : ""]
 // allowlisted in script-src, frame-src, connect-src, and img-src. Only the
 // /book page uses them; every other page still resolves to 'self'.
 const calSrc = "https://app.cal.com https://cal.com";
+const metricoolSrc = "https://tracker.metricool.com";
 
 const contentSecurityPolicy = [
   "default-src 'self'",
@@ -36,9 +37,9 @@ const contentSecurityPolicy = [
   `img-src 'self' data: ${calSrc}`,
   "font-src 'self'",
   "style-src 'self' 'unsafe-inline'",
-  `script-src ${scriptSrc} ${calSrc}`,
+  `script-src ${scriptSrc} ${calSrc} ${metricoolSrc}`,
   `frame-src 'self' ${calSrc}`,
-  `connect-src 'self' ${calSrc}`,
+  `connect-src 'self' ${calSrc} ${metricoolSrc}`,
   "upgrade-insecure-requests",
 ].join("; ");
 
