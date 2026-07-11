@@ -172,18 +172,20 @@ function SiteHeaderBar({ locale, dict, pathname }: SiteHeaderBarProps) {
             <div className="hidden md:block">
               <LanguageSwitcher locale={locale} labels={dict.nav.langShort} tone={langTone} />
             </div>
-            <Link
-              href={`/${locale}/book`}
-              className={cn("hidden md:block", buttonVariants({ variant: "dark", size: "sm" }))}
-            >
-              {dict.nav.bookCall}
-            </Link>
-            <Link
-              href={`/${locale}/about#contact`}
-              className={cn("hidden md:block", buttonVariants({ variant: "outline", size: "sm" }))}
-            >
-              {dict.nav.contact}
-            </Link>
+            <div className="hidden items-center gap-4 md:flex">
+              <Link
+                href={`/${locale}/book`}
+                className={buttonVariants({ variant: "dark", size: "sm" })}
+              >
+                {dict.nav.bookCall}
+              </Link>
+              <Link
+                href={`/${locale}/about#contact`}
+                className={buttonVariants({ variant: "outline", size: "sm" })}
+              >
+                {dict.nav.contact}
+              </Link>
+            </div>
             <button
               onClick={() => setMenuOpen((prev) => !prev)}
               aria-label={menuOpen ? "Close menu" : "Open menu"}
