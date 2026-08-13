@@ -280,6 +280,10 @@ export type SiteDictionary = {
       email: string;
       service: string;
       message: string;
+      file: string;
+      fileHelp: string;
+      fileChoose: string;
+      fileRemove: string;
       success: string;
       sending: string;
       errors: {
@@ -287,6 +291,8 @@ export type SiteDictionary = {
         email: string;
         service: string;
         message: string;
+        fileTooLarge: string;
+        fileType: string;
         generic: string;
       };
     };
