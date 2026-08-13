@@ -1,8 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import {
+  ATTACHMENT_ACCEPT,
+  MAX_ATTACHMENT_BYTES,
+  isAllowedAttachment,
+} from "@/lib/contact-attachment";
 import type { Locale } from "@/lib/i18n/config";
 import type { SiteDictionary } from "@/lib/i18n/types";
 
@@ -15,7 +20,7 @@ const initialState = {
   website: "", // honeypot — must stay empty for real users
 };
 
-type ValidatedField = "name" | "email" | "service" | "message";
+type ValidatedField = "name" | "email" | "service" | "message" | "file";
 type FieldErrors = Partial<Record<ValidatedField, string>>;
 
 const inputClass =
@@ -40,12 +45,23 @@ export function ContactBlock({
   text?: string;
 }) {
   const [form, setForm] = useState(initialState);
+  // The File lives outside `form` — that object is all-strings and doubles as
+  // the reset value. A file input is uncontrolled, so clearing it needs a
+  // direct DOM assignment via the ref.
+  const [file, setFile] = useState<File | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
 
   const errors = dict.contactBlock.form.errors;
+
+  // This field always has help text, so it needs a describedby that `fieldProps`
+  // (which only emits one when an error exists) doesn't provide.
+  const fileDescribedBy = ["contact-file-help", fieldErrors.file ? "contact-file-error" : null]
+    .filter(Boolean)
+    .join(" ");
 
   function clearFieldError(field: ValidatedField) {
     setFieldErrors((prev) => {
@@ -63,6 +79,37 @@ export function ContactBlock({
     if (!form.service) next.service = errors.service;
     if (form.message.trim().length < 10) next.message = errors.message;
     return next;
+  }
+
+  function resetFileInput() {
+    setFile(null);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  }
+
+  // Validated at pick time rather than on submit, so the feedback is immediate
+  // and `validate()` stays purely about the text fields.
+  function handleFileChange(event: React.ChangeEvent<HTMLInputElement>) {
+    const picked = event.target.files?.[0] ?? null;
+    if (!picked) {
+      resetFileInput();
+      clearFieldError("file");
+      return;
+    }
+
+    if (!isAllowedAttachment(picked)) {
+      resetFileInput();
+      setFieldErrors((prev) => ({ ...prev, file: errors.fileType }));
+      return;
+    }
+
+    if (picked.size > MAX_ATTACHMENT_BYTES) {
+      resetFileInput();
+      setFieldErrors((prev) => ({ ...prev, file: errors.fileTooLarge }));
+      return;
+    }
+
+    clearFieldError("file");
+    setFile(picked);
   }
 
   function fieldProps(field: ValidatedField, inputId: string) {
@@ -85,17 +132,36 @@ export function ContactBlock({
       return;
     }
 
+    // Guard against state and DOM diverging.
+    if (file && (!isAllowedAttachment(file) || file.size > MAX_ATTACHMENT_BYTES)) {
+      setFieldErrors({ file: errors.fileType });
+      return;
+    }
+
     setFieldErrors({});
     setLoading(true);
 
     try {
+      const payload = new FormData();
+      Object.entries(form).forEach(([key, value]) => payload.append(key, value));
+      payload.append("locale", locale);
+      if (file) payload.append("file", file);
+
       const response = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, locale }),
+        // No Content-Type header — setting it manually would omit the multipart
+        // boundary the browser generates, and the server parse would fail.
+        body: payload,
       });
 
-      const result = await response.json();
+      // An oversized body is rejected by the platform before the route runs,
+      // and the response is not JSON — so check status before parsing.
+      if (response.status === 413) {
+        setError(errors.fileTooLarge);
+        return;
+      }
+
+      const result = await response.json().catch(() => ({} as { error?: string; message?: string }));
 
       if (!response.ok) {
         setError(result.error ?? errors.generic);
@@ -104,6 +170,9 @@ export function ContactBlock({
 
       setSuccess(result.message ?? dict.contactBlock.form.success);
       setForm(initialState);
+      // Only cleared on success: a file input can't be repopulated
+      // programmatically, so clearing on error would force a re-pick to retry.
+      resetFileInput();
     } catch {
       setError(errors.generic);
     } finally {
@@ -251,6 +320,63 @@ export function ContactBlock({
                   {fieldErrors.message ? (
                     <p id="contact-message-error" className="text-sm text-red-400" role="alert">
                       {fieldErrors.message}
+                    </p>
+                  ) : null}
+                </div>
+                <div className="grid gap-1">
+                  {/* A span, not a second <label htmlFor> — one control should
+                      not have two labels pointing at it. */}
+                  <span className={labelClass}>{dict.contactBlock.form.file}</span>
+
+                  <div className="flex flex-wrap items-center gap-3 border-b border-white/20 py-3">
+                    {/* `peer` must precede the label in DOM order for peer-* to apply. */}
+                    <input
+                      {...fieldProps("file", "contact-file")}
+                      aria-describedby={fileDescribedBy}
+                      ref={fileInputRef}
+                      name="file"
+                      type="file"
+                      accept={ATTACHMENT_ACCEPT}
+                      disabled={loading}
+                      className="peer sr-only"
+                      onChange={handleFileChange}
+                    />
+                    <label
+                      htmlFor="contact-file"
+                      className="cursor-pointer rounded-full border border-white/25 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-white/80 transition-colors hover:border-white/50 hover:text-white peer-focus-visible:ring-2 peer-focus-visible:ring-white/60"
+                    >
+                      {dict.contactBlock.form.fileChoose}
+                    </label>
+
+                    <div aria-live="polite" className="flex min-w-0 items-center gap-2">
+                      {file ? (
+                        <>
+                          <span className="max-w-[16rem] truncate text-sm text-white/70">
+                            {file.name}
+                          </span>
+                          <button
+                            type="button"
+                            onClick={resetFileInput}
+                            aria-label={dict.contactBlock.form.fileRemove}
+                            className="rounded-full border border-white/20 px-2 leading-6 text-white/60 transition-colors hover:border-white/50 hover:text-white"
+                          >
+                            &times;
+                          </button>
+                        </>
+                      ) : null}
+                      {/* Kept mounted so aria-describedby never dangles. */}
+                      <span
+                        id="contact-file-help"
+                        className={file ? "sr-only" : "text-sm text-white/45"}
+                      >
+                        {dict.contactBlock.form.fileHelp}
+                      </span>
+                    </div>
+                  </div>
+
+                  {fieldErrors.file ? (
+                    <p id="contact-file-error" className="text-sm text-red-400" role="alert">
+                      {fieldErrors.file}
                     </p>
                   ) : null}
                 </div>
